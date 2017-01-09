@@ -2,7 +2,7 @@
 
 ## Lab Resources
 
-Every discussion/Q&A will be at https://github.com/tkimva/ucr-eecs168. Please use GITHUB page instead of email to ask any question to TA. Labs must be finished on the given time. You have one week for your lab report. If you lab session is Monday and your lab report due is the next Monday (The end of lab). If the lab is multiple sessions lab, like lab 3, 4, and 5, then a week after the last session of each lab is due. Please be sure to include all required deliverables in your lab report. Five lab reports are required to turn in and total score is 100. Team work (Pair design and programming) (limit 2) is allowed but individual lab report is required and those lab reports should not be the same with your pair.
+Every discussion/Q&A will be at https://github.com/sheldonucr/ucr-eecs168-lab. Please use GITHUB page instead of email to ask any question to TA. Labs must be finished on the given time. You have one week for your lab report. If you lab session is Monday and your lab report due is the next Monday (The end of lab). If the lab is multiple sessions lab, like lab 3, 4, and 5, then a week after the last session of each lab is due. Please be sure to include all required deliverables in your lab report. Five lab reports are required to turn in and total score is 100. Team work (Pair design and programming) (limit 2) is allowed but individual lab report is required and those lab reports should not be the same with your pair.
 
 ### Lab schedule
 
