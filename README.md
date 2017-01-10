@@ -2,7 +2,7 @@
 
 ## Lab Resources
 
-Every discussion/Q&A will be at https://github.com/sheldonucr/ucr-eecs168-lab. Please use GITHUB page instead of email to ask any question to TA. Labs must be finished on the given time. You have one week for your lab report. If you lab session is Monday and your lab report due is the next Monday (The end of lab). If the lab is multiple sessions lab, like lab 3, 4, and 5, then a week after the last session of each lab is due. Please be sure to include all required deliverables in your lab report. Five lab reports are required to turn in and total score is 100. Team work (Pair design and programming) (limit 2) is allowed but individual lab report is required and those lab reports should not be the same with your pair.
+Every discussion/Q&A will be at https://github.com/sheldonucr/ucr-eecs168-lab. Please use GITHUB page instead of email to ask any questions to TA. Questions of confidential nature, eg. grading, are the exception. Labs must be finished on the given time. You have one week for your lab report. If you lab session is Wednesday your lab report is due the next Wednesday (The end of lab). If the lab is multiple sessions lab, like lab 3, 4, and 5, then a week after the last session of each lab is due. Please be sure to include all required deliverables in your lab report. Five lab reports are required to turn in and total score is 100. Team work (Pair design and programming) (limit 2) is allowed but individual lab report is required and those lab reports should not be the same with your pair.
 
 ### Lab schedule
 
@@ -22,10 +22,10 @@ Every discussion/Q&A will be at https://github.com/sheldonucr/ucr-eecs168-lab. P
 
 ### Attendance Policy
 
-- Late, which are after (6:10pm for Monday, 8:10am for Thursday) will be 10% penalty
-- More than 10min late, which are after (6:20pm for Monday, 8:20am for Thursday) will be 50% penalty
-- Any missed lab should be made up within 1 week with 50% penalty, otherwise no credit. Missing a lab is acceptable only when emergency occurs (eg. Medical emergency, doctor letter is required)
-- If you finish your lab earlier, you do not need to come to lab, but you have to show your proof-of-completion (simple screenshot) to get permission by email.
+- Late, which are after (11:10am for Wednesday, 5:10pm for Friday) will be 10% penalty
+- More than 10min late, which are after (11:20am for Wednesday, 5:20pm for Friday) will be 50% penalty
+- Missing a lab is acceptable only for emergency (eg. Medical emergency, doctor letter is required) and should be completed within 1 week of the missed lab.
+- Labs can be skipped by completing early. Proof of completion will be due prior to the start of your scheduled lab day, eg. before 11:10am for Tuesday labs, 5:10am for Friday labs. Available by request ONLY. 
 
 ## Late Submission for lab report
 
@@ -33,7 +33,7 @@ Every discussion/Q&A will be at https://github.com/sheldonucr/ucr-eecs168-lab. P
 
 ## Checkoff
 
-- You need to get checkoff your each lab result. If not , you will receive no credit for your lab score even if you submit your lab report.
+- You need to get checkoff your each lab result. If not , you will receive no credit for your lab score even if you submit your lab report. Checkoff means showing your completed work to your TA.
 
 ### Cheating Policy
 
