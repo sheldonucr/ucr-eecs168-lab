@@ -15,7 +15,7 @@ go to [github.com](http://github.com) and follow the screenshots below.
 
 ![github](images/lab0-07.png)
 
-After you register, you need to login and go to our lab repository [github.com/tkimva/ucr-eecs168](https://github.com/tkimva/ucr-eecs168). You need to press watching and star as seen below.
+After you register, you need to login and go to our lab repository [github.com/sheldonucr/ucr-eecs168-lab](https://github.com/sheldonucr/ucr-eecs168-lab). You need to press watching and star as seen below.
 
 ![github](images/lab0-08.png)
 
@@ -37,7 +37,7 @@ To install `putty` and `Xming` in your computer, you can find an instruction at 
 Find `Xming` in the start menu, and launch first. You should be able to find `Xming` in the system tray.
 
 Then, you find `putty` and launch, the following screen is popped up.
-and you can put hostname `storm.engr.ucr.edu` and put your user id. The most important thing is to enable X11 forwarding in the `putty`.
+and you can put hostname `bender.engr.ucr.edu` and put your user id. The most important thing is to enable X11 forwarding in the `putty`.
 
 ![putty1](images/lab0-03.png)
 ![putty1](images/lab0-04.png)
@@ -51,20 +51,20 @@ Again, you need to run `Xming` first and then `putty` later
 
 For OSX/Linux, you do not need to install SSH/Xwindows tools as these are default software in these operating systems.
 
-We connect `storm.engr.ucr.edu` server thru SSH with X-forwarding service.
+We connect `bender.engr.ucr.edu` server thru SSH with X-forwarding service.
 
 
 For OSX/Linux, you can type following command in your terminal,
 
-`ssh -Y [ENGRID]@storm.engr.ucr.edu`
+`ssh -Y [ENGRID]@bender.engr.ucr.edu`
 
 For example
 
-`ssh -Y tkim@storm.engr.ucr.edu`
+`ssh -Y tkim@bender.engr.ucr.edu`
 
 ## Check Synopsys Galaxy Custom Designer Launch
 
-We already preconfigured every IC design environment, so you do not need to set any environment. You can check toolchain is correctly working. Once you log in `storm.engr.ucr.edu`, you can check if Synopsys tool is working correctly by typing the following command.
+We already preconfigured every IC design environment, so you do not need to set any environment. You can check toolchain is correctly working. Once you log in `bender.engr.ucr.edu`, you can check if Synopsys tool is working correctly by typing the following command.
 
 `cdesigner&`
 
