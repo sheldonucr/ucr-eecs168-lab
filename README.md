@@ -25,7 +25,7 @@ Every discussion/Q&A will be at https://github.com/sheldonucr/ucr-eecs168-lab. P
 - Late, which are after (11:10am for Wednesday, 5:10pm for Friday) will be 10% penalty
 - More than 10min late, which are after (11:20am for Wednesday, 5:20pm for Friday) will be 50% penalty
 - Missing a lab is acceptable only for emergency (eg. Medical emergency, doctor letter is required) and should be completed within 1 week of the missed lab.
-- Labs can be skipped by completing early. Proof of completion will be due prior to the start of your scheduled lab day, eg. before 11:10am for Tuesday labs, 5:10am for Friday labs. Available by request ONLY. 
+- Labs can be skipped by completing early. Proof of completion will be due prior to the start of your scheduled lab day, eg. before 11:10am for Wednesday labs, 5:10am for Friday labs. Available by request ONLY. 
 
 ## Late Submission for lab report
 
