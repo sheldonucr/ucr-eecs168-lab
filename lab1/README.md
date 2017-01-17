@@ -236,7 +236,7 @@ In the same window, select `dc` to setup a DC sweep. Fill out the options as sho
 _**Fig. 22. DC Simulation Setup**_
 
 
-The following step is to choose the desired simulations results and select the nodes in the circuit to measure. In section TWO of Fig. 20 do the following steps:
+The following step is to choose the desired simulations results and select the nodes in the circuit to measure. In section THREE of Fig. 20 do the following steps:
 
 
 To setup the circuit output voltage:
