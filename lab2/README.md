@@ -8,11 +8,12 @@ In this tutorial, you will learn how to draw custom IC layout and simulate your 
 
 ## Part 5: Creating Layout (continues from lab1)
 
-To design a layout, you need to be familiar with the Lamba-based rules design. This helps you save your time for design cycle and debugging Design Rules Check (DRC) errors. For Synopsys PDK, you can access 90nm technology we are currently using in the following location at `/usr/local/synopsys/pdk/SAED_PDK90nm/documents/SAED_90_Design_Rule.pdf` at `storm.engr.ucr.edu`. To see this document, you can launch a `evince` viewer from our server. Due to the license issue, please do neither download this document in your computer nor re-post this publicly.
+To design a layout, you need to be familiar with the Lamba-based rules design. This helps you save your time for design cycle and debugging Design Rules Check (DRC) errors. For Synopsys PDK, you can access 90nm technology we are currently using in the following location at `/usr/local/synopsys/pdk/SAED_PDK90nm/documents/SAED_90_Design_Rule.pdf` at `bender.engr.ucr.edu`. To see this document, you can launch a `evince` viewer from our server. Due to the license issue, please do neither download this document in your computer nor re-post this publicly.
 
 ```
 evince /usr/local/synopsys/pdk/SAED_PDK90nm/documents/SAED_90_Design_Rule.pdf
 ```
+If envince is not installed, you can download this file to your desktop using a file transfer application ( WinSCP, Filezilla) or use the network drive and then use your computer's pdf viewer.
 
 It is recommended that you keep running and check with DRC tool for your layout design while you design. In this tutorial you just sequentially design first and then check your DRC later. However, in practice, you need to keep checking your DRC with layout to find errors earlier and correct your errors and mistakes.
 
@@ -62,6 +63,8 @@ After you have created an N-well (N-tub), move your mouse over it. Notice at the
 
 Now we are going to make diffusion areas for PMOS, NMOS and body connections. From our schematic, we know that the width of the PMOS should be 0.5um and the width of NMOS should be 0.25um (Refer lab1). The location of the diffusion should be similar to the ones in Fig. 44. There are two horizontal diffusion areas that are the NMOS and PMOS devices, and two vertical rectangles that will be the body connections. Place rulers down to help you make sure the width of the diffusion areas for the NMOS and PMOS match our schematic area exactly. Select the “DIFF” layer again use the `Create Rectangle` tool to draw the diffusion area. Use rulers to check the width of the rectangles. If the widths are different than the widths of the devices in the schematic, you will not pass LVS. You can also use the property editor in `Edit -> Property` Editor to change the dimensions of the rectangle to exact values.
 
+The size of the diffusion areas and body connections can be modified later. I recommend you look ahead and see what else you will need to add to your layout so you can make these locations large enought to accomodate future material. 
+
 ![fig43](images/fig43.png)
 
 _**Fig. 43. Drawing Diffusion**_
@@ -74,13 +77,16 @@ _**Fig. 44. Layout with NWell and diffusion**_
 Now we will add the P-implant and N-implant areas. When manipulating layers on top of each other sometimes it is useful to “hide” a layer, like you would do in a program like Photoshop.
 You can do hide or reveal layers in Cosmos by clicking ![fig44-2](images/fig44-2.png).
 
-Use the p-diff(PIMP layer) and n-diff (NIMP layer) layers with the `Create Rectangle` to cover and surround the diffusion areas. It is important to note that the `PIMP` is drawn to the edge of the `NWELL` where the `NWELL` meets the `NIMP`. This can be seen in Fig. 45. The PMOS area should be covered with `PIMP` and the `NMOS` with `NIMP`, except for the body connections which have the opposite implantation.
+Use the p-diff(PIMP layer) and n-diff (NIMP layer) layers with the `Create Rectangle` to cover and surround the diffusion and body connection areas. It is important to note that the `PIMP` is drawn to the edge of the `NWELL` where the `NWELL` meets the `NIMP`. This can be seen in Fig. 45. The PMOS area should be covered with `PIMP` and the `NMOS` with `NIMP`, except for the body connections which have the opposite implantation.
+
+
+TIPS: There cannot be any overlap between `NIMP` and `PIMP` so be sure to zoom in and make these meet exactly. You can seperate these two but you will then need to ensure you leave a large enough gap between to pass DRC. The implant areas just need to cover the diffusion and connection areas but extra room can help you later, so it is ok if you make them large.
 
 ![fig45](images/fig45.png)
 
 _**Fig. 45. Drawing PIMP and NIMP layers**_
 
-Now we select the `PO` layer (Polysilicon) and use the `Create -> Path` tool (Fig. 46) to draw a strip of poly through both PMOS and NMOS diffusion areas. Make sure the poly is sticking out past the diffusion areas by at least the amount specified in the design rule manual. When drawing the Poly path, be sure to make sure the thickness is 0.1um to match the transistor lengths in the schematic, see figure 49 to set width/thickness for the draw path tool. Create a rectangle of poly in the center of the strip that would be used for the input signal, see Fig. 47.
+Now we select the `PO` layer (Polysilicon) and use the `Create -> Path` tool (Fig. 46) to draw a strip of poly through both PMOS and NMOS diffusion areas. Make sure the poly is sticking out past the diffusion areas by at least the amount specified in the design rule manual. When drawing the Poly path, be sure to make sure the thickness is 0.1um to match the transistor lengths in the schematic, see figure 49 to set width/thickness for the draw path tool. Create a rectangle of poly in the center of the strip that would be used for the input signal, see Fig. 47. This strip does not have to be inside the N-tub.
 
 ![fig46](images/fig46.png)
 
@@ -305,8 +311,8 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 * One week.
 
-* eecs168-021: by 11:59pm on 2/1
-* eecs168-022: by 11:59pm on 1/28
+* eecs168-021: by 2:00pm on 2/1
+* eecs168-022: by 8:00pm on 2/3
 
 ### Next lab
 
