@@ -793,7 +793,7 @@ The code are needed at the following comment region
 
 _**GCD RTL Design Block**_
 
-you need to download incomplete GCD RTL design [here](https://raw.githubusercontent.com/sheldonucr/ucr-eecs168/master/lab4/GCD_RTL.tgz)
+you need to download incomplete GCD RTL design [here](https://raw.githubusercontent.com/sheldonucr/ucr-eecs168-lab/master/lab4/GCD_RTL.tgz)
 
 
 
