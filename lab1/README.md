@@ -35,17 +35,10 @@ cd eecs168
 ```
 Then, you need to install Synopsys PDK ([Process Design Kit](https://en.wikipedia.org/wiki/Process_design_kit)) (technology library into your workspace as follows.
 
-/*For 32/28 nm Synopsys PDK
-```
-cp /usr/local/synopsys/pdk/SAED3228nm_iPDK/install/lib.defs ./
-```
-
-For 90nm Synopsys PDK*/
 ```
 cp /usr/local/synopsys/pdk/SAED_PDK90nm/install/lib.defs ./
 ```
 
-/*You can choose either 32/28 nm PDK or 90nm. In this class, 90nm PDK is recommended for your class work. You can choose 32/28 nm PDK but it might be required more strict rules on DRC, so you need to be more careful about your layout design with 32/28nm PDK. */
 Above procedure is just required for one time, you do not need to re-do above command `cp` for the next time.
 
 Once PDK library is installed correctly in your workspace, then you can run `custom designer` as follows
