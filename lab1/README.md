@@ -19,7 +19,7 @@ For the rest four parts (Lab 2), you will use Custom Designer to create a layout
 
 ## Part 1: Setup your design workspace
 
-You need to login our `bender.engr.ucr.edu` server first. If you do not know how to connect our server, please check out [lab1](../lab0)
+You need to login our `bender.engr.ucr.edu` server first. If you do not know how to connect our server, please check out [lab0](../lab0)
 
 
 You can use your home folder (`~ or /home/[Account Name]`, in the example, [Account Name] will be `tkim` or `zsun`, you need to use your own account) or you can create a new folder to have your design for this eecs168 course. To create your design folder, you need to type followings. The first command let you move your home folder, and `mkdir` command is to create your folder.
@@ -35,17 +35,18 @@ cd eecs168
 ```
 Then, you need to install Synopsys PDK ([Process Design Kit](https://en.wikipedia.org/wiki/Process_design_kit)) (technology library into your workspace as follows.
 
-For 32/28 nm Synopsys PDK
+/*For 32/28 nm Synopsys PDK
 ```
 cp /usr/local/synopsys/pdk/SAED3228nm_iPDK/install/lib.defs ./
 ```
 
-For 90nm Synopsys PDK
+For 90nm Synopsys PDK*/
 ```
 cp /usr/local/synopsys/pdk/SAED_PDK90nm/install/lib.defs ./
 ```
 
-You can choose either 32/28 nm PDK or 90nm. In this class, 90nm PDK is recommended for your class work. You can choose 32/28 nm PDK but it might be required more strict rules on DRC, so you need to be more careful about your layout design with 32/28nm PDK. Above procedure is just required for one time, you do not need to re-do above command `cp` for the next time.
+/*You can choose either 32/28 nm PDK or 90nm. In this class, 90nm PDK is recommended for your class work. You can choose 32/28 nm PDK but it might be required more strict rules on DRC, so you need to be more careful about your layout design with 32/28nm PDK. */
+Above procedure is just required for one time, you do not need to re-do above command `cp` for the next time.
 
 Once PDK library is installed correctly in your workspace, then you can run `custom designer` as follows
 
