@@ -52,6 +52,8 @@ If you cannot install `Xming` on your computer, you can use `VcXsrv`. You can do
 
 For OSX/Linux, you do not need to install SSH/Xwindows tools as these are default software in these operating systems.
 
+For OSX, make sure you have XQuartz on your mac.
+
 We connect `bender.engr.ucr.edu` server thru SSH with X-forwarding service.
 
 
@@ -62,6 +64,8 @@ For OSX/Linux, you can type following command in your terminal,
 For example
 
 `ssh -Y tkim@bender.engr.ucr.edu`
+
+If you are using your own laptop to login the bender and blocked by your firewall, you can try the vpn which can be found at http://systems.engr.ucr.edu/vpn/vpn.html
 
 ## Check Synopsys Galaxy Custom Designer Launch
 
