@@ -389,7 +389,7 @@ This lab is designed for two weeks, so for your lab report, you need to design `
 
 ### Deliverables for your lab report.
 
-* Name, SID, Session(021,022), ENGR ID, UCR NetID, your partner name
+* Name, SID, Session(021,022,023), ENGR ID, UCR NetID, your partner name
 
 * Summary of what you learned thru this lab (One paragraph)
 
@@ -477,10 +477,8 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 ### Lab Report Due
 
-* Two weeks.
-
-* eecs168-021: by 2pm on 2/22
-* eecs168-022: by 2pm on 2/24
+* eecs168-021,023: by 11am on 2/21
+* eecs168-022: by 5pm on 2/23
 
 ### Checkoff
 

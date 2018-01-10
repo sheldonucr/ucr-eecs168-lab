@@ -1446,7 +1446,7 @@ In this lab4, we introduce Synopsys RTL design toolkit, which are VCS, Design Co
 
 ### Deliverables for your lab report.
 
-* Name, SID, Session(021,022), ENGR ID, UCR NetID, your partner name
+* Name, SID, Session(021,022,023), ENGR ID, UCR NetID, your partner name
 
 ---- week1 checkoff from here
 
@@ -1506,8 +1506,7 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 ### Lab Report Due
 
-* eecs168-021: by 2:00pm on 3/15
-* eecs168-022: by 2:00pm on 3/17
+* All sessions: by 11am on 3/19
 
 ### Checkoff
 

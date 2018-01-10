@@ -2,7 +2,7 @@
 
 ## Lab Resources
 
-Every discussion/Q&A will be at https://github.com/sheldonucr/ucr-eecs168-lab. Please use GITHUB page instead of email to ask any questions to TA. Questions of confidential nature, eg. grading, are the exception. Labs must be finished on the given time. You have one week for your lab report. Lab due dates are indicated in the Lab schedule. Your lab will be due on your respective lab day, eg. if your lab day is Wednesday then you will turn in your lab on the Wednesday of the week your lab is due. Please be sure to include all required deliverables in your lab report. Five lab reports are required to turn in and total score is 100. Team work (Pair design and programming) (limit 2) is allowed but individual lab report is required and those lab reports should not be the same with your pair.
+Every discussion/Q&A will be at https://github.com/sheldonucr/ucr-eecs168-lab. Please use GITHUB page instead of email to ask any questions to TA. Questions of confidential nature, eg. grading, are the exception. Labs must be finished on the given time. You have one week for your lab report. Lab due dates are indicated in the Lab schedule. Your lab will be due on your respective lab day (except Lab 4), eg. if your lab day is Wednesday then you will turn in your lab on the Wednesday of the week your lab is due. Please be sure to include all required deliverables in your lab report. Five lab reports are required to turn in and total score is 100. Team work (Pair design and programming) (limit 2) is allowed but individual lab report is required and those lab reports should not be the same with your pair.
 
 ### Lab schedule
 

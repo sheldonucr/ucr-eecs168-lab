@@ -19,7 +19,7 @@ For the rest four parts (Lab 2), you will use Custom Designer to create a layout
 
 ## Part 1: Setup your design workspace
 
-You need to login our `storm.engr.ucr.edu` server first. If you do not know how to connect our server, please check out [lab1](../lab0)
+You need to login our `bender.engr.ucr.edu` server first. If you do not know how to connect our server, please check out [lab1](../lab0)
 
 
 You can use your home folder (`~ or /home/[Account Name]`, in the example, [Account Name will be `tkim` or `zsun`, you need to use your own account) or you can create a new folder to have your design for this eecs168 course. To create your design folder, you need to type followings. The first command let you move your home folder, and `mkdir` command is to create your folder.
@@ -427,7 +427,7 @@ Lab 1 is to learn how to design your circuit, generate netlist, and simulate giv
 
 ### Deliverables for your lab report.
 
-* Name, SID, Session(021,022), ENGR ID, UCR NetID, your partner name (Partners only available upon request)
+* Name, SID, Session(021,022,023), ENGR ID, UCR NetID, your partner name (Partners only available upon request)
 
 * Summary of what you learned thru this lab (One paragraph)
 
@@ -477,7 +477,10 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 ### Lab Report Due
 
-* One week by end of next lab eg, Jan 25 and Jan 27 for Wednesday and Friday lab respectively.
+* One week.
+
+* eecs168-021,023: by 11am on 1/24
+* eecs168-022: by 5pm on 1/26
 
 ### Next lab
 

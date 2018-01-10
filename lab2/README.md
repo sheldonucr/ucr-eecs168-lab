@@ -254,7 +254,7 @@ Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will
 
 ### Deliverables for your lab report.
 
-* Name, SID, Session(021,022), ENGR ID, UCR NetID, your partner name
+* Name, SID, Session(021,022,023), ENGR ID, UCR NetID, your partner name
 
 * Summary of what you learned thru this lab (One paragraph)
 
@@ -311,8 +311,8 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 * One week.
 
-* eecs168-021: by 2:00pm on 2/1
-* eecs168-022: by 8:00pm on 2/3
+* eecs168-021,023: by 11am on 1/31
+* eecs168-022: by 5pm on 2/2
 
 ### Next lab
 
