@@ -43,7 +43,6 @@ and you can put hostname `bender.engr.ucr.edu` and put your user id. The most im
 
 ![putty1](images/lab0-03.png)
 ![putty1](images/lab0-04.png)
-![putty1](images/lab0-05.png)
 ![putty1](images/lab0-06.png)
 
 
