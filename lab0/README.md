@@ -27,6 +27,8 @@ The college provides three computational servers for student use both on and off
 
 To access these servers on Windows, you must first download and install an SSH client (putty) and an X Server (Xming).  Once you have finished downloading the links below.
 
+#### Install `Xming` and `putty`
+
 In our lab (WCH125), `putty` and `Xming` already installed.
 
 To install `putty` and `Xming` in your computer, you can find an instruction at [ here ](http://www.geo.mtu.edu/geoschem/docs/putty_install.html)
@@ -66,6 +68,7 @@ For example
 
 `ssh -Y tkim@bender.engr.ucr.edu`
 
+### VPN(if needed)
 If you are using your own laptop to login the bender and blocked by your firewall, you can try the vpn which can be found at http://systems.engr.ucr.edu/vpn/vpn.html
 
 ## Check Synopsys Galaxy Custom Designer Launch
