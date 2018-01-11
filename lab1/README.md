@@ -105,14 +105,14 @@ _**Fig. 7. Adding instance for p-mos and n-mos**_
 
 After placing the p-mos and n-mos transistors, the schematic should look like figure 8 below.
 
-![Placing p-mos and n-mos](images/fig8.png)
+![Placing p-mos and n-mos](images/fig8_1.png)
 
 _**Fig. 8. Placing p-mos and n-mos**_
 
 
 After you place, you need to add wires to the schematic as seen in Fig 9. Go to Add -> Wire in the menu of the schematic editor and draw wire with your mouse and you need to press `ESC` key to escape the selected mode.
 
-![Add wires](images/fig9.png)
+![Add wires](images/fig9_1.png)
 
 _**Fig. 9. Add wires**_
 
@@ -136,12 +136,12 @@ Afterward, your circuit should look similar to figure 13 below after you add the
 _**Fig. 11. Adding pins**_
 
 
-![fig12](images/fig12.png)
+![fig12](images/fig12_1.png)
 
 _**Fig. 12. Adding pins**_
 
 
-![fig13](images/fig13.png)
+![fig13](images/fig13_1.png)
 
 _**Fig. 13. Complete Schematic with pins**_
 
@@ -158,7 +158,7 @@ _**Fig. 14. Cellview generation from cellview**_
 
 Now we have a transistor level model of an inverter (symbol). See Fig. 15 for reference.
 
-![fig15](images/fig15.png)
+![fig15](images/fig15_1.png)
 
 _**Fig. 15. Design symbol for inverter**_
 
