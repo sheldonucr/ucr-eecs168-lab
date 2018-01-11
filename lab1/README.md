@@ -136,12 +136,12 @@ Afterward, your circuit should look similar to figure 13 below after you add the
 _**Fig. 11. Adding pins**_
 
 
-![fig12](images/fig12_1.png)
+![fig12_1](images/fig12_1.png)
 
 _**Fig. 12. Adding pins**_
 
 
-![fig13](images/fig13_1.png)
+![fig13_1](images/fig13_1.png)
 
 _**Fig. 13. Complete Schematic with pins**_
 
@@ -158,7 +158,7 @@ _**Fig. 14. Cellview generation from cellview**_
 
 Now we have a transistor level model of an inverter (symbol). See Fig. 15 for reference.
 
-![fig15](images/fig15_1.png)
+![fig15_1](images/fig15_1.png)
 
 _**Fig. 15. Design symbol for inverter**_
 
@@ -178,7 +178,7 @@ _**Fig. 17. Drawing an Instance of an Inverter**_
 
 Now add wires to the circuit using Add -> Wire and use Add -> Pin to add an output pin on the VOUT signal of the inverter so the schematic looks like figure 18 below. Don’t worry if your values for vpulse and vsource don’t match up with figure 18 since we will be modifying them next.
 
-![fig18](images/fig18.png)
+![fig18_1](images/fig18_1.png)
 
 _**Fig. 18. Testbench for Inverter**_
 
@@ -256,12 +256,12 @@ Afterward, the SAE window should look something similar to figure 25 below. Note
 
 
 
-![fig24](images/fig24.png)
+![fig24_1](images/fig24_1.png)
 
 _**Fig. 24. Schematic Windows**_
 
 
-![fig25](images/fig25.png)
+![fig25_1](images/fig25_1.png)
 
 _**Fig. 25. Updated SAE Window**_
 
