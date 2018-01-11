@@ -4,7 +4,7 @@ In this tutorial, some contexts use Synopsys tutorials from Vazgen Melikyan (Syn
 
 ## Introduction
 
-In this tutorial, you will learn how to draw custom IC layout and simulate your design using 28/32/90nm technologies in Synopsys Custom Design Tools. This tutorial includes the detail steps of schematic, layout, and simulation of designs.
+In this tutorial, you will learn how to draw custom IC layout and simulate your design using 90nm technology in Synopsys Custom Design Tools. This tutorial includes the detail steps of schematic, layout, and simulation of designs.
 
 ## Part 5: Creating Layout (continues from lab1)
 
@@ -14,6 +14,10 @@ To design a layout, you need to be familiar with the Lamba-based rules design. T
 evince /usr/local/synopsys/pdk/SAED_PDK90nm/documents/SAED_90_Design_Rule.pdf
 ```
 If envince is not installed, you can download this file to your desktop using a file transfer application ( WinSCP, Filezilla) or use the network drive and then use your computer's pdf viewer.
+
+```
+cp /usr/local/synopsys/pdk/SAED_PDK90nm/documents/SAED_90_Design_Rule.pdf SAED_90_Design_Rule.pdf
+```
 
 It is recommended that you keep running and check with DRC tool for your layout design while you design. In this tutorial you just sequentially design first and then check your DRC later. However, in practice, you need to keep checking your DRC with layout to find errors earlier and correct your errors and mistakes.
 
@@ -55,7 +59,7 @@ Go to `Create ruler` by clicking on  ![fig42_a](images/fig41-3.png) . Click once
 Draw a rectangle that approximately fits the dimensions of the rulers you set. You can always adjust the dimensions of this rectangle by using the tools (stretch object, refer icon ![fig42_2](images/fig42-2.png), move object, refer icon ![fig42_3](images/fig42-3.png)) that existed on left side of layout window then clicking the side you want to stretch or move.
 
 
-![fig42_a](images/fig42_a.png) ![fig42_b](images/fig42_b.png)
+![fig42_a](images/fig42_a.png) ![fig42_b_1](images/fig42_b_1.png)
 
 _**Fig. 42. Drawing Rulers and N-Well Layer**_
 
@@ -70,7 +74,7 @@ The size of the diffusion areas and body connections can be modified later. I re
 _**Fig. 43. Drawing Diffusion**_
 
 
-![fig44](images/fig44.png)
+![fig44_1](images/fig44_1.png)
 
 _**Fig. 44. Layout with NWell and diffusion**_
 
@@ -82,7 +86,7 @@ Use the p-diff(PIMP layer) and n-diff (NIMP layer) layers with the `Create Recta
 
 TIPS: There cannot be any overlap between `NIMP` and `PIMP` so be sure to zoom in and make these meet exactly. You can seperate these two but you will then need to ensure you leave a large enough gap between to pass DRC. The implant areas just need to cover the diffusion and connection areas but extra room can help you later, so it is ok if you make them large.
 
-![fig45](images/fig45.png)
+![fig45_1](images/fig45_1.png)
 
 _**Fig. 45. Drawing PIMP and NIMP layers**_
 
@@ -92,14 +96,14 @@ Now we select the `PO` layer (Polysilicon) and use the `Create -> Path` tool (Fi
 
 _**Fig. 46. Drawing a path**_
 
-![fig47](images/fig47.png)
+![fig47_1](images/fig47_1.png)
 
 _**Fig. 47. Drawing Polysilicon (PO Layer)**_
 
 Select the “CO” (contact) layer and use the `Create Rectangle` or `Create Polygon tool` in conjunction with rulers to make a contact 0.13 by 0.13. You can also use the property editor to
 get these exact values. After you have created one contact click on ![fig47-2](images/fig47-2.png)  and the contact and make a copy to place the other contacts. `Contact` placements are shown in Fig. 48. Check to see that your contact placements meet the design rules.
 
-![fig48](images/fig48.png)
+![fig48_1](images/fig48_1.png)
 
 _**Fig. 48. Drawing Contacts**_
 
@@ -111,14 +115,14 @@ _**Fig. 49. Modifying Width**_
 
 Draw the M1 layer the way it is shown in Fig.50. Make sure the metal is covering the contacts by the amount specified in the design rule manual. You can also draw rectangles over the contacts to cover them more.
 
-![fig50](images/fig50.png)
+![fig50_1](images/fig50_1.png)
 
 _**Fig. 50. Drawing Metal Connections**_
 
 Select the M1PIN layer. Select the `Create -> Text -> Label` tool and place text labels labeled as AVDD, AVSS, VIN, and VOUT (refer Fig. 51). Note that you need to match the label names in layout as the labeled pins in the schematic in order to pass LVS (Layout vs Schematic) later. You have now completed the initial layout and can move onto DRC. Save your layout by going to `Design -> Save`.
 As a general convention, use uppercase letters for labels instead of lowercase letters.
 
-![fig51](images/fig51.png)
+![fig51_1](images/fig51_1.png)
 
 _**Fig. 51. Labeling Connections**_
 
