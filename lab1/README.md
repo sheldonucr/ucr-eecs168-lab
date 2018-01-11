@@ -131,7 +131,7 @@ See Fig. 11 and Fig. 12 for reference on how to add pins.
 Afterward, your circuit should look similar to figure 13 below after you add the pins. As a general convention, use uppercase letters for naming pins instead of lowercase letters.
 
 
-![fig11](images/fig11.png)
+![fig11_1](images/fig11_1.png)
 
 _**Fig. 11. Adding pins**_
 
@@ -172,7 +172,7 @@ _**Fig. 16. New CellView Creation**_
 
 Now that you have a new schematic window, go to Add -> Instance. In the add instance window, select “mylibrary” as the library, “inverter” as the cell, and “symbol” for the view to select the inverter you just made and place it on the schematic. See Fig. 17 for reference. Also in the add instance window, select “analogLib” for the library and choose: vsource, vpulse and gnd for the cell while placing the part for each selection on the schematic.
 
-![fig17](images/fig17.png)
+![fig17_1](images/fig17_1.png)
 
 _**Fig. 17. Drawing an Instance of an Inverter**_
 
@@ -184,8 +184,8 @@ _**Fig. 18. Testbench for Inverter**_
 
 By clicking on property editor icon and selecting a component in schematic view, you can edit a component's property. You can also use Edit -> Properties -> Property Editor to edit the properties of the parts. Select vpulse and modify its properties as shown in Fig.19. Select vsource and modify its properties as shown in Fig.19.
 
-![fig19](images/fig19-1.png)
-![fig19](images/fig19-2.png)
+![fig19](images/fig19_1.png)
+![fig19](images/fig19_2.png)
 
 _**Fig. 19. Property editor**_
 
