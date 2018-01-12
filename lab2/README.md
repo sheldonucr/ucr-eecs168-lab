@@ -156,6 +156,11 @@ Select the `M1PIN` layer. Select the `Create -> Text -> Label` tool and place te
 
 _**Fig. 51. Labeling Connections**_
 
+Fig.51-2 shows another inverter layout. In real design, you should try to make the dimensions small in the case of meeting design rules.  
+
+![fig51-2](images/fig51-2.png)
+
+_**Fig. 51-2. Another Inverter Layout**_
 
 ## PART 6: Running DRC
 
