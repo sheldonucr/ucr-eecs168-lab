@@ -250,7 +250,7 @@ To setup the circuit input voltage:
 
 To setup the circuit source current:
 1. Click under the output field in a new row, and write “isupply” or a name for a current variable.
-1. In the same row, click under the expression column and choose the voltage source from the schematic. In this case, click on and select the voltage source labeled “V0” as shown below in Fig. 24 in the schematic window. Notice that current is being measured rather than voltage.
+1. In the same row, click under the expression column and choose the voltage source from the schematic. In this case, click on and select the voltage source labeled “V1” as shown below in Fig. 24 in the schematic window. Notice that current is being measured rather than voltage.
 1. Under analysis, select the type of analysis you want to run. In this case, select `dc` and `tran` to run the transient and DC analysis for this variable.
 
 Afterward, the SAE window should look something similar to figure 25 below. Note that the expression values in figure 25 may not match with your values which are fine since those are dependent on the names used in the schematic for the voltage sources and wires.
