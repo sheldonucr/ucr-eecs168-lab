@@ -182,7 +182,7 @@ For the inverter instances, look for them in Add -> Instance to open the add ins
 
 Add wires with Add -> Wire.
 
-For the pins, go to Add -> Pins and place two input pins for the AVDD and AVSS signals, and place five input/Output pins at each inverter output. For the five input/output pins, I called them VIO1-5 in the schematic. Feel free to give the wires the same names as the pins using Add -> Wire Name. Also as a convention, use uppercase letters for pin names instead of lowercase letters.
+For the pins, go to Add -> Pins and place two input pins for the VDD and VSS signals, and place five input/Output pins at each inverter output. For the five input/output pins, I called them VIO1-5 in the schematic. Feel free to give the wires the same names as the pins using Add -> Wire Name. Also as a convention, use uppercase letters for pin names instead of lowercase letters.
 
 ![fig82](images/fig82.png)
 
@@ -251,13 +251,30 @@ _**Fig. 89. placing Five Inverter Layout Instances**_
 
 _**Fig. 90. Viewing Inverter Layout Instances**_
 
-Now draw metal paths with Create -> Path using the M1 layer under the LPP panel. Connect all AVDD signals with a single M1 connection and all AVSS signals with a single M1 connection. Also connect the output of an inverter to the input of the next inverter using the M1 layer. See Fig 91 for M1 connections.
+Now draw metal paths with Create -> Path using the M1 layer under the LPP panel. Connect all VDD signals with a single M1 connection and all VSS signals with a single M1 connection. Also connect the output of an inverter to the input of the next inverter using the M1 layer. See Fig 91 for M1 connections.
 
-In addition you need to add labels for the metal connections just added. To add labels, select the M1PIN layer in the LPP panel and go to Create -> Text -> Label. Enter a name for each label in the box noted in Fig 92 and place the text labels as noted by the red boxes in Fig 91. Label names used are: AVDD, AVSS, VIO1, VIO2, VIO3, VIO4, and VIO5. Remember that in order to pass LVS, your M1PIN label names in layout need to match up with the pin names from your ring oscillator schematic. Also names for schematic pins and names for layout labels should use uppercase letters. Save the layout.
+In addition you need to add labels for the metal connections just added. To add labels, select the M1PIN layer in the LPP panel and go to Create -> Text -> Label. Enter a name for each label in the box noted in Fig 92 and place the text labels as noted by the red boxes in Fig 91. Label names used are: VDD, VSS, VIO1, VIO2, VIO3, VIO4, and VIO5. Remember that in order to pass LVS, your M1PIN label names in layout need to match up with the pin names from your ring oscillator schematic. Also names for schematic pins and names for layout labels should use uppercase letters. Save the layout.
 
 ![fig91](images/fig91.png)
 
 _**Fig. 91. Ring Oscillator Layout**_
+
+### More Stardand Layout
+
+![fig91-2](images/fig91-2.png)
+
+_**Fig. 91-2. Another Ring Oscillator Layout**_
+
+
+![fig91-3](images/fig91-3.png)
+
+_**Fig. 91-3. Ring Oscillator Layout using Metal2 (refer Fig.107)**_
+
+
+![fig91-4](images/fig91-4.png)
+
+_**Fig. 91-4. Compact Ring Oscillator Layout **_
+
 
 ![fig92](images/Fig_92.png)
 
