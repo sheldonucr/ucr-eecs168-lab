@@ -87,9 +87,7 @@ Use the p-diff(PIMP layer) and n-diff (NIMP layer) layers with the `Create Recta
 TIPS: There cannot be any overlap between `NIMP` and `PIMP` so be sure to zoom in and make these meet exactly. You can seperate these two but you will then need to ensure you leave a large enough gap between to pass DRC. The implant areas just need to cover the diffusion and connection areas but extra room can help you later, so it is ok if you make them large.
 
 For example:
-
 Rule DIFF.E.1: Source/drain active to well edge (min enclosure by well) is 0.24um, we make it 0.3um.
-
 Rule PIMP.E.1: Enclosure of P+Active is 0.14um, we make it 0.2um.
 
 ![fig45_1](images/fig45_1.png)
@@ -98,11 +96,11 @@ _**Fig. 45. Drawing PIMP and NIMP layers**_
 
 Now we select the `PO` layer (Polysilicon) and use the `Create -> Path` tool (Fig. 46) to draw a strip of poly through both PMOS and NMOS diffusion areas. Make sure the poly is sticking out past the diffusion areas by at least the amount specified in the design rule manual. When drawing the Poly path, be sure to make sure the thickness is 0.1um to match the transistor lengths in the schematic, see figure 49 to set width/thickness for the draw path tool. Create a rectangle of poly in the center of the strip that would be used for the input signal, see Fig. 47. This strip does not have to be inside the N-tub.
 
-Rule PO.EX.1: Minimum gate extension of active (end cap) is 0.18um.
-
 ![fig46](images/fig46.png)
 
 _**Fig. 46. Drawing a path**_
+
+Rule PO.EX.1: Minimum gate extension of active (end cap) is 0.18um.
 
 ![fig47_1](images/fig47_1.png)
 
@@ -111,15 +109,10 @@ _**Fig. 47. Drawing Polysilicon (PO Layer)**_
 Select the “CO” (contact) layer and use the `Create Rectangle` or `Create Polygon tool` in conjunction with rulers to make a contact 0.13 by 0.13. You can also use the property editor to get these exact values. After you have created one contact click on ![fig47-2](images/fig47-2.png)  and the contact and make a copy to place the other contacts. `Contact` placements are shown in Fig. 48. Check to see that your contact placements meet the design rules.
 
 Rule CO.W.1: Exact contact size is 0.13um.
-
 Rule CO.S.1: Minimum contact spacing is 0.13um.
-
-Rule CO.S.2: (Contact inside DIFF) min space to gate is 0.12um, we make it 0.155um.
-
+Rule CO.S.2: (Contact inside DIFF) Minimum space to gate is 0.12um, i.e., we make it 0.155um.
 Rule CO.E.1: Minimum enclosure by poly is 0.04um.
-
-Rule CO.E.2: Minimum enclosure by DIFF is 0.04um, we make it 0.055um.
-
+Rule CO.E.2: Minimum enclosure by DIFF is 0.04um, i.e., we make it 0.055um.
 Rule CO.E.3: Minimum enclosure by poly at least two apposite sides 0.05um.
 
 
@@ -136,9 +129,7 @@ _**Fig. 49. Modifying Width**_
 Draw the M1 layer the way it is shown in Fig.50. Make sure the metal is covering the contacts by the amount specified in the design rule manual. You can also draw rectangles over the contacts to cover them more.
 
 Rule M1.W.1: Minimum width is 0.14um.
-
 Rule CO.E.6: Minimum enclosure of any contact (CO outside M1 is not allowed) is 0.005um.
-
 Rule CO.E.7: Minimum enclosure of contact at end of line is 0.05um.
 
 ![fig50_1](images/fig50_1.png)
