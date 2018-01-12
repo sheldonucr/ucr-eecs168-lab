@@ -156,13 +156,14 @@ Make sure library and cell names match and click OK. See figure 14 below for ref
 _**Fig. 14. Cellview generation from cellview**_
 
 
-Now we have a transistor level model of an inverter (symbol). See Fig. 15 for reference.
+Now we have a transistor level model of an inverter (symbol). See Fig. 15 for reference. 
 
-![fig15](images/fig15.png)
+You may also modify the appearance of the inverter symbol here by using the shape tools, Add -> Shape. Now save and close the symbol window.
+![fig15](images/fig15_a.png)
+![fig15](images/fig15_b.png)
 
 _**Fig. 15. Design symbol for inverter**_
 
-You may also modify the appearance of the inverter symbol here by using the shape tools, Add -> Shape. Now save and close the symbol window.
 From the Custom Design Console, go to File -> New -> CellView and select mylibrary under the library column. Enter a new name for “Cell Name” in this case I used inverter_testbench and choose schematic for “View Name”. For the editor choose Schematic.
 Click OK. See Fig. 16 for the reference. Note that this schematic file will be used as a sandbox for circuits using the inverter symbol we created earlier.
 
