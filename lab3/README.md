@@ -34,13 +34,13 @@ _**Fig. 67-1. LPE Setup for StarRC**_
 
 _**Fig. 67-2. LPE Setup for StarRC**_
 
-![fig67_3](images/Fig_67_3.png)
+![fig67_3](images/fig67-3.png)
 
 _**Fig. 67-3. LPE Setup for StarRC**_
 
-In Fig67-3, you should choose your ground node. You chose 'AVSS' for our ground. So put this.
+In Fig67-3, you should choose your ground node. You chose 'VSS' for our ground. So put this.
 
-![fig68](images/Fig_68.png)
+![fig68](images/fig68.png)
 
 _**Fig. 68. LPE Setup for StarRC**_
 
@@ -57,23 +57,23 @@ Layer Map:
 
 Now click on OK. Then you will see Customer Designer as Fig. 69.
 
-![fig69](images/Fig_69.png)
+![fig69](images/fig69.png)
 
 _**Fig. 69. Console Output**_
 
 After some time you should able to see the following message as shown in the console window if the parasitics were generated correctly. See Fig 70.
 
-![fig70](images/Fig_70.png)
+![fig70](images/fig70.png)
 
 _**Fig. 70. Console Output**_
 
 After LPE has successfully run, a parasitic view window should open. See Fig 71 and 72 for reference. The RC components are very small in the window that opens up (Fig 71) so you may need to zoom in to see the details (Fig 72). It may help to drag a box around the RC components using the mouse cursor to highlight them, then zoom in to see them. Also note that your parasitic view may not match exactly as shown below which is fine since this depends on differences in layout
 
-![fig71](images/Fig_71.png)
+![fig71](images/fig71.png)
 
 _**Fig. 71. Parasitic View**_
 
-![fig72](images/Fig_72.png)
+![fig72](images/fig72.png)
 
 _**Fig. 72. Parasitic View Zoom In**_
 
@@ -98,7 +98,7 @@ See Fig 73 for reference. Once all options are highlighted, click Open and the s
 _**Fig. 73. Opening Circuit with Inverter Schematic**_
 
 
-![fig74](images/Fig_74.png)
+![fig74](images/fig74.png)
 
 _**Fig. 74. Testbench Circuit for Inverter**_
 
@@ -144,7 +144,7 @@ _**Fig. 78. Open Design with Parasitics**_
 
 Afterwards, a schematic view should open up with parasitics applied, see Fig 79 below for reference. To check if the parasitics were applied, you can double click on the inverter symbol/cell and it should display the same parasitics view that was generated from running LPE. To change between parasitic and schematic views, select the desired view in the yellow box noted in Fig 79.
 
-![fig79](images/Fig_79.png)
+![fig79](images/fig79.png)
 
 _**Fig. 79. Schematic with Parasitics Applied to the Inverter**_
 
@@ -184,19 +184,19 @@ Add wires with Add -> Wire.
 
 For the pins, go to Add -> Pins and place two input pins for the AVDD and AVSS signals, and place five input/Output pins at each inverter output. For the five input/output pins, I called them VIO1-5 in the schematic. Feel free to give the wires the same names as the pins using Add -> Wire Name. Also as a convention, use uppercase letters for pin names instead of lowercase letters.
 
-![fig82](images/Fig_82.png)
+![fig82](images/fig82.png)
 
 _**Fig. 82. Ring Oscillator Schematic**_
 
 Save your schematic using Design -> Save. Now create a symbol of your inverter using Design -> New CellView -> From CellView. Make sure your options match up as shown below in Fig 83 and click OK.
 
-![fig83](images/Fig_83.png)
+![fig83](images/fig83.png)
 
 _**Fig. 83. Ring Oscillator Symbol Setup**_
 
 After clicking OK, a new schematic window opens up with the ring oscillator symbol. Feel free to move around the pin placements for a better pin organization. See Fig 84 below for reference. Save the symbol when done with Design -> Save.
 
-![fig84](images/Fig_84.png)
+![fig84](images/fig84.png)
 
 _**Fig. 84. Ring Oscillator Symbol**_
 
@@ -219,7 +219,7 @@ Add wires with Add -> Wire.
 For the pins, go to Add -> Pins and place five output pins for each of the five `VIO#` pins. Feel
 free to give the wires the same names as the pins using Add -> Wire Name.
 
-![fig86](images/Fig_86.png)
+![fig86](images/fig86.png)
 
 _**Fig. 86. Ring Oscillator Testbench Circuit**_
 
@@ -237,7 +237,7 @@ _**Fig. 87. Ring Oscillator Testbench Circuit**_
 
 In the new layout window, we can use the layout of the inverter created earlier to build a ring oscillator circuit. Go to Create -> Instance to open up a new create instance window. In the window select mylibrary for library, inverter for cell, and layout for the view and place five instances of the inverter layout on the layout screen. See Fig 88 for reference.
 
-![fig88](images/Fig_88.png)
+![fig88](images/fig88.png)
 
 _**Fig. 88. Placing Five Inverter Layout Instances**_
 
@@ -247,7 +247,7 @@ Notice that the layout components for the inverter layouts don’t display. This
 
 _**Fig. 89. placing Five Inverter Layout Instances**_
 
-![fig90](images/Fig_90.png)
+![fig90](images/fig90.png)
 
 _**Fig. 90. Viewing Inverter Layout Instances**_
 
@@ -255,7 +255,7 @@ Now draw metal paths with Create -> Path using the M1 layer under the LPP panel.
 
 In addition you need to add labels for the metal connections just added. To add labels, select the M1PIN layer in the LPP panel and go to Create -> Text -> Label. Enter a name for each label in the box noted in Fig 92 and place the text labels as noted by the red boxes in Fig 91. Label names used are: AVDD, AVSS, VIO1, VIO2, VIO3, VIO4, and VIO5. Remember that in order to pass LVS, your M1PIN label names in layout need to match up with the pin names from your ring oscillator schematic. Also names for schematic pins and names for layout labels should use uppercase letters. Save the layout.
 
-![fig91](images/Fig_91.png)
+![fig91](images/fig91.png)
 
 _**Fig. 91. Ring Oscillator Layout**_
 
@@ -265,7 +265,7 @@ _**Fig. 92. Label Text**_
 
 After your layout matches Fig 91, go to Verification -> DRC -> Setup and Run to setup and run DRC (as done earlier in lab2 of the tutorial). Your options for DRC should match Fig 93. Leave the options on the custom tab as their defaults. Click OK when done.
 
-![fig93](images/Fig_93.png)
+![fig93](images/fig93.png)
 
 _**Fig. 93. DRC Setup**_
 
@@ -277,11 +277,11 @@ Under main option select the file “rules.lvs.9m_saed90.ev” as `Run Dir` in t
 [under your project folder]/pvjob_mylibrary.ringOscillator.icv.lvs
 ```
 
-![fig94](images/Fig_94.png)
+![fig94](images/fig94.png)
 
 _**Fig. 94. LVS Setup**_
 
-![fig95](images/Fig_95.png)
+![fig95](images/fig95.png)
 
 _**Fig. 95. LVS Setup**_
 
@@ -289,9 +289,9 @@ At this point if there are any LVS errors, an error window will show up. Debug a
 
 See Fig 96 below for reference on setups.
 
-![fig96_1](images/FIg_96_1.png)
+![fig96_1](images/fig96_a.png)
 
-![fig96_2](images/Fig_96_2.png)
+![fig96_2](images/fig96_b.png)
 
 _**Fig. 96. LPE Setup**_
 
@@ -302,13 +302,13 @@ Under the Output Options tab make sure that you have the same setup as shown in 
 
 Leave the custom options tab with their set defaults. Click OK when done.
 
-![fig97](images/Fig_97.png)
+![fig97](images/fig97.png)
 
 _**Fig. 97. LPE Setup**_
 
 If LPE ran successfully, a parasitics view will open up. The parasitics are small so drag a box over it with a mouse cursor and zoom in to see individual components if you don’t see it at first. See Fig 98 below for reference. Afterwards save the parasitics view with Design -> Save.
 
-![fig98](images/Fig_98.png)
+![fig98](images/fig98.png)
 
 _**Fig. 98. Parasitics View**_
 
@@ -332,7 +332,7 @@ _**Fig. 101. Open Design with Parasitics**_
 
 Afterwards a schematic window opens up with the ring oscillator testbench circuit created earlier, see Fig 102 for reference. To check if the parasitics were properly loaded into the ring oscillator, double click the ring oscillator symbol and the parasitics view generated from LPE earlier should display.
 
-![fig102](images/Fig_102.png)
+![fig102](images/fig102.png)
 
 _**Fig. 102. Ring Oscillator Testbench Circuit**_
 
