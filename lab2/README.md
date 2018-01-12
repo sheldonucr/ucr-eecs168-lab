@@ -207,8 +207,8 @@ The LVS (Layout versus Schematic) performs LVS comparison to verify that the des
 
 Notice that in order to pass LVS, schematic names and layout names must match one to one. Make sure the names for labels and pins are using uppercase letters instead of lowercase letters. Also transistor dimensions for gate width and length in layout and schematic must match. See Fig. 58 for reference.
 
-![fig58_a](images/fig58_a.png)
-![fig58_b](images/fig58_b.png)
+![fig58_a](images/fig58_a_1.png)
+![fig58_b](images/fig58_b_1.png)
 
 _**Fig. 58. Layout versus Schematic (LVS)**_
 
