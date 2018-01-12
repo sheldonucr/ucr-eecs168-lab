@@ -105,14 +105,14 @@ _**Fig. 7. Adding instance for p-mos and n-mos**_
 
 After placing the p-mos and n-mos transistors, the schematic should look like figure 8 below.
 
-![Placing p-mos and n-mos](images/fig8_1.png)
+![Placing p-mos and n-mos](images/fig8.png)
 
 _**Fig. 8. Placing p-mos and n-mos**_
 
 
 After you place, you need to add wires to the schematic as seen in Fig 9. Go to Add -> Wire in the menu of the schematic editor and draw wire with your mouse and you need to press `ESC` key to escape the selected mode.
 
-![Add wires](images/fig9_1.png)
+![Add wires](images/fig9.png)
 
 _**Fig. 9. Add wires**_
 
@@ -131,17 +131,17 @@ See Fig. 11 and Fig. 12 for reference on how to add pins.
 Afterward, your circuit should look similar to figure 13 below after you add the pins. As a general convention, use uppercase letters for naming pins instead of lowercase letters.
 
 
-![fig11_1](images/fig11_1.png)
+![fig11](images/fig11.png)
 
 _**Fig. 11. Adding pins**_
 
 
-![fig12_1](images/fig12_1.png)
+![fig12](images/fig12_1.png)
 
 _**Fig. 12. Adding pins**_
 
 
-![fig13_1](images/fig13_1.png)
+![fig13](images/fig13.png)
 
 _**Fig. 13. Complete Schematic with pins**_
 
@@ -158,7 +158,7 @@ _**Fig. 14. Cellview generation from cellview**_
 
 Now we have a transistor level model of an inverter (symbol). See Fig. 15 for reference.
 
-![fig15_1](images/fig15_1.png)
+![fig15](images/fig15.png)
 
 _**Fig. 15. Design symbol for inverter**_
 
@@ -172,20 +172,20 @@ _**Fig. 16. New CellView Creation**_
 
 Now that you have a new schematic window, go to Add -> Instance. In the add instance window, select “mylibrary” as the library, “inverter” as the cell, and “symbol” for the view to select the inverter you just made and place it on the schematic. See Fig. 17 for reference. Also in the add instance window, select “analogLib” for the library and choose: vsource, vpulse and gnd for the cell while placing the part for each selection on the schematic.
 
-![fig17_1](images/fig17_1.png)
+![fig17](images/fig17.png)
 
 _**Fig. 17. Drawing an Instance of an Inverter**_
 
 Now add wires to the circuit using Add -> Wire and use Add -> Pin to add an output pin on the VOUT signal of the inverter so the schematic looks like figure 18 below. Don’t worry if your values for vpulse and vsource don’t match up with figure 18 since we will be modifying them next.
 
-![fig18_1](images/fig18_1.png)
+![fig18](images/fig18.png)
 
 _**Fig. 18. Testbench for Inverter**_
 
 By clicking on property editor icon and selecting a component in schematic view, you can edit a component's property. You can also use Edit -> Properties -> Property Editor to edit the properties of the parts. Select vpulse and modify its properties as shown in Fig.19. Select vsource and modify its properties as shown in Fig.19.
 
-![fig19](images/fig19_1.png)
-![fig19](images/fig19_2.png)
+![fig19](images/fig19_a.png)
+![fig19](images/fig19_b.png)
 
 _**Fig. 19. Property editor**_
 
@@ -235,13 +235,13 @@ The following step is to choose the desired simulations results and select the n
 
 To setup the circuit output voltage:
 
-1. Click under the output field, and write “Vout” or a name for an output variable of the inverter.
+1. Click under the output field, and write “VOUT” or a name for an output variable of the inverter.
 1. Click under the expression column and choose the output node from the schematic. In this case, click on pointer icon and select the wire labeled “VOUT” as shown below in Fig. 24 in the schematic window. You can also write an equation that uses the values of some nodes in that schematic.
 1. Under analysis, select the type of analysis you want to run. In this case, select `dc` and `tran` to run the transient and DC analysis for this variable.
 
 
 To setup the circuit input voltage:
-1. Click under the output field in a new row, and write “Vin” or a name for an input variable of the inverter.
+1. Click under the output field in a new row, and write “VIN” or a name for an input variable of the inverter.
 1. In the same row, click under the expression column and choose the input node from the schematic. In this case, click on pointer icon and select the wire labeled “VIN” as shown below in figure 24 in the schematic window.
 1. Under analysis, select the type of analysis you want to run. In this case, select `dc` and `tran` to run the transient and DC analysis for this variable.
 
@@ -256,12 +256,12 @@ Afterward, the SAE window should look something similar to figure 25 below. Note
 
 
 
-![fig24_1](images/fig24_1.png)
+![fig24](images/fig24.png)
 
 _**Fig. 24. Schematic Windows**_
 
 
-![fig25_1](images/fig25_1.png)
+![fig25](images/fig25.png)
 
 _**Fig. 25. Updated SAE Window**_
 
@@ -320,22 +320,22 @@ _**Fig. 31. Grouping Waveforms**_
 
 To group the waveforms in Waveview together, select the names of the signals to be grouped in the signals list and hold down `Ctrl` for each additional signal to add. Once you have all the signals you want to group selected, right click on the mouse and select `Group` from the dropdown menu to group the selected waveforms.
 
-Delay Measurements of Vin and Vout at 50% to 50%:
+Delay Measurements of VIN and VOUT at 50% to 50%:
 
-To measure delay between the input and output signals of the inverter at 50% select `tran` tab in the bottom left hand corner of the WaveView window. Group the Vout and Vin waveforms together so the two waves overlap each other (see figure 31 on how to group signals). Open the measurement tool by going to Tools -> Measurement… or by clicking ruler icon in the WaveView window. Click the All tab in the measurement tool window and fill out the options as shown below in figure 32. Click Ok when done.
+To measure delay between the input and output signals of the inverter at 50% select `tran` tab in the bottom left hand corner of the WaveView window. Group the VOUT and VIN waveforms together so the two waves overlap each other (see figure 31 on how to group signals). Open the measurement tool by going to Tools -> Measurement… or by clicking ruler icon in the WaveView window. Click the All tab in the measurement tool window and fill out the options as shown below in figure 32. Click Ok when done.
 
 ![fig32](images/fig32.png)
 
 _**Fig. 32. Delay Analysis**_
 
-After clicking Ok, a delay measurement box will appear on the waveform. Just drag the box to the waveform you want to measure (in this case the Vin and Vout overlapping waveforms) and the delay value will appear in the box. You can also drag the delay measurement box along different valid points of the waveform to get more delay values. See Fig. 33 below for the delay measurements box.
+After clicking Ok, a delay measurement box will appear on the waveform. Just drag the box to the waveform you want to measure (in this case the VIN and VOUT overlapping waveforms) and the delay value will appear in the box. You can also drag the delay measurement box along different valid points of the waveform to get more delay values. See Fig. 33 below for the delay measurements box.
 
 ![fig33](images/fig33.png)
 
 _**Fig. 33. Delay Waveform Measurement**_
 
 
-Rise/Fall Time Measurements at 90% and 10% for Vout:
+Rise/Fall Time Measurements at 90% and 10% for VOUT:
 
 To measure fall and rise time, select the `tran` tab in the bottom left-hand corner of the WaveView window and ungroup all the waveforms as described in figure 30. Open the measurement tool by going to Tools -> Measurement… or by clicking ruler icon in the WaveView window. Click the All tab in the measurement tool window and fill out the options as shown below in Fig. 34. Click Ok when done.
 
@@ -344,7 +344,7 @@ To measure fall and rise time, select the `tran` tab in the bottom left-hand cor
 _**Fig. 34. Rise/Fall Measurement Tool**_
 
 
-After clicking Ok, a rise/fall measurement box will appear on the waveform. You can drag the rise/fall measurement box along the Vout waveform to get the rising and falling delay times. Notice that when the rise/fall measurement box shows a rising red curve the tool is measuring rising delay time from 10% of the signal to 90% of the signal. Also when the rise/fall measurement box shows a falling green curve the tool is measuring the falling delay time from 90% of the signal to 10% of the signal. See figure 35 for reference, it shows two measurement boxes and zooms in on Vout.
+After clicking Ok, a rise/fall measurement box will appear on the waveform. You can drag the rise/fall measurement box along the VOUT waveform to get the rising and falling delay times. Notice that when the rise/fall measurement box shows a rising red curve the tool is measuring rising delay time from 10% of the signal to 90% of the signal. Also when the rise/fall measurement box shows a falling green curve the tool is measuring the falling delay time from 90% of the signal to 10% of the signal. See figure 35 for reference, it shows two measurement boxes and zooms in on VOUT.
 
 ![fig35](images/fig35.png)
 
@@ -353,7 +353,7 @@ _**Fig. 35. Rise/Fall Waveform measurement**_
 
 Average Current Measurement:
 
-To measure average current, select the `tran` tab in the bottom left-hand corner of the WaveView window and ungroup all the waveforms as described in figure 30. Delete the Vout and Vin waveforms so only the isupply waveform shows. You can delete a waveform by selecting its name in the signal list on the left side of the WaveView window and pressing delete on the keyboard and clicking ok. You can always recover these signals later by clicking Plot on the SAE window.
+To measure average current, select the `tran` tab in the bottom left-hand corner of the WaveView window and ungroup all the waveforms as described in figure 30. Delete the VOUT and VIN waveforms so only the isupply waveform shows. You can delete a waveform by selecting its name in the signal list on the left side of the WaveView window and pressing delete on the keyboard and clicking ok. You can always recover these signals later by clicking Plot on the SAE window.
 
 Open the measurement tool by going to Tools -> Measurement… or by clicking ruler icon in the WaveView window. Scroll down in the menu window on the left and then click on the Average measurement within the Level submenu as shown in Fig. 36. Click Ok when done.
 
