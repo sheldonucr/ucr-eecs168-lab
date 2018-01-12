@@ -23,7 +23,6 @@ It is recommended that you keep running and check with DRC tool for your layout 
 
 __Be careful not to submit your lab report with any DRC or LVS errors.__
 
-
 Start with Custom Designer. Type `cdesigner&` and open your design from lab1 you finished. Go to file-> New -> CellView on your Custom Designer Console. You need to make sure the name of the cell is the same as the schematic cell. Now, it is inverter (refer Fig.40), so click OK and the new layout workspace will be popup (refer Fig. 41)
 
 ![fig40](images/fig40.png)
@@ -52,37 +51,39 @@ Note that this design tool based on p-substrate.
 - CO : Contact Layer
 - M1PIN : Metal-pin-naming layer
 
+### Ruler
 
+Go to `Create ruler` by clicking on  ![fig42_1](images/fig42-1.png). Click once to start drawing the ruler and again to end it. Draw two rulers about the lengths shown in Fig.42 (about 3um by 2um can be a good start). 
 
-Go to `Create ruler` by clicking on  ![fig42_a](images/fig41-3.png) . Click once to start drawing the ruler and again to end it. Draw two rulers about the lengths shown in Fig. 42 (about 3 micrometers by 3 micrometers can be a good start). Select the `NWELL` layer in the layers panel on the right and select `Create-> Rectangle` (Fig.42).
+### NWELL Layer
+
+Select the `NWELL` layer in the layers panel on the right and select `Create-> Rectangle` (Fig.42).
 
 Draw a rectangle that approximately fits the dimensions of the rulers you set. You can always adjust the dimensions of this rectangle by using the tools (stretch object, refer icon ![fig42_2](images/fig42-2.png), move object, refer icon ![fig42_3](images/fig42-3.png)) that existed on left side of layout window then clicking the side you want to stretch or move.
 
-
-![fig42_a](images/fig42_a.png) ![fig42_b_1](images/fig42_b_1.png)
+![fig42_a](images/fig42_a.png) ![fig42_b](images/fig42_b_1.png)
 
 _**Fig. 42. Drawing Rulers and N-Well Layer**_
 
 After you have created an N-well (N-tub), move your mouse over it. Notice at the top left there are two fields that tell you what layer you are on and the coordinates. This is useful information if you are having trouble figuring out what a layer is and when you are fixing errors found in DRC.
 
-Now we are going to make diffusion areas for PMOS, NMOS and body connections. From our schematic, we know that the width of the PMOS should be 0.5um and the width of NMOS should be 0.25um (Refer lab1). The location of the diffusion should be similar to the ones in Fig. 44. There are two horizontal diffusion areas that are the NMOS and PMOS devices, and two vertical rectangles that will be the body connections. Place rulers down to help you make sure the width of the diffusion areas for the NMOS and PMOS match our schematic area exactly. Select the “DIFF” layer again use the `Create Rectangle` tool to draw the diffusion area. Use rulers to check the width of the rectangles. If the widths are different than the widths of the devices in the schematic, you will not pass LVS. You can also use the property editor in `Edit -> Property` Editor to change the dimensions of the rectangle to exact values.
+### DIFF Layer
 
-The size of the diffusion areas and body connections can be modified later. I recommend you look ahead and see what else you will need to add to your layout so you can make these locations large enought to accomodate future material. 
+Now we are going to make diffusion areas for PMOS, NMOS and body connections. From our schematic, we know that the width of the PMOS should be 0.5um and the width of NMOS should be 0.25um (refer lab1). The location of the diffusion should be similar to the ones in Fig.44. There are two horizontal diffusion areas that are the NMOS and PMOS devices, and two vertical rectangles that will be the body connections. Place rulers down to help you make sure the width of the diffusion areas for the NMOS and PMOS match our schematic area exactly.
 
-![fig43](images/fig43.png)
+Select the `DIFF` layer again use the `Create Rectangle` tool to draw the diffusion area. Use rulers to check the width of the rectangles. If the widths are different than the widths of the devices in the schematic, you will not pass LVS. You can also use the property editor in `Edit -> Property` Editor to change the dimensions of the rectangle to exact values.
 
-_**Fig. 43. Drawing Diffusion**_
+The size of the diffusion areas and body connections can be modified later. I recommend you look ahead and see what else you will need to add to your layout so you can make these locations large enough to accomodate future material. 
 
+![fig44](images/fig44.png)
 
-![fig44_1](images/fig44_1.png)
+_**Fig. 44. Layout with NWell and Diffusion**_
 
-_**Fig. 44. Layout with NWell and diffusion**_
+### PIMP Layer and NIMP Layer
 
-Now we will add the P-implant and N-implant areas. When manipulating layers on top of each other sometimes it is useful to “hide” a layer, like you would do in a program like Photoshop.
-You can do hide or reveal layers in Cosmos by clicking ![fig44-2](images/fig44-2.png).
+Now we will add the P-implant and N-implant areas. When manipulating layers on top of each other sometimes it is useful to “hide” a layer, like you would do in a program like Photoshop. You can do hide or reveal layers in Cosmos by clicking ![fig44-2](images/fig44-2.png).
 
-Use the p-diff(PIMP layer) and n-diff (NIMP layer) layers with the `Create Rectangle` to cover and surround the diffusion and body connection areas. It is important to note that the `PIMP` is drawn to the edge of the `NWELL` where the `NWELL` meets the `NIMP`. This can be seen in Fig. 45. The PMOS area should be covered with `PIMP` and the `NMOS` with `NIMP`, except for the body connections which have the opposite implantation.
-
+Use the p-diff(PIMP layer) and n-diff (NIMP layer) layers with the `Create Rectangle` to cover and surround the diffusion and body connection areas. It is important to note that the `PIMP` is drawn to the edge of the `NWELL` where the `NWELL` meets the `NIMP`. This can be seen in Fig.45. The PMOS area should be covered with `PIMP` and the `NMOS` with `NIMP`, except for the body connections which have the opposite implantation.
 
 TIPS: There cannot be any overlap between `NIMP` and `PIMP` so be sure to zoom in and make these meet exactly. You can seperate these two but you will then need to ensure you leave a large enough gap between to pass DRC. The implant areas just need to cover the diffusion and connection areas but extra room can help you later, so it is ok if you make them large.
 
@@ -92,23 +93,23 @@ Rule DIFF.E.1: Source/drain active to well edge (min enclosure by well) is 0.24u
 
 Rule PIMP.E.1: Enclosure of P+Active is 0.14um, we make it 0.2um.
 
-![fig45_1](images/fig45_1.png)
+![fig45](images/fig45.png)
 
 _**Fig. 45. Drawing PIMP and NIMP layers**_
 
-Now we select the `PO` layer (Polysilicon) and use the `Create -> Path` tool (Fig. 46) to draw a strip of poly through both PMOS and NMOS diffusion areas. Make sure the poly is sticking out past the diffusion areas by at least the amount specified in the design rule manual. When drawing the Poly path, be sure to make sure the thickness is 0.1um to match the transistor lengths in the schematic, see figure 49 to set width/thickness for the draw path tool. Create a rectangle of poly in the center of the strip that would be used for the input signal, see Fig. 47. This strip does not have to be inside the N-tub.
+### PO Layer
 
-![fig46](images/fig46.png)
-
-_**Fig. 46. Drawing a path**_
+Now we select the `PO` layer (Polysilicon) and use the `Create -> Path` tool to draw a strip of poly through both PMOS and NMOS diffusion areas. Make sure the poly is sticking out past the diffusion areas by at least the amount specified in the design rule manual. When drawing the Poly path, make sure the width is 0.1um to match the transistor lengths in the schematic, see Fig.49 to set width/thickness for the draw path tool. Create a rectangle of poly in the center of the strip that would be used for the input signal, see Fig.47. This strip does not have to be inside the N-tub.
 
 Rule PO.EX.1: Minimum gate extension of active (end cap) is 0.18um.
 
-![fig47_1](images/fig47_1.png)
+![fig47](images/fig47.png)
 
-_**Fig. 47. Drawing Polysilicon (PO Layer)**_
+_**Fig. 47. Drawing Polysilicon**_
 
-Select the “CO” (contact) layer and use the `Create Rectangle` or `Create Polygon tool` in conjunction with rulers to make a contact 0.13 by 0.13. You can also use the property editor to get these exact values. After you have created one contact click on ![fig47-2](images/fig47-2.png)  and the contact and make a copy to place the other contacts. `Contact` placements are shown in Fig. 48. Check to see that your contact placements meet the design rules.
+### CO Layer
+
+Select the `CO` (contact) layer and use the `Create Rectangle` or `Create Polygon` tool in conjunction with rulers to make a contact 0.13 by 0.13. You can also use the property editor to get these exact values. After you have created one contact click on ![fig47-2](images/fig47-2.png)  and the contact and make a copy to place the other contacts. Contact placements are shown in Fig.48. Check to see that your contact placements meet the design rules.
 
 Rule CO.W.1: Exact contact size is 0.13um.
 
@@ -123,17 +124,19 @@ Rule CO.E.2: Minimum enclosure by DIFF is 0.04um, i.e., we make it 0.055um.
 Rule CO.E.3: Minimum enclosure by poly at least two apposite sides 0.05um.
 
 
-![fig48_1](images/fig48_1.png)
+![fig48](images/fig48.png)
 
 _**Fig. 48. Drawing Contacts**_
 
-Select the M1 (Metal-1) layer and again select the `Create -> Path` tool. This time in the `Create Path` window that pops ups, click on the width box to then enter 0.14 in the Width field as shown in fig.49.
+### M1 Layer
+
+Select the `M1` (Metal-1) layer and again select the `Create Path` tool. This time in the `Create Path` window that pops ups, click on the width box to then enter 0.14 in the Width field.
 
 ![fig49](images/fig49.png)
 
 _**Fig. 49. Modifying Width**_
 
-Draw the M1 layer the way it is shown in Fig.50. Make sure the metal is covering the contacts by the amount specified in the design rule manual. You can also draw rectangles over the contacts to cover them more.
+Draw the `M1` layer the way it is shown in Fig.50. Make sure the metal is covering the contacts by the amount specified in the design rule manual. You can also draw rectangles over the contacts to cover them more.
 
 Rule M1.W.1: Minimum width is 0.14um.
 
@@ -141,14 +144,15 @@ Rule CO.E.6: Minimum enclosure of any contact (CO outside M1 is not allowed) is 
 
 Rule CO.E.7: Minimum enclosure of contact at end of line is 0.05um.
 
-![fig50_1](images/fig50_1.png)
+![fig50](images/fig50.png)
 
 _**Fig. 50. Drawing Metal Connections**_
 
-Select the M1PIN layer. Select the `Create -> Text -> Label` tool and place text labels labeled as AVDD, AVSS, VIN, and VOUT (refer Fig. 51). Note that you need to match the label names in layout as the labeled pins in the schematic in order to pass LVS (Layout vs Schematic) later. You have now completed the initial layout and can move onto DRC. Save your layout by going to `Design -> Save`.
-As a general convention, use uppercase letters for labels instead of lowercase letters.
+### MIPIN Layer
 
-![fig51_1](images/fig51_1.png)
+Select the `M1PIN` layer. Select the `Create -> Text -> Label` tool and place text labels labeled as VDD, VSS, VIN, and VOUT (refer Fig.51). Note that you need to match the label names in layout as the labeled pins in the schematic in order to pass LVS (Layout vs Schematic). You have now completed the initial layout and can move onto DRC. Save your layout by going to `Design -> Save`. As a general convention, use uppercase letters for labels instead of lowercase letters.
+
+![fig51](images/fig51.png)
 
 _**Fig. 51. Labeling Connections**_
 
@@ -207,8 +211,8 @@ The LVS (Layout versus Schematic) performs LVS comparison to verify that the des
 
 Notice that in order to pass LVS, schematic names and layout names must match one to one. Make sure the names for labels and pins are using uppercase letters instead of lowercase letters. Also transistor dimensions for gate width and length in layout and schematic must match. See Fig. 58 for reference.
 
-![fig58_a](images/fig58_a_1.png)
-![fig58_b](images/fig58_b_1.png)
+![fig58_a](images/fig58_a.png)
+![fig58_b](images/fig58_b.png)
 
 _**Fig. 58. Layout versus Schematic (LVS)**_
 
