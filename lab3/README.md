@@ -265,16 +265,13 @@ _**Fig. 91. Ring Oscillator Layout**_
 
 _**Fig. 91-2. Another Ring Oscillator Layout**_
 
-
 ![fig91-3](images/fig91-3.png)
 
 _**Fig. 91-3. Ring Oscillator Layout using Metal2 (refer Fig.107)**_
 
-
 ![fig91-4](images/fig91-4.png)
 
-_**Fig. 91-4. Compact Ring Oscillator Layout **_
-
+_**Fig. 91-4. Compact Ring Oscillator Layout using Metal2**_
 
 ![fig92](images/Fig_92.png)
 
