@@ -159,7 +159,7 @@ _**Fig. 51. Labeling Connections**_
 
 ## PART 6: Running DRC
 
-After the inverter layout has been drawn to accurately represent the schematic, to verify that the layout meets all the basic design rules, we need to run `IC Validator` for a DRC (Design Rule Check). Save the layout cell by clicking on Save. In Custom Designer Editor, go to `Verification -> DRC -> Setup` and Run.
+After the inverter layout has been drawn to accurately represent the schematic, to verify that the layout meets all the basic design rules, we need to run `IC Validator` for a DRC (Design Rule Check). Save the layout cell by clicking on Save. In Custom Designer Editor, go to `Verification -> DRC -> Setup and Run`.
 Locate the runset file rules.drc.9m_saed90ev_saed90_icv.rs from the following directory and click Ok (Fig 52).
 
 ```
