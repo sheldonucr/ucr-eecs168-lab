@@ -273,7 +273,7 @@ _**Fig. 91-3. Ring Oscillator Layout using Metal2 (refer Fig.107)**_
 
 _**Fig. 91-4. Compact Ring Oscillator Layout using Metal2**_
 
-![fig92](images/Fig_92.png)
+![fig92](images/fig92.png)
 
 _**Fig. 92. Label Text**_
 
@@ -355,7 +355,7 @@ From the ring oscillator testbench window, you can simulate the circuit by using
 Side Notes for Using Convergence Aids to Initialize Voltages:
 Also note that it may be helpful to give a wire in the circuit an initial voltage before running simulation. This particular setup applies to circuits such as a five stage ring oscillator circuit shown in Fig 103. In addition to the setup noted in part 3 for SAE, before running the simulation, go to Setup -> Convergence Aids in the SAE window.
 
-![fig103](images/Fig_103.png)
+![fig103](images/fig103.png)
 
 _**Fig. 103. Where to Click on Schematic for Node Setup in Ring Oscillator**_
 
@@ -384,7 +384,7 @@ You have now finished transient simulation of the ring oscillator circuit with a
 For designs that require require an extra metal layers in layout, designers can use a metal layer higher up (like M2) to make connections if the lower metal layers (like M1) are too constricting to allow any other connections.
 In the ring oscillator layout, M1 (blue layer) is replaced with M2 (pink layer). See Fig 107 for reference (Ring Oscillator with M2 layer). Also note that M1 layers can run under M2 layers without physically connecting unless there is a VIA1 layer in between them.
 
-![fig107](images/fig107.png)
+![fig107](images/Fig_107.png)
 
 _**Fig. 107. Multiple layer (M2) example**_
 
