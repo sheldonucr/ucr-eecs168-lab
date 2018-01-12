@@ -328,19 +328,19 @@ _**Fig. 98. Parasitics View**_
 
 After parasitic extraction, create a new configuration files by going to File -> New -> CellView in the custom designer console. Setup the options as noted in Fig 99 to setup a configurations file for the ring oscillator testbench. Click OK when done.
 
-![fig98](images/Fig_99.png)
+![fig98](images/fig99.png)
 
 _**Fig. 99. Configurations File Setup**_
 
 A new configurations file will open up. From here, setup the options as noted in Fig 100 to load the ring oscillator parasitics into the ring oscillator symbol. Save with File -> Save when done.
 
-![fig100](images/Fig_100.png)
+![fig100](images/fig100.png)
 
 _**Fig. 100. Configurations File Setup**_
 
 To start simulation with parasitics, go to File -> Open Design from the Custom Designer Console window. In the Open Design window that opens, select ringOscillator_testbench under the cells column and config under the views column and right click on config under views. Select Open Design from the drop down menu. See Fig 101 below for reference.
 
-![fig101](images/Fig_101.png)
+![fig101](images/fig101.png)
 
 _**Fig. 101. Open Design with Parasitics**_
 
@@ -362,15 +362,15 @@ _**Fig. 103. Where to Click on Schematic for Node Setup in Ring Oscillator**_
 Setup the options as noted in Fig 104 below. You may need to setup multiple initial voltages to drive the inverters since one initial voltage may not be enough to drive the entire ring oscillator. It is suggested that you setup at least two initial voltages using alternating voltages of 0 and 1.2 for consecutive inverter nodes in the ring oscillator circuit. See Fig 105 for multi- node initialization and see Fig 103 on where to click in the schematic for node setups. Click OK, when done and run the simulation as noted in part 3 of the tutorial in Fig 106
 
 
-![fig104](images/Fig_104.png)
+![fig104](images/fig104.png)
 
 _**Fig. 104. Setting up Convergence Aids**_
 
-![fig105](images/Fig_105.png)
+![fig105](images/fig105.png)
 
 _**Fig. 105. Setup for Multiple Initial Voltages**_
 
-![fig106](images/Fig_106.png)
+![fig106](images/fig106.png)
 
 _**Fig. 106. Simulation result for ring oscillator**_
 
@@ -384,7 +384,7 @@ You have now finished transient simulation of the ring oscillator circuit with a
 For designs that require require an extra metal layers in layout, designers can use a metal layer higher up (like M2) to make connections if the lower metal layers (like M1) are too constricting to allow any other connections.
 In the ring oscillator layout, M1 (blue layer) is replaced with M2 (pink layer). See Fig 107 for reference (Ring Oscillator with M2 layer). Also note that M1 layers can run under M2 layers without physically connecting unless there is a VIA1 layer in between them.
 
-![fig107](images/Fig_107.png)
+![fig107](images/fig107.png)
 
 _**Fig. 107. Multiple layer (M2) example**_
 
