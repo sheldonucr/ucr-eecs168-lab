@@ -14,7 +14,7 @@ You need to keep working on Inverter schematic and layout for this extraction.
 
 From your lab2, after passing DRC and LVS you can now move on to LPE (Layout Parasitic Extraction). In this phase, resistances and capacitances will be extracted from the layout. In layout window go to Verification -> LPE -> Setup and Run. Please make sure your setup the Fig. 66 for the Main tab.
 
-![fig66](images/Fig_66.png)
+![fig66](images/fig66.png)
 
 _**Fig. 66. LPE Setup for StarRC**_
 
@@ -30,7 +30,7 @@ In Fig67, 'Extraction Options' tab, you need to your `Runset Report File` to you
 
 _**Fig. 67-1. LPE Setup for StarRC**_
 
-![fig67_2](images/Fig_67_2.png)
+![fig67_2](images/fig67-2.png)
 
 _**Fig. 67-2. LPE Setup for StarRC**_
 
@@ -93,7 +93,7 @@ Views: schematic
 
 See Fig 73 for reference. Once all options are highlighted, click Open and the schematic that was created earlier for testing the inverter will open, see Fig 74 for reference.
 
-![fig73](images/Fig_73.png)
+![fig73](images/fig73.png)
 
 _**Fig. 73. Opening Circuit with Inverter Schematic**_
 
@@ -173,7 +173,7 @@ Create a new schematic for the ring oscillator by going to New -> CellView from 
 
 Click OK when done.
 
-![fig81](images/Fig_81.png)
+![fig81](images/fig81.png)
 
 _**Fig. 81. Ring Oscillator Schematic Setup**_
 
@@ -207,7 +207,7 @@ Now create a new schematic to use as a testbench for the ring oscillator by goin
 - View Name: schematic
 - Editor: SE - schematic
 
-![fig85](images/Fig_85.png)
+![fig85](images/fig85.png)
 
 _**Fig. 85. Ring Oscillator Testbench Setup**_
 
@@ -231,7 +231,7 @@ Save with Design -> Save once your testbench circuit is done. Now we need to cre
 - Editor: Layout Editor
 Click OK when done.
 
-![fig87](images/Fig_87.png)
+![fig87](images/fig87.png)
 
 _**Fig. 87. Ring Oscillator Testbench Circuit**_
 
