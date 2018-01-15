@@ -124,7 +124,7 @@ After drawing all the required wires, then you can assign wire names (Add -> Wir
 _**Fig. 10. Add wire names**_
 
 
-After adding wires and wire names, you may need to add pins for input and output. To add pins to the schematic, go to Add -> Pin to add pins for input (VIN, AVDD, AVSS) and output (VOUT) for your schematic. You can type in a name for the pin and select whether the pin is an input or output port. Then place the pin on a wire or if the wire in schematic view already has a name you can click on the wire and the pin will get the name of the wire. Note that the pin names in schematic view should match the label names in layout view (AVDD, AVSS, VIN, VOUT, etc) for future reference.
+After adding wires and wire names, you may need to add pins for input and output. To add pins to the schematic, go to Add -> Pin to add pins for input (VIN, VDD, VSS) and output (VOUT) for your schematic. You can type in a name for the pin and select whether the pin is an input or output port. Then place the pin on a wire or if the wire in schematic view already has a name you can click on the wire and the pin will get the name of the wire. Note that the pin names in schematic view should match the label names in layout view (VDD, VSS, VIN, VOUT, etc) for future reference.
 
 See Fig. 11 and Fig. 12 for reference on how to add pins.
 
@@ -136,7 +136,7 @@ Afterward, your circuit should look similar to figure 13 below after you add the
 _**Fig. 11. Adding pins**_
 
 
-![fig12](images/fig12_1.png)
+![fig12](images/fig12.png)
 
 _**Fig. 12. Adding pins**_
 
@@ -392,7 +392,7 @@ _**Fig. 39. Frequency Waveform Measurement**_
 
 ## Schematic Tips 
 
-You don't need to draw whole wire to connect port, and you can assign the same name instead, then it becomes virtual connection. In case of many transistor being placed, you don't need to connect all bulks to AVDD or AVSS, and you can just draw wire with AVDD or AVSS nets. As seen in the Fig 41, you can draw wire along with assigning wire name.
+You don't need to draw whole wire to connect port, and you can assign the same name instead, then it becomes virtual connection. In case of many transistor being placed, you don't need to connect all bulks to VDD or VSS, and you can just draw wire with VDD or VSS nets. As seen in the Fig 41, you can draw wire along with assigning wire name.
 
 ![fig40](images/fig40.png)
 
