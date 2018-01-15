@@ -20,13 +20,13 @@ _**Fig. 66. LPE Setup for StarRC**_
 
 In Fig 66, you need to click the "View output" Option to see the output window.
 
-![fig67](images/Fig_67.png)
+![fig67](images/fig67.png)
 
 _**Fig. 67-0. LPE Setup for StarRC**_
 
 In Fig67, 'Extraction Options' tab, you need to your `Runset Report File` to yours. It is located under `pvjob_[your library name]_[your cellview name].icv.lvs` folder.
 
-![fig67_1](images/Fig_67_1.png)
+![fig67_1](images/fig67-1.png)
 
 _**Fig. 67-1. LPE Setup for StarRC**_
 
@@ -113,7 +113,7 @@ In the New CellView window, create a new configurations file as follows:
 
 See Fig 75 below for reference and click OK.
 
-![fig75](images/Fig_75.png)
+![fig75](images/fig75.png)
 
 _**Fig. 75. Configurations File Setup**_
 
@@ -125,20 +125,20 @@ A Hierarchy Editor window will display. Setup the view and list options as noted
 
 - View Stop List: symbol
 
-![fig76](images/Fig_76.png)
+![fig76](images/fig76.png)
 
 _**Fig. 76. Hierarchy Editor**_
 
 In order to map the parasitics generated from LPE to your inverter cell, select starrc under the 'Selected' column for the inverter instance, see Fig 77 for reference. The format for your inverter instance name in the instance column is schematic_instance_name (mylibrary, inverter). Notice that as starrc is selected, resistor and capacitor instances will show up under the instance column, this substitution replaces the inverter cell with its equivalent schematic containing its resistive and capacitive components. Afterwards save the settings by going to File -> Save.
 For future reference, to apply parasitics for a general case, a schematic must have its equivalent schematic symbol and layout created since a layout is used to generate the parasitics and a schematic symbol is used as a vessel to hold the parasitics. The testbench schematic is created to test the symbol containing the schematic with its applied parasitics.
 
-![fig77](images/Fig_77.png)
+![fig77](images/fig77.png)
 
 _**Fig. 77. Loading Parasitics into the Inverter**_
 
 To start simulation with parasitics, go to Tool -> Library Manager from the Custom Designer Console window. In the Open Design window that opens, select inverter_testbench under the cells column and config under the views column and right click on config under views. Select Open Design from the drop down menu. See Fig 78 below for reference.
 
-![fig78](images/Fig_78.png)
+![fig78](images/fig78.png)
 
 _**Fig. 78. Open Design with Parasitics**_
 
@@ -148,7 +148,7 @@ Afterwards, a schematic view should open up with parasitics applied, see Fig 79 
 
 _**Fig. 79. Schematic with Parasitics Applied to the Inverter**_
 
-![fig80](images/Fig_80.png)
+![fig80](images/fig80.png)
 
 _**Fig. 80. Simulation result with parasitic extraction**_
 
