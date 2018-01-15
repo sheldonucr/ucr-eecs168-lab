@@ -434,7 +434,7 @@ In Fig 108, there are two-stage. The first one is to generate `COUT` and the sec
 
 _**Fig. 109. 1-bit adder simulation (Pre-simulation)**_
 
-![fig110](images/Fig_110.png)
+![fig110](images/fig110.png)
 
 _**Fig. 110. 1-bit adder testbench schematic**_
 
