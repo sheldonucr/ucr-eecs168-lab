@@ -533,11 +533,6 @@ _**Fig. 32. Save your design**_
 
 _**Fig. 33. Save your design**_
 
-Now, we need to create the floorplan. Floorplan -> Create Floorplan
-
-For the spacing between core are and terminals, we can set 10um for
-left, right, bottom, and top.
-
 
 Now, we need to create power-ground network.
 
@@ -557,17 +552,20 @@ Ground pin. Create port should be "Top"
 
 _**Fig. 35. Derive Power Ground Connection**_
 
-Now, we need to write a floor plan.
-Go to Floorplan-> Create Floorplan
+Now, we need to create the floorplan. Floorplan -> Create Floorplan
+
+For the spacing between core are and terminals, we can set 20um for left, right, bottom, and top.
 
 ![fig36](images/fig36.png)
 
 _**Fig. 36. Floor plan**_
 
+We can also write a floorplan.
 
 ```
 create_floorplan -use_vertical_row -start_first_row -left_io2core 20 -bottom_io2core 20 -right_io2core 20 -top_io2core 20
 ```
+
 ![fig37](images/fig37.png)
 
 _**Fig. 37. Floor plan**_
