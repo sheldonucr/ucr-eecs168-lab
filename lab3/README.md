@@ -413,45 +413,11 @@ This lab is designed for two weeks, so for your lab report, you need to design `
 
 * Your 1-bit full adder schematic - it must be transistor-level not logic-level
 
-You can refer this full adder here.
-
-[https://en.wikipedia.org/wiki/Adder_%28electronics%29](https://en.wikipedia.org/wiki/Adder_%28electronics%29)
-
-A full adder adds binary number with carry in and out. A 1-bit full adder adds three one-bit number, such as A, B, and CIN. A and B are the operands and CIN is a bit carried in from the previous less significant stage.
-
-
-
-
-![fig108](images/Fig_108.png)
-
-_**Fig. 108. 1-bit Full Adder Schematic (Transistor-Level)**_
-
-In Fig 108, there are two-stage. The first one is to generate `COUT` and the second is to generate `S` which is final sum. It requires 28 transistors including two inverters. You can use your own design but you need to transistor-level design.
-
 * Your 1-bit full adder simulation
 
-![fig109](images/Fig_109.png)
-
-_**Fig. 109. 1-bit adder simulation (Pre-simulation)**_
-
-![fig110](images/fig110.png)
-
-_**Fig. 110. 1-bit adder testbench schematic**_
-
-![fig111](images/Fig_111.png)
-
-_**Fig. 111. 1-bit adder logic and 4-bit ripple carry adder**_
-
+* Your 1-bit full adder layout
 
 * Your 4-bit full adder schematic (with using hierarchical design)
-
-![fig112](images/Fig_112.png)
-
-_**Fig. 112. 1-bit full adder layout hint (Diffusion width must be the same as schematic Width = 0.5um for PMOS and Width = 0.25um for NMOS**_
-
-
-
-* Your 1-bit full adder layout
 
 * Your 4-bit full adder layout (with using hierarchical design)
 
@@ -464,6 +430,47 @@ _**Fig. 112. 1-bit full adder layout hint (Diffusion width must be the same as s
 * Your 4-bit full adder __Layout POST SIMULATION__ result (with parasitic extraction) - you need to have your test bench
 
 * Some of the issues if you have (One paragraph)
+
+### Hint
+
+You can refer this full adder here.
+
+[https://en.wikipedia.org/wiki/Adder_%28electronics%29](https://en.wikipedia.org/wiki/Adder_%28electronics%29)
+
+A full adder adds binary number with carry in and out. A 1-bit full adder adds three one-bit number, such as A, B, and CIN. A and B are the operands and CIN is a bit carried in from the previous less significant stage.
+
+## 1-bit adder logic
+
+The full adder computes two functions: S and COUT. We can compute S using two two-input XORs and use a two-level NAND network to compute COUT.
+
+![fig108-1](images/fig108-1.png)
+![fig108-2](images/fig108-2.png)
+
+_**Fig. 108. 1-bit Full Adder Schematic (Gate-Level)**_
+
+## Complementary static CMOS
+
+![fig109](images/fig109.png)
+
+_**Fig. 109. 1-bit Full Adder Schematic (Transistor-Level)**_
+
+In Fig 109, there are two-stage. The first one is to generate `COUT` and the second is to generate `S` which is final sum. It requires 28 transistors including two inverters. You can use your own design but you need to transistor-level design.
+
+![fig110](images/fig110.png)
+
+_**Fig. 110. 1-bit adder simulation (Pre-simulation)**_
+
+![fig111](images/fig111.png)
+
+_**Fig. 111. 1-bit adder testbench schematic**_
+
+![fig112](images/fig112.png)
+
+_**Fig. 112. 4-bit ripple carry adder**_
+
+![fig113](images/Fig_113.png)
+
+_**Fig. 113. 1-bit full adder layout hint (Diffusion width must be the same as schematic Width = 0.5um for PMOS and Width = 0.25um for NMOS**_
 
 ### What to submit
 
