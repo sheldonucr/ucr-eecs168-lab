@@ -439,16 +439,16 @@ You can refer this full adder here.
 
 A full adder adds binary number with carry in and out. A 1-bit full adder adds three one-bit number, such as A, B, and CIN. A and B are the operands and CIN is a bit carried in from the previous less significant stage.
 
-## 1-bit adder logic
+#### 1-bit adder logic
 
-The full adder computes two functions: S and COUT. We can compute S using two two-input XORs and use a two-level NAND network to compute COUT.
+The full adder computes two functions: S and COUT. We can compute S using two two-input XORs and use a two-level NAND network to compute COUT (Fig. 108-1), or XOR, AND and OR gates (Fig. 108-2), or directly design them as a complementary static CMOS logic circuit (Fig. 109).
 
 ![fig108-1](images/fig108-1.png)
 ![fig108-2](images/fig108-2.png)
 
 _**Fig. 108. 1-bit Full Adder Schematic (Gate-Level)**_
 
-## Complementary static CMOS
+#### Complementary static CMOS
 
 ![fig109](images/fig109.png)
 
