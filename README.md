@@ -14,8 +14,8 @@ Every discussion/Q&A will be at https://github.com/sheldonucr/ucr-eecs168-lab. P
 |Week 4		| [Lab/Tutorial 3 - Post-Simulation with Parasitic Extraction (HSPICE). Simple Hierarchical IC Design (Target Circuit: Ring Oscillator)](lab3) | Lab2 report due by the beginning of lab.	| 40 |
 |Week 5		| [Lab/Tutorial 3 - Hierarchical IC Design (Target Circuit: 1-bit full adder-no hierarchical design)](lab3)	| | |
 |Week 6	  | [Lab/Tutorial 3 - Hierarchical IC Design (Target Circuit: 4-bit full adder-use Hierarchical)](lab3) | 	|  |
-|Week 7   | Lab3 work week. No new assignment. |Lab3 report due by the beginning of lab.	 | |
-|Week 8		| [Lab/Tutorial 4 - RTL Synthesis Design (Design Compiler/IC Compiler/PrimeTime) (Target Circuit: 4-bit full adder)](lab4)|| 35 |
+|Week 7   | Lab3 work week. No new assignment. |	 | |
+|Week 8		| [Lab/Tutorial 4 - RTL Synthesis Design (Design Compiler/IC Compiler/PrimeTime) (Target Circuit: 4-bit full adder)](lab4)|Lab3 report due by the beginning of lab.| 35 |
 |Week 9		| [Lab/Tutorial 4 - Complex RTL Synthesis Design  (Target Circuit: Euclid's Algorithm for GCD)](lab4)| 	|  |
 |Week 10	| [Lab/Tutorial 4 - Full Chip RTL Synthesis Design	(Target Circuit: Core Design)](lab4)|  |  |
 |Final Week | No lab |  |Lab4 report due by Monday.  | |
