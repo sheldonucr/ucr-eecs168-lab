@@ -307,7 +307,7 @@ Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will
 
 * Your NAND gate test bench schematic for simulation
 
-* Your Waveform View result with transient analysis result (SAE, HSPICE) to show `OUT'=AIN*BIN`, you need one capacitance load (0.05p F) at the output to remove noise of `OUT`. `AIN` pulse signal can be 5n pulse width `BIN` pulse signal can be 10n pulse width for simulation. Expected result can be seen in Fig 66.
+* Your Waveform View result with transient analysis result (SAE, HSPICE) to show `OUT'=AIN*BIN`, you need one capacitance load (0.05p F) at the output connecting your `OUT` to `GND` to remove noise of `OUT`. `AIN` pulse signal can be 5n pulse width `BIN` pulse signal can be 10n pulse width for simulation. Expected result can be seen in Fig 66.
 
 ![fig66](images/fig66.png)
 
