@@ -276,7 +276,7 @@ From your lecture class, we learned NAND gate schematic and its layout. Now, fro
 
 1. Design your testbench for simulation `NAND_testbench` cell
 
-1. Do transient simulation with two different inputs and one output, you need to show if `NAND` gate is correctly working. You need to setup your testing variables such as timing, Input signal frequencies (`AIN`, `BIN`) with appropriate `AVDD` and `AVSS`.
+1. Do transient simulation with two different inputs and one output, you need to show if `NAND` gate is correctly working. You need to setup your testing variables such as timing, Input signal frequencies (`AIN`, `BIN`) with appropriate `VDD` and `VSS`.
 
 1. Draw `NAND` gate layout (see lecture notes)
 
