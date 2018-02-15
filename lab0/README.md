@@ -42,7 +42,6 @@ Then, you find `putty` and launch, the following screen is popped up.
 and you can put hostname `bender.engr.ucr.edu` and put your user id. The most important thing is to enable X11 forwarding in the `putty`.
 
 ![putty1](images/lab0-03.png)
-![putty1](images/lab0-04.png)
 ![putty1](images/lab0-06.png)
 
 
