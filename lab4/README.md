@@ -1406,30 +1406,6 @@ report_power -verbose -hierarchy
 
 
 
-### Full-chip synthesis (extra-credit)
-
-To implement fullchip, we can use OpenSource core website to get IPs.
-
-```
-http://opencores.org/
-```
-
-#### Useful examples
-
-- OpenRISC 1200 processor example
-
-[Here](http://venividiwiki.ee.virginia.edu/mediawiki/index.php/Specialized_SHA-256_Accelerator)
-
-- OpenMSP430 processor example
-
-[Here](http://venividiwiki.ee.virginia.edu/mediawiki/index.php/MSP430PeriphsandPG)
-
-
-If you see the projects, there is processor section. If you earn the extra-credit, you can download any processor RTL design and try to synthesize and transfer gate to layout.
-
-Once you finish this work, turn in your layout to TA.
-your total lab score will increase by 20%.
-You can use any external resources for this extra work.
 
 ## Lab4 Logistics
 
@@ -1512,4 +1488,4 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 * Second week: Refer above deliverables
 
-* Three week: Refer above deliverables
+* Third week: Refer above deliverables
