@@ -6,7 +6,7 @@ In this tutorial, some contexts use Synopsys tutorials from Hamid Nahmoodi (SFSU
 
 In this tutorial, you will learn how to do RTL (register transfer level) design to build your circuit with HDL (hardware description language) for EDA (electronic design automation)
 
-This work design for three weeks lab, so for your lab report, you need to design three sets of HDLs, which are 4-bit binary full adder, finite state machine, greatest common devisor (gcd), and finally full-chip design.
+This work design for three weeks lab, you need to design two sets of HDLs, which are 4-bit binary full adder (week1) and greatest common devisor (gcd) (week2-3).
 
 
 In this lab4, we introduce Synopsys RTL design toolkit, which are VCS, Design Compiler, IC Compiler, VCS RTL Verification solution.
@@ -20,11 +20,11 @@ In this lab, you need to review at least 2 hours for the following website to re
 
 Lab4 is 3-week lab and here are the details for given lab
 
-- Lab4-week1: Verilog Review, 4-bit full adder Chip, FSM chip design.
+- Lab4-week1: Verilog Review, 4-bit full adder Chip.
 
 - Lab4-week2: RTL Practical Programming for your GCD design.
 
-- Lab4-week3: Full-chip synthesis design and layout for Synopsys ChipTop processor with Timing, Area, and Power Analysis of PrimeTime
+- Lab4-week3: Timing, Area, and Power Analysis of PrimeTime
 
 
 ## Lab4-Week1: Part 1. HDL (Hardware Description Language)- Verilog Language
@@ -1413,8 +1413,6 @@ report_power -verbose -hierarchy
 
 In this tutorial, you will learn how to do RTL (register transfer level) design to build your circuit with HDL (hardware description language) for EDA (electronic design automation)
 
-This work design for three weeks lab, so for your lab report, you need to design three sets of HDLs, which are 4-bit binary full adder, finite state machine, greatest common devisor (gcd), and finally full-chip design.
-
 
 In this lab4, we introduce Synopsys RTL design toolkit, which are VCS, Design Compiler, IC Compiler, VCS RTL Verification solution.
 
@@ -1449,8 +1447,6 @@ In this lab4, we introduce Synopsys RTL design toolkit, which are VCS, Design Co
   * Primetime power report (after run `report_power` at the last step)
 
 ---- until here for week 3 check off
-
-  * (Optional) FullChip Synthesis (+extra credit)
 
 * Some of the issues if you have (One paragraph)
 
