@@ -41,7 +41,7 @@ Here is Verilog tutorials consist of 5 Chapters as follows:
 | 4 | Gate Level Modeling | This section covers gate level modeling constructs. It covers the semantics of Verilog primitives, port expressions, delays, strengths, and user-defined primitives. |
 | 5 | Behavioral and Register Transfer Level Modeling | This section covers the remainder of the language basics: assignments of all kinds, control constructs, time and event controls, tasks and functions, and examples. |
 
-You need to review from chapter 1 thru Chapter 5, Chapter 5-9 can be references for your Verilog programming.
+You need to review from chapter 1 thru Chapter 5, Chapter 6-9 can be references for your Verilog programming.
 
 You need to provide all your answers for the each question to get checked off at the end of the lab. So please open text editor/ms office word and write down all the answers to show TA for the check-off.
 
@@ -54,7 +54,7 @@ You should finish this tutorial first for 2 hours at least.
 
 There is better explanation for Verolog Operators [Click Here](https://embeddedmicro.com/tutorials/mojo/verilog-operators) - Thanks, Brandon
 
-__This lab requires individual lab! You cannot do any partner work anymore.__
+__This lab requires individual lab!__
 
 
 ## Lab4-Week1: Part 2. Synopsys Verilog Compiler Simulator (Verilog Compiler ) Tutorial
