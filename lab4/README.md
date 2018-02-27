@@ -271,7 +271,7 @@ First we need to choose Synopsys 90nm model for design process.
 
 _**Fig. 3. Choose Setup for library setup.**_
 
-click Link library and put the following paths
+Replace the libraries with the following files
 - Link library
 ```
 /usr/local/synopsys/pdk/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/ref/saed90nm_fr/LM/saed90nm_typ.db
@@ -359,7 +359,9 @@ We also need to create gate-level verilog synthesized file.
 write -format verilog -output "fa_4bit_synthesized.v"
 ```
 
-Now, we need to write a design constraint file.
+You can check this file to see what Design Compiler has done for us.
+
+Furthermore, we need to write a design constraint file.
 
 ```
 write_sdc -nosplit "fa_4bit_const.sdc"
@@ -454,6 +456,12 @@ for input reference libraries, you need to add the following file.
 make sure open library is checked
 
 ![fig23](images/fig23.png)
+
+If somehow you cannot create this new library through GUI, you can try doing it through command.
+
+```
+create_mw_lib  -technology /usr/local/synopsys/pdk/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/ref/tech/saed90nm.tf -mw_reference_library {/usr/local/synopsys/pdk/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/ref/saed90nm_fr} -bus_naming_style {[%d]}  -open  ./Fa_4bit_icc
+```
 
 _**Fig. 23. Create Library**_
 
