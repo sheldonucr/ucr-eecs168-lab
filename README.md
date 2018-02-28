@@ -17,7 +17,7 @@ Every discussion/Q&A will be at https://github.com/sheldonucr/ucr-eecs168-lab. P
 |Week 7   | Lab3 work week. No new assignment. |	 | |
 |Week 8		| [Lab/Tutorial 4 - RTL Synthesis Design (Design Compiler/IC Compiler/PrimeTime) (Target Circuit: 4-bit full adder)](lab4)|Lab3 report due by the beginning of lab.| 35 |
 |Week 9		| [Lab/Tutorial 4 - Complex RTL Synthesis Design  (Target Circuit: Euclid's Algorithm for GCD)](lab4)| 	|  |
-|Week 10	| [Lab/Tutorial 4 - Full Chip RTL Synthesis Design	(Target Circuit: Core Design)](lab4)|  |  |
+|Week 10	| [Lab/Tutorial 4 - Generating reports for the GCD design](lab4)|  |  |
 |Final Week | No lab |  |Lab4 report due by Monday.  | |
 
 ### Attendance Policy
