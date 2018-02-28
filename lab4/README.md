@@ -649,9 +649,9 @@ insert_stdcell_filler \
 _**Fig. 49. Final Layout after putting standard cell filler**_
 
 
-## Lab4-Week2 : RTL Practical Programming for your GCD design.
+## Lab4-Week2 : Synthesis of a GCD design.
 
-First download the relevant verilog files. It is recommended that you create a new directory dedicated to GCD.
+First you need to download the relevant verilog files. It is recommended that you create a new directory dedicated to GCD.
 
 ```
 wget https://raw.githubusercontent.com/sheldonucr/ucr-eecs168-lab/master/lab4/gcd_ctrl.v
@@ -661,7 +661,7 @@ wget https://raw.githubusercontent.com/sheldonucr/ucr-eecs168-lab/master/lab4/gc
 
 Then you can follow the instructions with Design Compiler again, except some changes covered below.
 
-##### Design Compiler and IC Compiler for GCD
+### Design Compiler and IC Compiler for GCD
 
 GCD requires clock and you also need to synthesize clock tree. For your GCD, every step is __the same as above 4-bit full adder steps__ from RTL to Layout except the following extra steps.
 
