@@ -685,6 +685,10 @@ elaborate "gcdGCDUnit_rtl"
 create_clock clk -name ideal_clock1 -period 1
 ```
 
+- Instead of `compile` in Design Compiler, we use a more advanced version (`compiler_ultra`).	
+```	
+compile_ultra	
+```
 
 - When you write a synthesized file and ddc file, you need to have a `-hierarchy` option
 
