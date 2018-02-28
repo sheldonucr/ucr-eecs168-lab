@@ -6,7 +6,7 @@ In this tutorial, some contexts use Synopsys tutorials from Hamid Nahmoodi (SFSU
 
 In this tutorial, you will learn how to do RTL (register transfer level) design to build your circuit with HDL (hardware description language) for EDA (electronic design automation)
 
-This work design for three weeks lab, you need to design two sets of HDLs, which are 4-bit binary full adder (week1) and greatest common devisor (gcd) (week2-3).
+You will synthesize two sets of HDL, which are 4-bit binary full adder (week1) and greatest common devisor (gcd) (week2-3).
 
 
 In this lab4, we introduce Synopsys RTL design toolkit, which are VCS, Design Compiler, IC Compiler, VCS RTL Verification solution.
@@ -22,7 +22,7 @@ Lab4 is 3-week lab and here are the details for given lab
 
 - Lab4-week1: Verilog Review, 4-bit full adder Chip.
 
-- Lab4-week2: RTL Practical Programming for your GCD design.
+- Lab4-week2: Synthesis of the given GCD design.
 
 - Lab4-week3: Timing, Area, and Power Analysis of PrimeTime
 
@@ -255,6 +255,7 @@ dc_shell
 ```
 
 - launch dc_shell for design compiler.
+
 ![fig1](images/fig1.png)
 
 _**Fig. 1. Launch Design Compiler**_
@@ -650,215 +651,15 @@ _**Fig. 49. Final Layout after putting standard cell filler**_
 
 ## Lab4-Week2 : RTL Practical Programming for your GCD design.
 
-### Design GCD Design
-
-#### Part 1. Complete your RTL for GCD
-
-**Caution! You have to train your Verilog skill youself to make this code. TA will not be easily helpful for your Verilog code debugging. Please refer __[Verilog Tutorial](http://vol.verilog.com/VOL/main.htm)__**.
-
-Lab4-week2, we work on GCD algorithm, which is a popular algorithm for computing greatest common divisor (GCD) (TA provides some incomplete RTL designs for GCD algorithm, students complete RTL code and synthesize and generate Layout finally)
-
-Here is GCD algorithm.
-
-Following is the Euclid’s algorithm to compute GCD of two numbers, A and B. The algorithm was reported by J. Stein in 1967 and is available on the web at http://www.nist.gov/dads/HTML/binaryGCD.html (link is perhaps inactive) and also at http://en.wikipedia.org/wiki/Binary_GCD_algorithm.
-
-
-
-- Euclid's Algorithm for GCD (in C):
+First download the relevant verilog files. It is recommended that you create a new directory dedicated to GCD.
 
 ```
-#include <stdio.h>
-
-
-int GCD( int inA, int inB) {
-  int done = 0;
-  int swap = 0;
-
-  int A = inA;
-  int B = inB;
-
-  while ( !done )
-    {
-      if ( A < B ) // if A < B, swap values
-        {
-          swap = A; A = B;
-          B = swap;
-        }
-      else if ( B != 0 ) // subtract as long as B isn’t 0
-        A = A - B;
-      else
-        done = 1;
-    }
-  return A;
-}
-
-int main(void) {
-// this can be testbench
-
-  int inA = 20;
-  int inB = 30;
-  int out = 0;
-
-  out = GCD( inA, inB );
-
-  printf("Input inA = %d\n",inA);
-  printf("Input inB = %d\n",inB);
-  printf("GCD Output of inA and inB = %d\n",out);
-
-  return 0;
-}
+wget https://raw.githubusercontent.com/sheldonucr/ucr-eecs168-lab/master/lab4/gcd_ctrl.v
+wget https://raw.githubusercontent.com/sheldonucr/ucr-eecs168-lab/master/lab4/gcd_dpath.v
+wget https://raw.githubusercontent.com/sheldonucr/ucr-eecs168-lab/master/lab4/gcd_toplevel.v
 ```
 
-Now, we need to implement this in hardware.
-
-Here is behavioral Verilog code for GCD. What is wrong with this approach? Basically, it does not synthesize due to data dependent loop in hardware.
-
-```
-module gcdGCDUnit_behavior#( parameter W = 16 )
-  (
-  input  [W-1:0] inA, inB,
-  output [W-1:0] out
-  );
-    reg [W-1:0] A, B, out, swap;
-    integer     done;
-    always @(*)
-    begin
-      done = 0;
-      A = inA; B = inB;
-      while ( !done )
-        begin
-          if ( A < B )
-            swap = A;
-            A = B;
-            B = swap;
-          else if ( B != 0 )
-            A = A - B;
-          else
-            done = 1;
-        end
-      out = A;
-    end
-endmodule
-```
-
-The above behavioral description of the GCD unit describes the functionality of the module. While this is sufficient for VCS RTL simulation, the Design Compiler and IC Compiler cannot properly synthesize netlist from this description. Because of this, you must rewrite the behavioral description using “synthesizable” RTL code. For this, you will apply a structural design approach which involves describing the circuit design in terms of its registers, connections, and other modules. This process is referred to as Register Transfer Level Design.
-
-The first step is to derive the module in terms of its Data Path and Control Unit. The Data Path contains the registers, logic and math modules. The Control Unit contains the logic that drives the control signals for the Data Path. This is typically accomplished using a Finite State Machine which was part of your tutorial example in Chapter 5.
-
-Here is some methodology how we can make some RTL Design from behavioral RTL design.
-
-
-- __1st step:__ Start with behavioral and find out what hardware constructs you’ll need the followings
-  - Registers (for state)
-  - Functional units
-    1. Adders / Subtractors
-    1. Comparators
-    1. ALU’s
-
-    Above behavioral code. Let's find functional unit samples.
-    ```
-    A = inA; B = inB; => State -> Registers
-
-    A<B => Need comparator
-
-    B != 0 => Need another comparator
-
-    A= A - B: Need subtractor
-    ```
-
-
-- __2nd step:__ Define module ports
-
-  Define module ports
-
-
-
-- __3rd step:__ Implement the modules
-  - Two step process
-    1. Define datapath
-    1. Define control/ control path
-
-
-
-The detail methodology and GCD RTL can be found [this slides](https://cseweb.ucsd.edu/classes/wi08/cse141L/Slides/verilog_deux.pdf)
-
-Total system block is look like below.
-
-
-We provide three following incomplete RTL designs (Verilog) from above behavioral code for GCD algorithm. You should complete this file to go next part.
-The code are needed at the following comment region
-```
-// code here for EECS168
-```
-
-- GCD Top Design: `gcd_rtl.v`
-- GCD Control: `gcd_ctrl.v`
-- GCD Data Path: `gcd_dpath.v`
-
-![GCD RTL Design](images/GCD_RTL.png)
-
-_**GCD RTL Design Block**_
-
-you need to download incomplete GCD RTL design [here](https://raw.githubusercontent.com/sheldonucr/ucr-eecs168-lab/master/lab4/GCD_RTL.tgz)
-
-
-
-To test your GCD Testbench with RTL Design successfully, you need to pass the following VCS testing toolkit (referred from MIT 6.375)
-```
-vcs -PP +lint=all,noVCDE +v2k -timescale=1ns/10ps +define+CLOCK_PERIOD=0.5 gcd_rtl_tb.v gcd_ctrl.v gcd_dpath.v gcd_rtl.v -v vcTest.v -v vcTestSource.v -v vcTestSink.v -v vcQueues.v -v vcStateElements.v
-```
-
-
-If your RTL still has error, then your `./simv +verbose=1` result will be the following
-```
-[tkim@kepler rtl_students]:./simv +verbose=1
-Chronologic VCS simulator copyright 1991-2015
-Contains Synopsys proprietary information.
-Compiler version K-2015.09-SP1-1; Runtime version K-2015.09-SP1-1;  Feb 29 16:49 2016
- Entering Test Suite: gcdGCDUnit_rtl
-VCD+ Writer K-2015.09-SP1-1 Copyright (c) 1991-2015 by Synopsys Inc.
-  + Running Test Case: gcdGCDUnit_rtl
-     [ FAILED ] Test ( Is sink finished? ) failed
-
-$finish called from file "gcd_rtl_tb.v", line 124.
-$finish at simulation time               154650
-           V C S   S i m u l a t i o n   R e p o r t
-Time: 1546500 ps
-CPU Time:      0.640 seconds;       Data structure size:   0.0Mb
-Mon Feb 29 16:49:37 2016
-[tkim@kepler rtl_students]:
-```
-
-If you successfully finished your RTL, then your `simv` result will be the following
-```
-[tkim@kepler rtl_students]:./simv +verbose=1
-Chronologic VCS simulator copyright 1991-2015
-Contains Synopsys proprietary information.
-Compiler version K-2015.09-SP1-1; Runtime version K-2015.09-SP1-1;  Feb 29 16:50 2016
- Entering Test Suite: gcdGCDUnit_rtl
-VCD+ Writer K-2015.09-SP1-1 Copyright (c) 1991-2015 by Synopsys Inc.
-  + Running Test Case: gcdGCDUnit_rtl
-     [ passed ] Test ( vcTestSink ) succeeded, [ 0003 == 0003 ]
-     [ passed ] Test ( vcTestSink ) succeeded, [ 0007 == 0007 ]
-     [ passed ] Test ( vcTestSink ) succeeded, [ 0005 == 0005 ]
-     [ passed ] Test ( vcTestSink ) succeeded, [ 0001 == 0001 ]
-     [ passed ] Test ( vcTestSink ) succeeded, [ 0028 == 0028 ]
-     [ passed ] Test ( vcTestSink ) succeeded, [ 000a == 000a ]
-     [ passed ] Test ( vcTestSink ) succeeded, [ 0005 == 0005 ]
-     [ passed ] Test ( vcTestSink ) succeeded, [ 0000 == 0000 ]
-     [ passed ] Test ( Is sink finished? ) succeeded
-
-$finish called from file "gcd_rtl_tb.v", line 124.
-$finish at simulation time               154650
-           V C S   S i m u l a t i o n   R e p o r t
-Time: 1546500 ps
-CPU Time:      0.640 seconds;       Data structure size:   0.0Mb
-Mon Feb 29 16:50:13 2016
-[tkim@kepler rtl_students]:
-```
-
-#### Part 2. Synthesis and layout for GCD
-After you finished your RTL design, then you need to synthesize with Design Compiler and generate a layout with IC Compiler.
+Then you can follow the instructions with Design Compiler again, except some changes covered below.
 
 ##### Design Compiler and IC Compiler for GCD
 
@@ -868,7 +669,7 @@ GCD requires clock and you also need to synthesize clock tree. For your GCD, eve
 
 - For analyze, you need to use the command for multiple verilog file
 ```
-analyze -format verilog "gcd_ctrl.v gcd_dpath.v gcd_rtl.v"
+analyze -format verilog "gcd_ctrl.v gcd_dpath.v gcd_toplevel.v"
 ```
 
 - For elaborate, you can use top-level design block name
@@ -884,10 +685,6 @@ elaborate "gcdGCDUnit_rtl"
 create_clock clk -name ideal_clock1 -period 1
 ```
 
-- Instead of `compiler` in Design Compiler, you use faster compiler variants (`compiler_ultra`) with clock option.
-```
-compile_ultra -gate_clock -no_autoungroup
-```
 
 - When you write a synthesized file and ddc file, you need to have a `-hierarchy` option
 
@@ -1441,8 +1238,6 @@ In this lab4, we introduce Synopsys RTL design toolkit, which are VCS, Design Co
 ---- until here for week1 check off
 
 ---- week 2 checkoff
-
-  * Complete three Verilog file (gcd_rtl.v gcd_dpath.v gcd_ctrl.v)
 
   * Final Layout in Figure 51
 
