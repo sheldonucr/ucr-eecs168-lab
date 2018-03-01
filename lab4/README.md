@@ -710,7 +710,20 @@ write -f verilog -hierarchy -output "gcdGCDUnit_rtl_synthesized.v"
 create_floorplan -use_vertical_row -start_first_row -left_io2core 30 -bottom_io2core 30 -right_io2core 30 -top_io2core 30
 ```
 
-- For the clock synthesize, you need to generate clock tree after `commit_fp_rail`.
+- After `commit_fp_rail`, you need to optimize your placing.
+
+```
+route_zrt_global
+optimize_fp_timing -fix_design_rule -effort high
+route_zrt_global
+place_opt  -power -area_recovery  -effort high
+place_opt  -power  -effort high
+derive_pg_connection -power_net {VDD} -ground_net {VSS} -power_pin {VDD} -ground_pin {VSS} -create_ports top
+psynopt -congestion -area_recovery
+derive_pg_connection -power_net {VDD} -ground_net {VSS} -power_pin {VDD} -ground_pin {VSS} -create_ports top
+```
+
+- You also need to generate clock tree after placing.
 ```
 clock_opt -only_cts -no_clock_route
 ```
@@ -1199,10 +1212,6 @@ link
 After importing your Post Verilog Design.
 ```
 set power_analysis_mode "averaged"
-```
-
-```
-report_switching_activity -list_not_annotated
 ```
 
 ```
