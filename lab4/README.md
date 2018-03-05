@@ -805,16 +805,16 @@ Report : timing
         -transition_time
 Design : gcdGCDUnit_rtl
 Version: K-2015.06-SP4
-Date   : Sat Mar  5 08:19:55 2016
+Date   : Mon Mar  5 14:06:38 2018
 ****************************************
 
 Operating Conditions: TYPICAL   Library: saed90nm_typ
 Wire Load Model Mode: top
 
-  Startpoint: GCDdpath0/B_reg_reg[4]
+  Startpoint: GCDdpath0/A_reg_reg[4]
               (rising edge-triggered flip-flop clocked by ideal_clock1)
-  Endpoint: GCDdpath0/clk_gate_A_reg_reg/latch
-            (positive level-sensitive latch clocked by ideal_clock1')
+  Endpoint: GCDdpath0/A_reg_reg[9]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
   Path Group: ideal_clock1
   Path Type: max
 
@@ -830,67 +830,46 @@ Attributes:
   ---------------------------------------------------------------------------------------------------------
   clock ideal_clock1 (rise edge)                                    0.00       0.00
   clock network delay (ideal)                                       0.00       0.00
-  GCDdpath0/B_reg_reg[4]/CLK (DFFARX1)                    0.00      0.00       0.00 r
-  GCDdpath0/B_reg_reg[4]/Q (DFFARX1)                      0.04      0.24       0.24 f
-  GCDdpath0/B_reg[4] (net)                      4                   0.00       0.24 f
-  GCDdpath0/U114/QN (NOR2X1)                              0.06      0.04       0.28 r
-  GCDdpath0/n189 (net)                          3                   0.00       0.28 r
-  GCDdpath0/U115/QN (AOINVX1)                             0.03      0.03       0.30 f
-  GCDdpath0/n35 (net)                           1                   0.00       0.30 f
-  GCDdpath0/U116/QN (NOR2X0)                              0.05      0.03       0.33 r
-  GCDdpath0/n36 (net)                           1                   0.00       0.33 r
-  GCDdpath0/U118/QN (NOR2X1)                              0.05      0.04       0.37 f
-  GCDdpath0/n130 (net)                          3                   0.00       0.37 f
-  GCDdpath0/U36/QN (NOR2X1)                               0.04      0.03       0.40 r
-  GCDdpath0/n39 (net)                           1                   0.00       0.40 r
-  GCDdpath0/U121/Q (OR3X1)                                0.05      0.08       0.48 r
-  GCDdpath0/n40 (net)                           1                   0.00       0.48 r
-  GCDdpath0/U35/QN (NOR2X2)                               0.05      0.05       0.52 f
-  GCDdpath0/n84 (net)                           2                   0.00       0.52 f
-  GCDdpath0/U159/QN (NOR2X2)                              0.06      0.04       0.56 r
-  GCDdpath0/n85 (net)                           1                   0.00       0.56 r
-  GCDdpath0/U160/QN (NOR2X4)                              0.04      0.04       0.60 f
-  GCDdpath0/N5 (net)                            4                   0.00       0.60 f
-  GCDdpath0/A_lt_B (gcdGCDUnitDpath_W16)                            0.00       0.60 f
-  A_lt_B (net)                                                      0.00       0.60 f
-  GCDctrl0/A_lt_B (gcdGCDUnitCtrl)                                  0.00       0.60 f
-  GCDctrl0/A_lt_B (net)                                             0.00       0.60 f
-  GCDctrl0/U8/QN (NAND2X2)                                0.04      0.02       0.62 r
-  GCDctrl0/n6 (net)                             2                   0.00       0.62 r
-  GCDctrl0/U9/QN (NAND2X0)                                0.05      0.04       0.67 f
-  GCDctrl0/B_en (net)                           2                   0.00       0.67 f
-  GCDctrl0/U10/QN (AOINVX1)                               0.03      0.03       0.69 r
-  GCDctrl0/n4 (net)                             1                   0.00       0.69 r
-  GCDctrl0/U13/QN (NAND2X1)                               0.03      0.03       0.72 f
-  GCDctrl0/A_en (net)                           1                   0.00       0.72 f
-  GCDctrl0/A_en (gcdGCDUnitCtrl)                                    0.00       0.72 f
-  A_en (net)                                                        0.00       0.72 f
-  GCDdpath0/A_en (gcdGCDUnitDpath_W16)                              0.00       0.72 f
-  GCDdpath0/A_en (net)                                              0.00       0.72 f
-  GCDdpath0/clk_gate_A_reg_reg/EN (SNPS_CLOCK_GATE_HIGH_gcdGCDUnitDpath_W16_1)     0.00     0.72 f
-  GCDdpath0/clk_gate_A_reg_reg/net151 (net)                         0.00       0.72 f
-  GCDdpath0/clk_gate_A_reg_reg/latch/D (LATCHX1)          0.03      0.00       0.72 f
-  data arrival time                                                            0.72
+  GCDdpath0/A_reg_reg[4]/CLK (DFFARX1)                    0.00      0.00       0.00 r
+  GCDdpath0/A_reg_reg[4]/Q (DFFARX1)                      0.04      0.24       0.24 f
+  result_bits_data[4] (net)                     5                   0.00       0.24 f
+  U153/QN (NAND2X1)                                       0.04      0.03       0.28 r
+  n294 (net)                                    2                   0.00       0.28 r
+  U251/QN (INVX0)                                         0.03      0.03       0.31 f
+  n183 (net)                                    2                   0.00       0.31 f
+  U133/QN (NAND2X0)                                       0.06      0.04       0.35 r
+  n149 (net)                                    1                   0.00       0.35 r
+  U252/QN (NAND2X1)                                       0.05      0.04       0.39 f
+  n314 (net)                                    3                   0.00       0.39 f
+  U253/QN (NAND2X2)                                       0.03      0.02       0.41 r
+  n153 (net)                                    1                   0.00       0.41 r
+  U258/QN (NAND2X1)                                       0.03      0.03       0.44 f
+  n154 (net)                                    1                   0.00       0.44 f
+  U259/Q (AO21X1)                                         0.04      0.08       0.52 f
+  n227 (net)                                    4                   0.00       0.52 f
+  U177/Q (LSDNX1)                                         0.04      0.08       0.60 f
+  n308 (net)                                    2                   0.00       0.60 f
+  U320/Q (AO21X1)                                         0.03      0.09       0.69 f
+  n233 (net)                                    1                   0.00       0.69 f
+  U322/Q (XOR2X1)                                         0.04      0.12       0.81 r
+  n234 (net)                                    1                   0.00       0.81 r
+  U140/QN (NAND2X0)                                       0.05      0.04       0.84 f
+  n238 (net)                                    1                   0.00       0.84 f
+  U324/QN (NAND4X0)                                       0.07      0.04       0.88 r
+  n91 (net)                                     1                   0.00       0.88 r
+  GCDdpath0/A_reg_reg[9]/D (DFFARX1)                      0.07      0.00       0.88 r
+  data arrival time                                                            0.88
 
-  clock ideal_clock1' (rise edge)                                   0.50       0.50
-  clock network delay (ideal)                                       0.00       0.50
-  GCDdpath0/clk_gate_A_reg_reg/latch/CLK (LATCHX1)                  0.00       0.50 r
-  time borrowed from endpoint                                       0.22       0.72
-  data required time                                                           0.72
+  clock ideal_clock1 (rise edge)                                    1.00       1.00
+  clock network delay (ideal)                                       0.00       1.00
+  GCDdpath0/A_reg_reg[9]/CLK (DFFARX1)                              0.00       1.00 r
+  library setup time                                               -0.12       0.88
+  data required time                                                           0.88
   ---------------------------------------------------------------------------------------------------------
-  data required time                                                           0.72
-  data arrival time                                                           -0.72
+  data required time                                                           0.88
+  data arrival time                                                           -0.88
   ---------------------------------------------------------------------------------------------------------
   slack (MET)                                                                  0.00
-
-  Time Borrowing Information
-  ------------------------------------------------------------------------
-  ideal_clock1' nominal pulse width                                 0.50
-  library setup time                                               -0.10
-  ------------------------------------------------------------------------
-  max time borrow                                                   0.40
-  actual time borrow                                                0.22
-  ------------------------------------------------------------------------
 
 ```
 
@@ -908,29 +887,29 @@ then, you can see the report
 Report : area
 Design : gcdGCDUnit_rtl
 Version: K-2015.06-SP4
-Date   : Sat Mar  5 08:23:57 2016
+Date   : Mon Mar  5 14:07:59 2018
 ****************************************
 
 Library(s) Used:
 
     saed90nm_typ (File: /usr/local/synopsys/pdk/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/ref/saed90nm_fr/LM/saed90nm_typ.db)
 
-Number of ports:                          130
-Number of nets:                           461
-Number of cells:                          326
-Number of combinational cells:            285
-Number of sequential cells:                37
+Number of ports:                           54
+Number of nets:                           384
+Number of cells:                          317
+Number of combinational cells:            283
+Number of sequential cells:                34
 Number of macros/black boxes:               0
-Number of buf/inv:                         36
-Number of references:                       2
+Number of buf/inv:                         34
+Number of references:                      30
 
-Combinational area:               1992.904015
-Buf/Inv area:                      205.527008
-Noncombinational area:            1126.194016
+Combinational area:               1995.864012
+Buf/Inv area:                      199.999007
+Noncombinational area:            1081.958015
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                  3119.098031
+Total cell area:                  3077.822028
 Total area:                 undefined
 
 Hierarchical area distribution
@@ -940,14 +919,10 @@ Hierarchical area distribution
                                   ------------------  ----------------------------
 Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
                                   Total      Total    national   national   boxes   Design
---------------------------------  ---------  -------  ---------  ---------  ------  ------------------------------------------
-gcdGCDUnit_rtl                    3119.0980    100.0     0.0000     0.0000  0.0000  gcdGCDUnit_rtl
-GCDctrl0                           193.3050      6.2   143.5390    49.7660  0.0000  gcdGCDUnitCtrl
-GCDdpath0                         2925.7930     93.8  1823.4150  1032.1920  0.0000  gcdGCDUnitDpath_W16
-GCDdpath0/clk_gate_A_reg_reg        35.0930      1.1    12.9750    22.1180  0.0000  SNPS_CLOCK_GATE_HIGH_gcdGCDUnitDpath_W16_1
-GCDdpath0/clk_gate_B_reg_reg        35.0930      1.1    12.9750    22.1180  0.0000  SNPS_CLOCK_GATE_HIGH_gcdGCDUnitDpath_W16_0
---------------------------------  ---------  -------  ---------  ---------  ------  ------------------------------------------
-Total                                                 1992.9040  1126.1940  0.0000
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------
+gcdGCDUnit_rtl                    3077.8220    100.0  1995.8640  1081.9580  0.0000  gcdGCDUnit_rtl
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------
+Total                                                 1995.8640  1081.9580  0.0000
 
 
 ```
@@ -1008,11 +983,13 @@ report_reference -nosplit -hierarchy
 ```
 
 ```
+Information: Updating graph... (UID-83)
+
 ****************************************
 Report : reference
 Design : gcdGCDUnit_rtl
 Version: K-2015.06-SP4
-Date   : Sat Mar  5 08:29:21 2016
+Date   : Mon Mar  5 14:11:39 2018
 ****************************************
 
 Attributes:
@@ -1028,93 +1005,30 @@ Attributes:
 
 Reference          Library       Unit Area   Count    Total Area   Attributes
 -----------------------------------------------------------------------------
-gcdGCDUnitCtrl                  193.305001       1    193.305001  h, n
-gcdGCDUnitDpath_W16            2925.793030       1   2925.793030  h, n
------------------------------------------------------------------------------
-Total 2 references                                   3119.098031
-
-****************************************
-Design: gcdGCDUnitCtrl
-****************************************
-Reference          Library       Unit Area   Count    Total Area   Attributes
------------------------------------------------------------------------------
 AND2X1             saed90nm_typ     7.445000       1     7.445000
-AOI22X1            saed90nm_typ    12.902000       1    12.902000
-AOINVX1            saed90nm_typ     6.451000       2    12.902000
-DFFX1              saed90nm_typ    24.882999       2    49.765999 n
-INVX0              saed90nm_typ     5.530000       1     5.530000
-INVX2              saed90nm_typ     6.451000       1     6.451000
-ISOLANDX1          saed90nm_typ     7.373000       1     7.373000
-ISOLORX1           saed90nm_typ     7.387000       1     7.387000
-NAND2X0            saed90nm_typ     5.443000       4    21.771999
-NAND2X1            saed90nm_typ     5.501000       1     5.501000
-NAND2X2            saed90nm_typ     8.798000       1     8.798000
-NOR2X0             saed90nm_typ     5.530000       4    22.120001
-NOR2X1             saed90nm_typ     6.005000       1     6.005000
-NOR3X0             saed90nm_typ     8.294000       1     8.294000
-OAI21X1            saed90nm_typ    11.059000       1    11.059000
------------------------------------------------------------------------------
-Total 15 references                                   193.305001
-
-****************************************
-Design: gcdGCDUnitDpath_W16
-****************************************
-Reference          Library       Unit Area   Count    Total Area   Attributes
------------------------------------------------------------------------------
-AND2X1             saed90nm_typ     7.445000      17   126.565003
-AND4X1             saed90nm_typ    10.123000       1    10.123000
-AO21X1             saed90nm_typ    10.138000       2    20.275999
-AOINVX1            saed90nm_typ     6.451000       1     6.451000
-AOINVX2            saed90nm_typ     6.451000       1     6.451000
+AO21X1             saed90nm_typ    10.138000       1    10.138000
+AO221X1            saed90nm_typ    12.902000       4    51.608002
+AO222X1            saed90nm_typ    14.746000      20   294.920006
 DFFARX1            saed90nm_typ    32.256001      32  1032.192017 n
-INVX0              saed90nm_typ     5.530000      26   143.780005
-INVX2              saed90nm_typ     6.451000       2    12.902000
-ISOLANDX1          saed90nm_typ     7.373000       1     7.373000
-ISOLORX1           saed90nm_typ     7.387000       1     7.387000
-MUX21X1            saed90nm_typ    11.059000      16   176.944000
-NAND2X0            saed90nm_typ     5.443000      49   266.706992
-NAND2X1            saed90nm_typ     5.501000      31   170.530998
-NAND2X2            saed90nm_typ     8.798000       3    26.394001
-NAND3X0            saed90nm_typ     7.373000       1     7.373000
-NOR2X0             saed90nm_typ     5.530000      62   342.860013
-NOR2X1             saed90nm_typ     6.005000       8    48.040001
-NOR2X2             saed90nm_typ     9.216000       9    82.943996
-NOR2X4             saed90nm_typ    14.731000       2    29.462000
-NOR3X0             saed90nm_typ     8.294000       1     8.294000
-NOR4X0             saed90nm_typ     9.216000       3    27.647999
-NOR4X1             saed90nm_typ    15.638000       1    15.638000
-OA21X1             saed90nm_typ     9.216000       1     9.216000
-OR3X1              saed90nm_typ     9.230000       3    27.689999
-OR3X2              saed90nm_typ    11.030000       1    11.030000
+DFFX1              saed90nm_typ    24.882999       2    49.765999 n
+FADDX1             saed90nm_typ    29.490999      11   324.400991 r
+INVX0              saed90nm_typ     5.530000       9    49.770002
+ISOLANDX1          saed90nm_typ     7.373000       4    29.492001
+ISOLORX1           saed90nm_typ     7.387000       4    29.548000
+MUX21X1            saed90nm_typ    11.059000       4    44.236000
+NAND2X0            saed90nm_typ     5.443000      47   255.820992
+NAND3X0            saed90nm_typ     7.373000      17   125.341002
+NAND4X0            saed90nm_typ     8.294000       3    24.881999
+NOR2X0             saed90nm_typ     5.530000       7    38.710001
+NOR3X0             saed90nm_typ     8.294000       2    16.587999
+NOR4X0             saed90nm_typ     9.216000       4    36.863998
+OA21X1             saed90nm_typ     9.216000       3    27.647999
+OA22X1             saed90nm_typ    11.059000      19   210.121000
+OA221X1            saed90nm_typ    12.902000       1    12.902000
 OR4X1              saed90nm_typ    10.152000       1    10.152000
-SNPS_CLOCK_GATE_HIGH_gcdGCDUnitDpath_W16_0    35.093000       1    35.093000 h, n
-SNPS_CLOCK_GATE_HIGH_gcdGCDUnitDpath_W16_1    35.093000       1    35.093000 h, n
-XNOR2X1            saed90nm_typ    13.824000       4    55.296001
-XOR2X1             saed90nm_typ    13.824000      12   165.888004
+XNOR2X1            saed90nm_typ    13.824000       1    13.824000
 -----------------------------------------------------------------------------
-Total 30 references                                  2925.793030
-
-****************************************
-Design: SNPS_CLOCK_GATE_HIGH_gcdGCDUnitDpath_W16_0
-****************************************
-Reference          Library       Unit Area   Count    Total Area   Attributes
------------------------------------------------------------------------------
-AND2X1             saed90nm_typ     7.445000       1     7.445000
-INVX0              saed90nm_typ     5.530000       1     5.530000
-LATCHX1            saed90nm_typ    22.118000       1    22.118000 n
------------------------------------------------------------------------------
-Total 3 references                                     35.093000
-
-****************************************
-Design: SNPS_CLOCK_GATE_HIGH_gcdGCDUnitDpath_W16_1
-****************************************
-Reference          Library       Unit Area   Count    Total Area   Attributes
------------------------------------------------------------------------------
-AND2X1             saed90nm_typ     7.445000       1     7.445000
-INVX0              saed90nm_typ     5.530000       1     5.530000
-LATCHX1            saed90nm_typ    22.118000       1    22.118000 n
------------------------------------------------------------------------------
-Total 3 references                                     35.093000
+Total 22 references                                  2696.369010
 ```
 
 You can go to terminal/output window and copy above report and paste into your lab report for standard-cell area analysis.
@@ -1133,30 +1047,16 @@ Then, the report is like below.
 Report : resources
 Design : gcdGCDUnit_rtl
 Version: K-2015.06-SP4
-Date   : Sat Mar  5 08:32:06 2016
+Date   : Mon Mar  5 14:12:48 2018
 ****************************************
 
-
-No resource sharing information to report.
-
-No implementations to report
-
-****************************************
-Design : gcdGCDUnitCtrl
-****************************************
-
-No implementations to report
-
-****************************************
-Design : gcdGCDUnitDpath_W16
-****************************************
 
 Resource Report for this hierarchy in file ./gcd_dpath.v
 =============================================================================
 | Cell           | Module         | Parameters | Contained Operations       |
 =============================================================================
-| sub_x_2        | DW01_sub       | width=16   | sub_45 (gcd_dpath.v:45)    |
-| lt_x_3         | DW_cmp         | width=16   | lt_51 (gcd_dpath.v:51)     |
+| sub_x_2        | DW01_sub       | width=16   | GCDdpath0/sub_45 (gcd_dpath.v:45) |
+| lt_x_3         | DW_cmp         | width=16   | GCDdpath0/lt_51 (gcd_dpath.v:51) |
 =============================================================================
 
 
@@ -1165,9 +1065,10 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_x_2            | DW01_sub         | pparch (area,speed)                 |
-| lt_x_3             | DW_cmp           | pparch (area,speed)                 |
+| sub_x_2            | DW01_sub         | apparch (area)     |                |
+| lt_x_3             | DW_cmp           | apparch (area)     |                |
 ===============================================================================
+
 ```
 
 ### Post analysis with PrimeTime
