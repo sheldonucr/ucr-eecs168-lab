@@ -519,7 +519,7 @@ _**Fig. 28. Read synthesized gate-level Verilog**_
 Now we can see the standard cells as layout
 
 
-File->Import Design, choose SDC and import `fa_4bit_const.sdc` you
+File->Import->Read SDC, choose SDC and import `fa_4bit_const.sdc` you
 exported from Design Compiler.
 
 ![fig29](images/fig29.png)
@@ -699,7 +699,11 @@ write -format ddc -hierarchy -output "gcdGCDUnit_rtl_synthesized.ddc"
 ```
 write -f verilog -hierarchy -output "gcdGCDUnit_rtl_synthesized.v"
 ```
+- Also, remember to write the sdc file
 
+```
+write_sdc -nosplit "fa_4bit_const.sdc"
+```
 
 
 ###### IC Compiler Changes for GCD.
