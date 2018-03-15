@@ -156,10 +156,10 @@ Make sure library and cell names match and click OK. See figure 14 below for ref
 _**Fig. 14. Cellview generation from cellview**_
 
 
-Now we have a transistor level model of an inverter (symbol). See Fig. 15 for reference. 
+Now we have a transistor level model of an inverter (symbol). 
 
-You may also modify the appearance of the inverter symbol here by using the shape tools, Add -> Shape. Now save and close the symbol window.
-![fig15](images/fig15_a.png)
+You may modify the appearance of the inverter symbol here by using the shape tools, Add -> Shape. Now save and close the symbol window. See Fig. 15 for reference. 
+
 ![fig15](images/fig15_b.png)
 
 _**Fig. 15. Design symbol for inverter**_
