@@ -24,7 +24,7 @@ Lab4 is 3-week lab and here are the details for given lab
 
 - Lab4-week2: Synthesis of the given GCD design.
 
-- Lab4-week3: Timing, Area, and Power Analysis of PrimeTime
+- Lab4-week3: Timing, Area, and Power Analysis.
 
 
 ## Lab4-Week1: Part 1. HDL (Hardware Description Language)- Verilog Language
@@ -211,9 +211,7 @@ $finish at simulation time  171.0 ns
 Time: 171000 ps
 CPU Time:      0.350 seconds;       Data structure size:   0.0Mb
 Mon Feb 22 13:45:00 2016
-
 ```
-
 
 
 ## Lab4-Week1: Part 3. Design Compiler for Synthesis
@@ -245,7 +243,6 @@ module fa_4bit( cin, cout, ain, bin, sum );
 	assign {cout,sum} = ain + bin + cin;
 
 endmodule // fa_4bit
-
 ```
 
 One Verilog file is ready. We need to do SYNTHESIS, which is a transformation process from RTL to gate-level design (another synthesized Verilog). Type the following command to launch Design Compiler.
@@ -775,7 +772,7 @@ _**Fig. 51. Final GCD Layout**_
 
 
 
-## Lab4-Week3 : Timing, Area, and Power Analysis and Full-chip synthesis design (Optional)
+## Lab4-Week3 : Timing, Area, and Power Analysis and Full-chip synthesis design
 
 ### Whole RTL and Layout Design Process
 
@@ -783,7 +780,7 @@ _**Fig. 51. Final GCD Layout**_
 
 _**Fig. 50. Full RTL and Physical Toolflow for IC design**_
 
-Let's get some timing, area, power reports from Design Compiler.
+Let's get some timing, area, power reports from `Design Compiler`.
 
 You need to re-run all design compiler step first for your GCD design.
 
