@@ -418,6 +418,8 @@ This lab is designed for four weeks, so for your lab report, you need to design 
 
 * Your 1-bit full adder simulation
 
+* Your 1-bit full adder stick diagram
+
 * Your 1-bit full adder layout
 
 ---- until here for week1 check off
