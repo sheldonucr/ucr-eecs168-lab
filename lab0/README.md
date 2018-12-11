@@ -29,8 +29,6 @@ To access these servers on Windows, you must first download and install an SSH c
 
 #### Install `Xming` and `putty`
 
-In our lab (WCH125), `putty` and `Xming` already installed.
-
 To install `putty` and `Xming` in your computer, you can find an instruction at [ here ](http://www.geo.mtu.edu/geoschem/docs/putty_install.html)
 
 
