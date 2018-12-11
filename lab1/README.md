@@ -396,7 +396,7 @@ Lab 1 is to learn how to design your circuit, generate netlist, and simulate giv
 
 ### Deliverables for your lab report.
 
-* Name, SID, Session(021,022,023), ENGR ID, UCR NetID, your partner name (Partners only available upon request)
+* Name, SID, Session(021,022,023), ENGR ID, UCR NetID.
 
 * Summary of what you learned thru this lab (One paragraph)
 
@@ -410,7 +410,7 @@ Lab 1 is to learn how to design your circuit, generate netlist, and simulate giv
 
 * A DC Sweep analysis waveform as seen in Fig 29.
 
-* A delay measurement of VIN and VOUT at 50% to 50% annotated waveform as seen in Fig 33.
+* A delay measurement of VOUT and VIN at 50% to 50% annotated waveform as seen in Fig 33.
 
 * A rise/fall measurement at 90% and 10% for VOUT annotated waveform as seen in Fig 35.
 
