@@ -293,7 +293,7 @@ Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will
 
 ### Deliverables for your lab report.
 
-* Name, SID, Session(021,022,023), ENGR ID, UCR NetID, your partner name
+* Name, SID, Session(021,022,023), ENGR ID, UCR NetID
 
 * Summary of what you learned thru this lab (One paragraph)
 
