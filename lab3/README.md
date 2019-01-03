@@ -392,7 +392,7 @@ This lab is designed for four weeks, so for your lab report, you need to design 
 
 ### Deliverables for your lab report.
 
-* Name, SID, Session(021,022,023), ENGR ID, UCR NetID, your partner name
+* Name, SID, Session(021,022,023), ENGR ID, UCR NetID
 
 * Summary of what you learned thru this lab (One paragraph)
 
