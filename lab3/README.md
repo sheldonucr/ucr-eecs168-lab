@@ -397,7 +397,7 @@ This lab is designed for four weeks, so for your lab report, you need to design 
 
 ---- until here for week1 check off
 
----- week 2 checkoff
+---- week 2 checkoff from here
 
 * Your 1-bit full adder schematic - it must be transistor-level not logic-level
 
@@ -407,9 +407,15 @@ This lab is designed for four weeks, so for your lab report, you need to design 
 
 * Your 1-bit full adder layout
 
----- until here for week1 check off
+* An DRC Result with `no errors` for your 1-bit full adder
 
----- week 2 checkoff
+* An LVS Result with `CLEAN` for your 1-bit full adder
+
+* Your 1-bit full adder __POST (Layout) SIMULATION__ result (with parasitic extraction) - you need to have your test bench and the test results should include 0+0, 0+1, 1+0, 1+1 (Hint: the frequency of input signal B can be twice that of A.)
+
+---- until here for week2 check off
+
+---- week 3 checkoff from here
 
 * Your 4-bit full adder schematic (with hierarchical design)
 
@@ -419,7 +425,7 @@ This lab is designed for four weeks, so for your lab report, you need to design 
 
 * An LVS Result with `CLEAN` for your 4-bit full adder
 
-* Your 4-bit full adder __PRE (Schematic) SIMULATION__ result - you need to have your test bench and the input signals should cover from 0000 to 1111
+* Your 4-bit full adder __PRE (Schematic) SIMULATION__ result - you need to have your test bench and the input signals should cover from 0000 to 1111 (Hint: the frequency of A0, A1, A2, A3, B0, B1, B2, B3 should be doubled by bit.)
 
 * Your 4-bit full adder __POST (Layout) SIMULATION__ result (with parasitic extraction) - you need to have your test bench and the input signals should cover from 0000 to 1111
 
