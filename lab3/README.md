@@ -249,25 +249,9 @@ Now draw metal paths with `Create -> Path` using the `M1` layer under the LPP pa
 
 In addition you need to add labels for the metal connections just added. To add labels, select the `M1PIN` layer in the LPP panel and go to `Create -> Text -> Label`. Enter a name for each label in the box noted in Fig.92 and place the text labels as noted by the red boxes in Fig.91. Label names used are: `VDD, VSS, VIO1, VIO2, VIO3, VIO4, and VIO5`. Remember that in order to pass LVS, your M1PIN label names in layout need to match up with the pin names from your ring oscillator schematic. Also names for schematic pins and names for layout labels should use uppercase letters. Save the layout.
 
-![fig91](images/fig91.png)
+![fig91](images/fig91-3.png)
 
-_**Fig. 91. Ring Oscillator Layout**_
-
-### More Stardand Layout
-
-![fig91-2](images/fig91-2.png)
-
-_**Fig. 91-2. Another Ring Oscillator Layout**_
-
-![fig91-3](images/fig91-3.png)
-
-_**Fig. 91-3. Ring Oscillator Layout using Metal2 (refer Fig.107)**_
-
-![fig91-4](images/fig91-4.png)
-
-_**Fig. 91-4. Compact Ring Oscillator Layout using Metal2**_
-
-![fig92](images/fig92.png)
+_**Fig. 91. Ring Oscillator Layout using Metal2 (refer Fig.107)**_
 
 _**Fig. 92. Label Text**_
 
