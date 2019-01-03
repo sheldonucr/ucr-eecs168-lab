@@ -101,7 +101,8 @@ _**Fig. 6. Technology Manager**_
 Go to your schematic window, and click `Add > Instance`, then select `SAED_PDK_90` for the library and select pmos4t and nmos4t for your PMOS and NMOS.
 For pmos4t width, assign 0.5um and for nmos4t width, assign 0.25um as seen in Fig.7. You can modify these values later with property editor (`Edit -> Properties -> Property Editor`).
 
-![Add instance for p-mos and n-mos](images/fig7_1.png)(images/fig7_2.png)
+![Add instance for p-mos](images/fig7_1.png)
+![Add instance for n-mos](images/fig7_2.png)
 
 _**Fig. 7. Adding Instance for PMOS and NMOS**_
 
