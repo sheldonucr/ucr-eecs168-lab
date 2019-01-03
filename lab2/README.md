@@ -350,8 +350,8 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 * One week.
 
-* eecs168-021,023: by 11am on 1/31
-* eecs168-022: by 5pm on 2/2
+* eecs168-021, 023: by 11am on 1/30
+* eecs168-022: by 5pm on 2/1
 
 ### Next lab
 
