@@ -11,20 +11,15 @@ You will synthesize two sets of HDL, which are 4-bit binary full adder (week1) a
 
 In this lab4, we introduce Synopsys RTL design toolkit, which are VCS, Design Compiler, IC Compiler, VCS RTL Verification solution.
 
-
 In this lab, you need to review at least 2 hours for the following website to review your Verilog programming skill, debugging method, and design examples. After 2 hours review, you need to follow RTL design step to make the final layout with design automation process.
-
-
 
 ## Lab4 Schedule
 
-Lab4 is 3-week lab and here are the details for given lab
+Lab4 is 2-week lab and here are the details for given lab
 
 - Lab4-week1: Verilog Review, 4-bit full adder Chip.
 
 - Lab4-week2: Synthesis of the given GCD design.
-
-- Lab4-week3: Timing, Area, and Power Analysis.
 
 
 ## Lab4-Week1: Part 1. HDL (Hardware Description Language)- Verilog Language
@@ -57,7 +52,7 @@ There is better explanation for Verolog Operators [Click Here](https://embeddedm
 __This lab requires individual lab!__
 
 
-## Lab4-Week1: Part 2. Synopsys Verilog Compiler Simulator (Verilog Compiler ) Tutorial
+## Lab4-Week1: Part 2. Synopsys Verilog Compiler Simulator (Verilog Compiler) Tutorial
 
 For the Verilog editor, `vi` or `emacs` is recommended, but if you're beginner of Linux system, you can use `nano`, it's your choice.
 
@@ -269,7 +264,7 @@ First we need to choose Synopsys 90nm model for design process.
 
 _**Fig. 3. Choose Setup for library setup.**_
 
-Replace the libraries with the following files
+**Replace** the default your_library with the following files
 - Link library
 ```
 /usr/local/synopsys/pdk/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/ref/saed90nm_fr/LM/saed90nm_typ.db
@@ -687,104 +682,7 @@ create_clock clk -name ideal_clock1 -period 1
 compile_ultra	
 ```
 
-- When you write a synthesized file and ddc file, you need to have a `-hierarchy` option
-
-```
-write -format ddc -hierarchy -output "gcdGCDUnit_rtl_synthesized.ddc"
-```
-
-```
-write -f verilog -hierarchy -output "gcdGCDUnit_rtl_synthesized.v"
-```
-- Also, remember to write the sdc file
-
-```
-write_sdc -nosplit "fa_4bit_const.sdc"
-```
-
-
-###### IC Compiler Changes for GCD.
-
-- For the floorplan, enough sizes are needeed. Use 30 instead of 20.
-
-```
-create_floorplan -use_vertical_row -start_first_row -left_io2core 30 -bottom_io2core 30 -right_io2core 30 -top_io2core 30
-```
-
-- After `commit_fp_rail`, you need to optimize your placing.
-
-```
-route_zrt_global
-optimize_fp_timing -fix_design_rule -effort high
-route_zrt_global
-place_opt  -power -area_recovery  -effort high
-place_opt  -power  -effort high
-derive_pg_connection -power_net {VDD} -ground_net {VSS} -power_pin {VDD} -ground_pin {VSS} -create_ports top
-psynopt -congestion -area_recovery
-derive_pg_connection -power_net {VDD} -ground_net {VSS} -power_pin {VDD} -ground_pin {VSS} -create_ports top
-```
-
-- You also need to generate clock tree after placing.
-```
-clock_opt -only_cts -no_clock_route
-```
-
-```
-route_zrt_group -all_clock_nets -reuse_existing_global_route true
-```
-- For Routing one more after `insert_stdcell_filler`
-```
-route_opt -incremental -size_only
-```
-- Extra final step, Generate the post place and route netlist, the constraint file, and parasitics files to generate power estimates.
-```
-change_names -rules verilog -hierarchy
-```
-
-```
-write_verilog "gcdGCDUnit_rtl.output.v"
-```
-
-```
-write_sdf "gcdGCDUnit_rtl.output.sdf"
-```
-
-```
-write_sdc "gcdGCDUnit_rtl.output.sdc"
-```
-
-```
-extract_rc -coupling_cap
-```
-
-```
-write_parasitics -format SBPF -output "gcdGCDUnit_rtl.output.sbpf"
-```
-
-
-- Final GCD layout ready.
-
-![Fig. 51](images/GCD_layout.png)
-
-_**Fig. 51. Final GCD Layout**_
-
-
-
-
-
-## Lab4-Week3 : Timing, Area, and Power Analysis and Full-chip synthesis design
-
-### Whole RTL and Layout Design Process
-
-![Fig. 50](images/synopsys_tool_flow.png)
-
-_**Fig. 50. Full RTL and Physical Toolflow for IC design**_
-
-Let's get some timing, area, power reports from `Design Compiler`.
-
-You need to re-run all design compiler step first for your GCD design.
-
-After `compile_ultra` step, you need to have more steps to generate report
+Let's get some timing, area, power reports from `Design Compiler`. After `compile_ultra` step, you need to have more steps to generate report
 
 Let's see timing report.
 
@@ -1072,57 +970,86 @@ Implementation Report
 
 ```
 
-### Post analysis with PrimeTime
-
-So far, we used Verilog Compiler Simulator (VCS) for RTL simulation, Design Compiler for Logic Synthesis, and IC Compiler for Layout. Now, we will use PrimeTime which is signoff tool and enable accurate delay and power estimations.
-
-Signoff users have a few key requirements for their signoff tool of choice, runtime and capacity to handle their largest chip size requirements, efficient multi-scenario analysis to verify timing across all corners and modes, margin control to reduce over-design and maximize chip performance, and accuracy to ensure correlation to silicon. The Synopsys PrimeTime Suite addresses these requirements by delivering fast, memory-efficient scalar and multicore computing, distributed multi-scenario analysis and ECO fixing, using variation-aware Composite Current Source (CCS) modeling that extends static timing analysis to include crosstalk timing, noise, power and constraint analysis.
-
-It delivers HSPICE accurate signoff analysis that helps pinpoint problems prior to tapeout thereby reducing risk, ensuring design integrity, and lowering the cost of design. This industry gold-standard solution improves designers' productivity by delivering fast turnaround on development schedules for large and small designs while ensuring first-pass silicon success through greater predictability and the highest accuracy.
-
-- See more at: http://www.synopsys.com/Tools/Implementation/SignOff/Pages/PrimeTime.aspx#sthash.qfYroAvS.dpuf
-
-To run primetime, you can type the following Tools
+- When you write a synthesized file and ddc file, you need to have a `-hierarchy` option
 
 ```
-pt_shell
-```
-
-To start GUI, you need to type the following command.
-
-```
-gui_start
-```
-
-Set the power analysis and read your saved verilog from last step of IC Compier.
-
-```
-set target_library "/usr/local/synopsys/pdk/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/ref/saed90nm_fr/LM/saed90nm_typ.db"
-
-set link_path "/usr/local/synopsys/pdk/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/ref/saed90nm_fr/LM/saed90nm_typ.db"
-
-set power_enable_analysis "true"
-
-read_verilog "gcdGCDUnit_rtl.output.v "
-
-current_design "gcdGCDUnit_rtl"
-
-link
-
-```
-
-After importing your Post Verilog Design.
-```
-set power_analysis_mode "averaged"
+write -format ddc -hierarchy -output "gcdGCDUnit_rtl_synthesized.ddc"
 ```
 
 ```
-read_parasitics -increment -format sbpf "gcdGCDUnit_rtl.output.sbpf.max"
+write -f verilog -hierarchy -output "gcdGCDUnit_rtl_synthesized.v"
+```
+- Also, remember to write the sdc file
+
+```
+write_sdc -nosplit "fa_4bit_const.sdc"
+```
+
+
+###### IC Compiler Changes for GCD.
+
+- For the floorplan, enough sizes are needeed. Use 30 instead of 20.
+
+```
+create_floorplan -use_vertical_row -start_first_row -left_io2core 30 -bottom_io2core 30 -right_io2core 30 -top_io2core 30
+```
+
+- After `commit_fp_rail`, you need to optimize your placing.
+
+```
+route_zrt_global
+optimize_fp_timing -fix_design_rule -effort high
+route_zrt_global
+place_opt  -power -area_recovery  -effort high
+place_opt  -power  -effort high
+derive_pg_connection -power_net {VDD} -ground_net {VSS} -power_pin {VDD} -ground_pin {VSS} -create_ports top
+psynopt -congestion -area_recovery
+derive_pg_connection -power_net {VDD} -ground_net {VSS} -power_pin {VDD} -ground_pin {VSS} -create_ports top
+```
+
+- You also need to generate clock tree after placing.
+```
+clock_opt -only_cts -no_clock_route
 ```
 
 ```
-report_power -verbose -hierarchy
+route_zrt_group -all_clock_nets -reuse_existing_global_route true
 ```
+- For Routing one more after `insert_stdcell_filler`
+```
+route_opt -incremental -size_only
+```
+- Extra final step, Generate the post place and route netlist, the constraint file, and parasitics files to generate power estimates.
+```
+change_names -rules verilog -hierarchy
+```
+
+```
+write_verilog "gcdGCDUnit_rtl.output.v"
+```
+
+```
+write_sdf "gcdGCDUnit_rtl.output.sdf"
+```
+
+```
+write_sdc "gcdGCDUnit_rtl.output.sdc"
+```
+
+```
+extract_rc -coupling_cap
+```
+
+```
+write_parasitics -format SBPF -output "gcdGCDUnit_rtl.output.sbpf"
+```
+
+
+- Final GCD layout ready.
+
+![Fig. 51](images/GCD_layout.png)
+
+_**Fig. 51. Final GCD Layout**_
 
 
 
@@ -1138,7 +1065,7 @@ In this lab4, we introduce Synopsys RTL design toolkit, which are VCS, Design Co
 
 ### Deliverables for your lab report.
 
-* Name, SID, Session(021,022,023), ENGR ID, UCR NetID, your partner name
+* Name, SID, Session(021,022,023), ENGR ID, UCR NetID
 
 ---- week1 checkoff from here
 
@@ -1152,19 +1079,13 @@ In this lab4, we introduce Synopsys RTL design toolkit, which are VCS, Design Co
 
 ---- until here for week1 check off
 
----- week 2 checkoff
+---- week 2 checkoff from here
 
   * Final Layout in Figure 51
 
----- until here for week 2 check off
-
----- week 3 checkoff
-
   * 5 design compiler report (timing, power, area, reference, and resource)
-
-  * Primetime power report (after run `report_power` at the last step)
-
----- until here for week 3 check off
+  
+---- until here for week 2 check off
 
 * Some of the issues if you have (One paragraph)
 
@@ -1194,12 +1115,10 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 ### Lab Report Due
 
-* All sessions: by 11am on 3/19
+* All sessions: by 11am on 3/15
 
 ### Checkoff
 
 * First week: Refer above deliverables
 
 * Second week: Refer above deliverables
-
-* Third week: Refer above deliverables
