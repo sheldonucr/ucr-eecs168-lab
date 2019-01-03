@@ -253,6 +253,7 @@ In addition you need to add labels for the metal connections just added. To add 
 
 _**Fig. 91. Ring Oscillator Layout using Metal2 (refer Fig.107)**_
 
+![fig92](images/fig92.png)
 _**Fig. 92. Label Text**_
 
 After your layout matches Fig 91, go to `Verification -> DRC -> Setup and Run` to setup and run DRC (as done earlier in lab2 of the tutorial). Leave the options on the custom tab as their defaults. Click `OK` when done.
@@ -418,9 +419,9 @@ This lab is designed for four weeks, so for your lab report, you need to design 
 
 * An LVS Result with `CLEAN` for your 4-bit full adder
 
-* Your 4-bit full adder __PRE (Schematic) SIMULATION__ result - you need to have your test bench
+* Your 4-bit full adder __PRE (Schematic) SIMULATION__ result - you need to have your test bench and the input signals should cover from 0000 to 1111
 
-* Your 4-bit full adder __POST (Layout) SIMULATION__ result (with parasitic extraction) - you need to have your test bench
+* Your 4-bit full adder __POST (Layout) SIMULATION__ result (with parasitic extraction) - you need to have your test bench and the input signals should cover from 0000 to 1111
 
 ---- week 3 checkoff
 
