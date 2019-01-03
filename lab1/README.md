@@ -413,7 +413,7 @@ Lab 1 is to learn how to design your circuit, generate netlist, and simulate giv
 
 * A delay measurement of VOUT and VIN at 50% to 50% annotated waveform as seen in Fig 33.
 
-* A rise/fall measurement at 90% and 10% for VOUT annotated waveform as seen in Fig 35.
+* A rise AND fall measurement at 90% and 10% for VOUT annotated waveform as seen in Fig 35.
 
 * An average current measurement annotated waveform as seen in Fig. 37.
 
