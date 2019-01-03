@@ -2,7 +2,7 @@
 
 ## Lab Resources
 
-Every discussion/Q&A will be at https://github.com/sheldonucr/ucr-eecs168-lab. Please use GITHUB page instead of email to ask any questions to TA. Questions of confidential nature, eg. grading, are the exception. Labs must be finished on the given time. You have one week for your lab report. Lab due dates are indicated in the Lab schedule. Your lab will be due on your respective lab day (except Lab 4), eg. if your lab day is Wednesday then you will turn in your lab on the Wednesday of the week your lab is due. Please be sure to include all required deliverables in your lab report. Five lab reports are required to turn in and total score is 100. Team work (Pair design and programming) (limit 2) is allowed but individual lab report is required and those lab reports should not be the same with your pair.
+Every discussion/Q&A will be at https://github.com/sheldonucr/ucr-eecs168-lab. Please use GITHUB page instead of email to ask any questions to TA. Questions of confidential nature, eg. grading, are the exception. Labs must be finished on the given time. You have one week for your lab report. Lab due dates are indicated in the Lab schedule. Your lab will be due on your respective lab day (except Lab 4), eg. if your lab day is Wednesday then you will turn in your lab on the Wednesday of the week your lab is due. Please be sure to include all required deliverables in your lab report. Five lab reports are required to turn in and total score is 100.
 
 ### Lab schedule
 
@@ -17,8 +17,8 @@ Every discussion/Q&A will be at https://github.com/sheldonucr/ucr-eecs168-lab. P
 |Week 7   | Lab3 work week. No new assignment. |	 | |
 |Week 8		| [Lab/Tutorial 4 - RTL Synthesis Design (Design Compiler/IC Compiler/PrimeTime) (Target Circuit: 4-bit full adder)](lab4)|Lab3 report due by the beginning of lab.| 25 |
 |Week 9		| [Lab/Tutorial 4 - Complex RTL Synthesis Design  (Target Circuit: Euclid's Algorithm for GCD)](lab4)| 	|  |
-|Week 10	| [Lab/Tutorial 4 - Generating reports for the GCD design](lab4)|  |  |
-|Final Week | No lab |  |Lab4 report due by Monday.  | |
+|Week 10	| No lab   |  | Lab4 report due by Friday.  |
+|Final Week | No lab |  |  | |
 
 ### Attendance Policy
 
