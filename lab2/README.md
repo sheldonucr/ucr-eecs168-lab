@@ -266,7 +266,7 @@ After fix every thing, you can see `PASS` message in Fig. 65
 
 _**Fig. 65. LVS Passed**_
 
-## Part 8: Design NAND Gate (You don't need to finish this part during lab but for your lab report, you need to finish this)
+## Part 8: Design NAND Gate
 
 From your lecture class, we learned NAND gate schematic and its layout. Now, from Lab1 and Lab2 tutorials, we learned how to draw schematic, simulate, and layout your circuit. Now we draw NAND gate schematic and layout. f'=a*b, so you need to design your NAND gate schematic and design testbench with your NAND symbol to simulate with HSPICE, then you need to draw layout for NAND gate with successful DRC and LVS.
 
@@ -290,6 +290,14 @@ From your lecture class, we learned NAND gate schematic and its layout. Now, fro
 ### Objective
 
 Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will learn three IC design tools (Custom Designer, IP Validator) and design inverter and NAND gates in this lab and the followings are expected to be delivered in your lab report.
+
+
+### Checkoff
+
+* inverter layout, DRC, LVS
+
+* NAND schematic, testbench, simulation, NAND layout, DRC, LVS
+
 
 ### Deliverables for your lab report.
 
@@ -318,7 +326,6 @@ _**Fig. 66. Expected NAND Simulation Result**_
 * An DRC Result with `no errors` for your NAND gate layout.
 
 * An LVS Result with `CLEAN` for your NAND gate layout.
-
 
 * Some of the issues if you have (One paragraph)
 
