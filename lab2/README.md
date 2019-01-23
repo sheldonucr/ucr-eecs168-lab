@@ -291,6 +291,14 @@ From your lecture class, we learned NAND gate schematic and its layout. Now, fro
 
 Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will learn three IC design tools (Custom Designer, IP Validator) and design inverter and NAND gates in this lab and the followings are expected to be delivered in your lab report.
 
+
+### Checkoff
+
+* inverter layout, DRC, LVS
+
+* NAND schematic, testbench, simulation, NAND layout, DRC, LVS
+
+
 ### Deliverables for your lab report.
 
 * Name, SID, Session(021,022,023), ENGR ID, UCR NetID
@@ -318,7 +326,6 @@ _**Fig. 66. Expected NAND Simulation Result**_
 * An DRC Result with `no errors` for your NAND gate layout.
 
 * An LVS Result with `CLEAN` for your NAND gate layout.
-
 
 * Some of the issues if you have (One paragraph)
 
