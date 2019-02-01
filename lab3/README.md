@@ -375,15 +375,15 @@ Contact (CO) size is 0.13um x 0.13um and VIA1 size is 0.14um x 0.14um for 90nm d
 
 Fig.108 shows an example of two NMOS connecting in parallel. Fig.109 shows the layout of Fig.108. Fig.110 shows another layout with source-drain sharing. 
 
-![fig108](images/Fig_108.png)
+![fig108](images/fig108.png)
 
 _**Fig. 108. Two parallel-connected NMOS transistors**_
 
-![fig109](images/Fig_109.png)
+![fig109](images/fig109.png)
 
 _**Fig. 109. Use two independent NMOS layout**_
 
-![fig110](images/Fig_110.png)
+![fig110](images/fig110.png)
 
 _**Fig. 110. layout with source-drain sharing**_
 
@@ -391,15 +391,15 @@ _**Fig. 110. layout with source-drain sharing**_
 
 Fig.111 shows an example of two PMOS connecting in series. Fig.112 shows the layout of Fig.111. Fig.113 shows another layout with source-drain sharing. 
 
-![fig111](images/Fig_111.png)
+![fig111](images/fig111.png)
 
 _**Fig. 111. Two series-connected PMOS transistors**_
 
-![fig112](images/Fig_112.png)
+![fig112](images/fig112.png)
 
 _**Fig. 112. Use two independent PMOS layout**_
 
-![fig113](images/Fig_113.png)
+![fig113](images/fig113.png)
 
 _**Fig. 113. layout with source-drain sharing**_
 
@@ -407,11 +407,11 @@ _**Fig. 113. layout with source-drain sharing**_
 
 Fig.114 shows an example of PMOS circuit. Fig.115 shows the layout of Fig.114. 
 
-![fig114](images/Fig_114.png)
+![fig114](images/fig114.png)
 
 _**Fig. 114. Five PMOS circuit **_
 
-![fig115](images/Fig_115.png)
+![fig115](images/fig115.png)
 
 _**Fig. 115. layout with source-drain sharing**_
 
@@ -507,7 +507,7 @@ _**Fig. 118. 1-bit adder testbench schematic**_
 
 _**Fig. 119. 4-bit ripple carry adder**_
 
-![fig120](images/Fig_120.png)
+![fig120](images/fig120.png)
 
 _**Fig. 113. 1-bit full adder layout hint (Diffusion width must be the same as schematic Width = 0.5um for PMOS and Width = 0.25um for NMOS**_
 
