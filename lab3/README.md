@@ -350,7 +350,9 @@ _**Fig. 106. Simulation result for ring oscillator**_
 
 You have now finished transient simulation of the ring oscillator circuit with applied parasitics.
 
-### Extra tutorial for use multiple layer
+## Extra tutorial 
+
+### Use multiple layers
 
 - Using M2 Layer (or higher like M3, M4...) in Layout
 
@@ -366,6 +368,52 @@ In order to connect different layers to each other, all metal layers and contact
 To use higher metal layers not shown, use their corresponding VIA layers to interconnect between the desired layers. For example, to connect M2 to M3, a VIA2 layer/contact must be drawn in between them.
 
 Contact (CO) size is 0.13um x 0.13um and VIA1 size is 0.14um x 0.14um for 90nm design.
+
+### Source-drain sharing
+
+- Connect MOS in parallel
+
+Fig.108 shows an example of two NMOS connecting in parallel. Fig.109 shows the layout of Fig.108. Fig.110 shows another layout with source-drain sharing. 
+
+![fig108](images/Fig_108.png)
+
+_**Fig. 108. Two parallel-connected NMOS transistors**_
+
+![fig109](images/Fig_109.png)
+
+_**Fig. 109. Use two independent NMOS layout**_
+
+![fig110](images/Fig_110.png)
+
+_**Fig. 110. layout with source-drain sharing**_
+
+- Connect MOS in series
+
+Fig.111 shows an example of two PMOS connecting in series. Fig.112 shows the layout of Fig.111. Fig.113 shows another layout with source-drain sharing. 
+
+![fig111](images/Fig_111.png)
+
+_**Fig. 111. Two series-connected PMOS transistors**_
+
+![fig112](images/Fig_112.png)
+
+_**Fig. 112. Use two independent PMOS layout**_
+
+![fig113](images/Fig_113.png)
+
+_**Fig. 113. layout with source-drain sharing**_
+
+- Another example
+
+Fig.114 shows an example of PMOS circuit. Fig.115 shows the layout of Fig.114. 
+
+![fig114](images/Fig_114.png)
+
+_**Fig. 114. Five PMOS circuit **_
+
+![fig115](images/Fig_115.png)
+
+_**Fig. 115. layout with source-drain sharing**_
 
 ## Lab3
 
@@ -407,9 +455,9 @@ This lab is designed for four weeks, so for your lab report, you need to design 
 
 * Your 1-bit full adder layout
 
-* An DRC Result with `no errors` for your 1-bit full adder
+* An DRC Result with `CLEAN` for your 1-bit full adder
 
-* An LVS Result with `CLEAN` for your 1-bit full adder
+* An LVS Result with `PASS` for your 1-bit full adder
 
 * Your 1-bit full adder __POST (Layout) SIMULATION__ result (with parasitic extraction) - you need to have your test bench and the test results should include 0+0, 0+1, 1+0, 1+1 (Hint: the frequency of input signal B can be twice that of A.)
 
@@ -421,9 +469,9 @@ This lab is designed for four weeks, so for your lab report, you need to design 
 
 * Your 4-bit full adder layout (with hierarchical design)
 
-* An DRC Result with `no errors` for your 4-bit full adder
+* An DRC Result with `CLEAN` for your 4-bit full adder
 
-* An LVS Result with `CLEAN` for your 4-bit full adder
+* An LVS Result with `PASS` for your 4-bit full adder
 
 * Your 4-bit full adder __PRE (Schematic) SIMULATION__ result - you need to have your test bench and the input signals should cover from 0000 to 1111 (Hint: the frequency of A0, A1, A2, A3, B0, B1, B2, B3 should be doubled by bit.)
 
@@ -441,25 +489,25 @@ You can refer this full adder here.
 
 A full adder adds binary number with carry in and out. A 1-bit full adder adds three one-bit number, such as A, B, and CIN. A and B are the operands and CIN is a bit carried in from the previous less significant stage.
 
-![fig109](images/fig109.png)
+![fig116](images/fig116.png)
 
-_**Fig. 109. 1-bit Full Adder Schematic**_
+_**Fig. 116. 1-bit Full Adder Schematic**_
 
-In Fig.109, there are two-stage. The first one is to generate `COUT` and the second one is to generate `S` which is final sum. It requires 28 transistors including two inverters. You can use your own design but you need to transistor-level design.
+In Fig.116, there are two-stage. The first one is to generate `COUT` and the second one is to generate `S` which is final sum. It requires 28 transistors including two inverters. You can use your own design but you need to transistor-level design.
 
-![fig110](images/fig110.png)
+![fig117](images/fig117.png)
 
-_**Fig. 110. 1-bit adder simulation (Pre-simulation)**_
+_**Fig. 117. 1-bit adder simulation (Pre-simulation)**_
 
-![fig111](images/fig111.png)
+![fig118](images/fig118.png)
 
-_**Fig. 111. 1-bit adder testbench schematic**_
+_**Fig. 118. 1-bit adder testbench schematic**_
 
-![fig112](images/fig112.png)
+![fig119](images/fig119.png)
 
-_**Fig. 112. 4-bit ripple carry adder**_
+_**Fig. 119. 4-bit ripple carry adder**_
 
-![fig113](images/Fig_113.png)
+![fig120](images/Fig_120.png)
 
 _**Fig. 113. 1-bit full adder layout hint (Diffusion width must be the same as schematic Width = 0.5um for PMOS and Width = 0.25um for NMOS**_
 
