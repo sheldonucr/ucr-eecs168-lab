@@ -373,7 +373,7 @@ Contact (CO) size is 0.13um x 0.13um and VIA1 size is 0.14um x 0.14um for 90nm d
 
 - Connect MOS in parallel
 
-Fig.108 shows an example of two NMOS connecting in parallel. Fig.109 shows the layout of Fig.108. Fig.110 shows another layout with source-drain sharing. 
+Fig.108 shows an example of two NMOS connecting in parallel (body is not connected in this example). Fig.109 shows the layout of Fig.108. Fig.110 shows another layout with source-drain sharing. 
 
 ![fig108](images/fig108.png)
 
@@ -385,11 +385,11 @@ _**Fig. 109. Use two independent NMOS layout**_
 
 ![fig110](images/fig110.png)
 
-_**Fig. 110. layout with source-drain sharing**_
+_**Fig. 110. Layout with source-drain sharing**_
 
 - Connect MOS in series
 
-Fig.111 shows an example of two PMOS connecting in series. Fig.112 shows the layout of Fig.111. Fig.113 shows another layout with source-drain sharing. 
+Fig.111 shows an example of two PMOS connecting in series (body is not connected in this example). Fig.112 shows the layout of Fig.111. Fig.113 shows another layout with source-drain sharing. 
 
 ![fig111](images/fig111.png)
 
@@ -401,19 +401,19 @@ _**Fig. 112. Use two independent PMOS layout**_
 
 ![fig113](images/fig113.png)
 
-_**Fig. 113. layout with source-drain sharing**_
+_**Fig. 113. Layout with source-drain sharing**_
 
-- Another example
+### Placing body along the top
 
-Fig.114 shows an example of PMOS circuit. Fig.115 shows the layout of Fig.114. 
+Fig.114 shows an example of PMOS circuit (body is not connected in this example). Fig.115 shows the layout of Fig.114. 
 
-![fig114](images/fig114.PNG)
+![fig114](images/fig114.png)
 
 _**Fig. 114. Five PMOS circuit**_
 
 ![fig115](images/fig115.png)
 
-_**Fig. 115. layout with source-drain sharing**_
+_**Fig. 115. Layout with source-drain sharing and body along the top**_
 
 ## Lab3
 
