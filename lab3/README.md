@@ -407,9 +407,9 @@ _**Fig. 113. layout with source-drain sharing**_
 
 Fig.114 shows an example of PMOS circuit. Fig.115 shows the layout of Fig.114. 
 
-![fig114](images/fig114.png)
+![fig114](images/fig114.PNG)
 
-_**Fig. 114. Five PMOS circuit **_
+_**Fig. 114. Five PMOS circuit**_
 
 ![fig115](images/fig115.png)
 
@@ -509,7 +509,7 @@ _**Fig. 119. 4-bit ripple carry adder**_
 
 ![fig120](images/fig120.png)
 
-_**Fig. 113. 1-bit full adder layout hint (Diffusion width must be the same as schematic Width = 0.5um for PMOS and Width = 0.25um for NMOS**_
+_**Fig. 120. 1-bit full adder layout hint (Diffusion width must be the same as schematic Width = 0.5um for PMOS and Width = 0.25um for NMOS**_
 
 ### What to submit
 
