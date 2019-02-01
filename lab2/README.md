@@ -307,9 +307,9 @@ Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will
 
 * Your inverter layout in Fig. 51.
 
-* An DRC Result with `no errors` for your inverter layout in Fig 54.
+* An DRC Result with `CLEAN` for your inverter layout in Fig 57.
 
-* An LVS Result with `CLEAN` for your inverter layout in Fig 63.
+* An LVS Result with `PASS` for your inverter layout in Fig 64.
 
 * Your NAND gate schematic (Only NAND cell)
 
@@ -323,9 +323,9 @@ _**Fig. 66. Expected NAND Simulation Result**_
 
 * Your NAND gate layout
 
-* An DRC Result with `no errors` for your NAND gate layout.
+* An DRC Result with `CLEAN` for your NAND gate layout.
 
-* An LVS Result with `CLEAN` for your NAND gate layout.
+* An LVS Result with `PASS` for your NAND gate layout.
 
 * Some of the issues if you have (One paragraph)
 
