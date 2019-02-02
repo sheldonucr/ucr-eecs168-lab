@@ -12,37 +12,37 @@ This work design for two weeks lab, so for your lab report, you need to design 4
 
 You need to keep working on Inverter schematic and layout for this extraction.
 
-From your lab2, after passing DRC and LVS you can now move on to LPE (Layout Parasitic Extraction). In this phase, resistances and capacitances will be extracted from the layout. In layout window go to `Verification -> LPE -> Setup and Run`. Please make sure your setup the Fig.66 for the Main tab, you need to click the "View output" Option to see the output window.
+From your lab2, after passing DRC and LVS you can now move on to LPE (Layout Parasitic Extraction). In this phase, resistances and capacitances will be extracted from the layout. In layout window go to `Verification -> LPE -> Setup and Run`. Please make sure your setup the Fig.1 for the Main tab, you need to click the "View output" Option to see the output window.
 
-![fig66](images/fig66.png)
+![fig1](images/fig1.png)
 
-_**Fig. 66. LPE Setup for StarRC**_
+_**Fig. 1. LPE Setup -- Main**_
 
-In Fig.67, 'Extraction Options' tab, you need to change your `Runset Report File` to yours. It is located under `pvjob_[your library name]_[your cellview name].icv.lvs` folder.
+In Fig.2, 'Extraction Options' tab, you need to change your `Runset Report File` to yours. It is located under `pvjob_[your library name]_[your cellview name].icv.lvs` folder.
 
-![fig67](images/fig67.png)
+![fig2](images/fig2.png)
 
-_**Fig. 67-0. LPE Setup for StarRC**_
+_**Fig. 2. LPE Setup -- Extract Options**_
 
-![fig67_1](images/fig67-1.png)
+![fig3](images/fig3.png)
 
-_**Fig. 67-1. LPE Setup for StarRC**_
+_**Fig. 3. Select ICV Runset Report File**_
 
-![fig67_2](images/fig67-2.png)
+![fig4](images/fig4.png)
 
-_**Fig. 67-2. LPE Setup for StarRC**_
+_**Fig. 4. Select ICV Runset Report File**_
 
-In Fig.67-3, you should make sure the netlist ground node matches the ground node name in the schematic and lyout. Here, choose 'VSS' for our ground. Note that you cannot use 'GND' or 'gnd' as ground node name.
+In Fig.5, you should make sure the netlist ground node matches the ground node name in the schematic and lyout. Here, choose 'VSS' for our ground. Note that you cannot use 'GND' or 'gnd' as ground node name.
 
-![fig67_3](images/fig67-3.png)
+![fig5](images/fig5.png)
 
-_**Fig. 67-3. LPE Setup for StarRC**_
+_**Fig. 5. LPE Setup -- Extract Options**_
 
-![fig68](images/fig68.png)
+![fig6](images/fig6.png)
 
-_**Fig. 68. LPE Setup for StarRC**_
+_**Fig. 6. LPE Setup -- Output Options**_
 
-Make sure the other options in this tab match up with Fig.67-0,1,2,3, and Fig.68.
+Make sure the other options in this tab match up with Fig.2-6.
 
 Device Map:
 ```
@@ -53,27 +53,27 @@ Layer Map:
 /usr/local/synopsys/pdk/SAED_PDK90nm/starrcxt/output_layer_map
 ```
 
-Now click on `OK`. Then you will see Customer Designer as Fig.69.
+Now click on `OK`. Then you will see Customer Designer as Fig.7.
 
-![fig69](images/fig69.png)
+![fig7](images/fig7.png)
 
-_**Fig. 69. Console Output**_
+_**Fig. 7. LPE Output**_
 
-After some time you should able to see the following message as shown in the console window if the parasitics were generated correctly. See Fig 70.
+After some time you should able to see the following message as shown in the console window if the parasitics were generated correctly. See Fig.8.
 
-![fig70](images/fig70.png)
+![fig8](images/fig8.png)
 
-_**Fig. 70. Console Output**_
+_**Fig. 8. Console Output**_
 
-After LPE has successfully run, a parasitic view window should open. See Fig 71 and 72 for reference. The RC components are very small in the window that opens up (Fig 71) so you may need to zoom in to see the details (Fig 72). It may help to drag a box around the RC components using the mouse cursor to highlight them, then zoom in to see them. Also note that your parasitic view may not match exactly as shown below which is fine since this depends on differences in layout
+After LPE has successfully run, a parasitic view window should open. See Fig 9 and 10 for reference. The RC components are very small in the window that opens up (Fig.9) so you may need to zoom in to see the details (Fig.10). It may help to drag a box around the RC components using the mouse cursor to highlight them, then zoom in to see them. Also note that your parasitic view may not match exactly as shown below which is fine since this depends on differences in layout
 
-![fig71](images/fig71.png)
+![fig9](images/fig9.png)
 
-_**Fig. 71. Parasitic View**_
+_**Fig. 9. Parasitic View**_
 
-![fig72](images/fig72.png)
+![fig10](images/fig10.png)
 
-_**Fig. 72. Parasitic View Zoom In**_
+_**Fig. 10. Parasitic View Zoom In**_
 
 You have successfully generated the parasitic view for the inverter and are ready to run post layout simulation. Save the parasitic view with `Design -> Save`. The parasitic view will be saved as “starrc” for the view name.
 
@@ -88,63 +88,63 @@ Select the following options for the following columns:
 - Cells: inverter_schematic
 - Views: schematic
 
-See Fig.73 for reference. Once all options are highlighted, click `Open` and the schematic that was created earlier for testing the inverter will open, see Fig 74 for reference.
+See Fig.11 for reference. Once all options are highlighted, click `Open` and the schematic that was created earlier for testing the inverter will open, see Fig.12 for reference.
 
-![fig73](images/fig73.png)
+![fig11](images/fig11.png)
 
-_**Fig. 73. Opening Circuit with Inverter Schematic**_
+_**Fig. 11. Opening Circuit with Inverter Schematic**_
 
-![fig74](images/fig74.png)
+![fig12](images/fig12.png)
 
-_**Fig. 74. Testbench Circuit for Inverter**_
+_**Fig. 12. Testbench Circuit for Inverter**_
 
-After opening the testbench circuit, make sure the circuit is similar to the one shown in Fig 74. Now the parasitics need to be loaded into the inverter cell used in the circuit. From the Custom Designer Console window, go to `File -> New -> CellView`. In the New CellView window, create a new configurations file as follows:
+After opening the testbench circuit, make sure the circuit is similar to the one shown in Fig.12. Now the parasitics need to be loaded into the inverter cell used in the circuit. From the Custom Designer Console window, go to `File -> New -> CellView`. In the New CellView window, create a new configurations file as follows:
 
 - Select inverter_testbench for the cell.
 - Set view name to config
 - Set editor to Hierarchy Editor
 
-See Fig.75 below for reference and click `OK`.
+See Fig.13 below for reference and click `OK`.
 
-![fig75](images/fig75.png)
+![fig13](images/fig13.png)
 
-_**Fig. 75. Configurations File Setup**_
+_**Fig. 13. Configurations File Setup**_
 
-A Hierarchy Editor window will display. Setup the view and list options as noted in Fig.76 below.
+A Hierarchy Editor window will display. Setup the view and list options as noted in Fig.14 below.
 
 - View: schematic
 - View Search List: schematic hspice symbol
 - View Stop List: symbol
 
-![fig76](images/fig76.png)
+![fig14](images/fig14.png)
 
-_**Fig. 76. Hierarchy Editor**_
+_**Fig. 14. Hierarchy Editor**_
 
-In order to map the parasitics generated from LPE to your inverter cell, select `starrc` under the 'Selected' column for the inverter instance, see Fig.77 for reference. The format for your inverter instance name in the instance column is schematic_instance_name (mylibrary, inverter). Notice that as starrc is selected, resistor and capacitor instances will show up under the instance column, this substitution replaces the inverter cell with its equivalent schematic containing its resistive and capacitive components. Afterwards save the settings by going to `File -> Save`.
+In order to map the parasitics generated from LPE to your inverter cell, select `starrc` under the 'Selected' column for the inverter instance, see Fig.15 for reference. The format for your inverter instance name in the instance column is schematic_instance_name (mylibrary, inverter). Notice that as starrc is selected, resistor and capacitor instances will show up under the instance column, this substitution replaces the inverter cell with its equivalent schematic containing its resistive and capacitive components. Afterwards save the settings by going to `File -> Save`.
 
 For future reference, to apply parasitics for a general case, a schematic must have its equivalent schematic symbol and layout created since a layout is used to generate the parasitics and a schematic symbol is used as a vessel to hold the parasitics. The testbench schematic is created to test the symbol containing the schematic with its applied parasitics.
 
-![fig77](images/fig77.png)
+![fig15](images/fig15.png)
 
-_**Fig. 77. Loading Parasitics into the Inverter**_
+_**Fig. 15. Loading Parasitics into the Inverter**_
 
-To start simulation with parasitics, go to `Tool -> Library Manager` from the Custom Designer Console window. In the Open Design window that opens, select `inverter_testbench` under the cells column and `config` under the views column and right click on config under views. Select `Open Design` from the drop down menu. See Fig.78 below for reference.
+To start simulation with parasitics, go to `Tool -> Library Manager` from the Custom Designer Console window. In the Open Design window that opens, select `inverter_testbench` under the cells column and `config` under the views column and right click on config under views. Select `Open Design` from the drop down menu. See Fig.16 below for reference.
 
-![fig78](images/fig78.png)
+![fig16](images/fig16.png)
 
-_**Fig. 78. Open Design with Parasitics**_
+_**Fig. 16. Open Design with Parasitics**_
 
-Afterwards, a schematic view should open up with parasitics applied, see Fig.79 below for reference. To check if the parasitics were applied, you can double click on the inverter symbol/cell and it should display the same parasitics view that was generated from running LPE. To change between parasitic and schematic views, select the desired view in the yellow box noted in Fig.79.
+Afterwards, a schematic view should open up with parasitics applied, see Fig.17 below for reference. To check if the parasitics were applied, you can double click on the inverter symbol/cell and it should display the same parasitics view that was generated from running LPE. To change between parasitic and schematic views, select the desired view in the yellow box noted in Fig.18.
 
-![fig79](images/fig79.png)
+![fig17](images/fig17.png)
 
-_**Fig. 79. Schematic with Parasitics Applied to the Inverter**_
+_**Fig. 17. Schematic with Parasitics Applied to the Inverter**_
 
-![fig80](images/fig80.png)
+![fig18](images/fig18.png)
 
-_**Fig. 80. Simulation result with parasitic extraction**_
+_**Fig. 18. Simulation result with parasitic extraction**_
 
-Now go ahead and simulate your circuit as you did previously in Part 3 of the tutorial. From the schematic window, go to `Tools -> SAE` to open a new SAE window. When comparing the two waveforms (inverter parasitics to inverter without parasitics) take note of the difference between delays from VIN to VOUT for transient waveforms. The result can be seen in Fig.80.
+Now go ahead and simulate your circuit as you did previously in Part 3 of the tutorial. From the schematic window, go to `Tools -> SAE` to open a new SAE window. When comparing the two waveforms (inverter parasitics to inverter without parasitics) take note of the difference between delays from VIN to VOUT for transient waveforms. The result can be seen in Fig.18.
 
 
 __Tip__:
@@ -156,7 +156,7 @@ If there is a mismatch error in the console regarding mismatched nets that are u
 
 Using smaller instances of circuits to create a larger design is what hierarchical design is all about. In this section, we use an inverter we created earlier and use several instances of it to create a five stage oscillator in schematic and layout views.
 
-Create a new schematic for the ring oscillator by going to `New -> CellView` from the Custom Designer Console and setup the options as shown in figure 81 below. The setup is as follows:
+Create a new schematic for the ring oscillator by going to `New -> CellView` from the Custom Designer Console and setup the options as shown in Fig.19 below. The setup is as follows:
 
 - Library: mylibrary
 - Cell Name: ringOscillator
@@ -165,45 +165,45 @@ Create a new schematic for the ring oscillator by going to `New -> CellView` fro
 
 Click `OK` when done.
 
-![fig81](images/fig81.png)
+![fig19](images/fig19.png)
 
-_**Fig. 81. Ring Oscillator Schematic Setup**_
+_**Fig. 19. Ring Oscillator Schematic Setup**_
 
-In the schematic window, building a ring oscillator circuit with pins as shown below in Fig.82.
+In the schematic window, building a ring oscillator circuit with pins as shown below in Fig.20.
 For the inverter instances, look for them in `Add -> Instance` to open the add instance window. In the add instance window, choose `mylibrary` for library, `inverter` for cell, and `symbol` for the view and place five instances of the inverter on the schematic.
 
 Add wires with `Add -> Wire`.
 
 For the pins, go to `Add -> Pins` and place two `input` pins for the VDD and VSS signals, and place five input/Output pins at each inverter output. For the five `input/output` pins, I called them VIO1-5 in the schematic. Feel free to give the wires the same names as the pins using `Add -> Wire Name`. Also as a convention, use uppercase letters for pin names instead of lowercase letters.
 
-![fig82](images/fig82.png)
+![fig20](images/fig20.png)
 
-_**Fig. 82. Ring Oscillator Schematic**_
+_**Fig. 20. Ring Oscillator Schematic**_
 
-Save your schematic using `Design -> Save`. Now create a symbol of your inverter using `Design -> New CellView -> From CellView`. Make sure your options match up as shown below in Fig.83 and click `OK`.
+Save your schematic using `Design -> Save`. Now create a symbol of your inverter using `Design -> New CellView -> From CellView`. Make sure your options match up as shown below in Fig.21 and click `OK`.
 
-![fig83](images/fig83.png)
+![fig21](images/fig21.png)
 
-_**Fig. 83. Ring Oscillator Symbol Setup**_
+_**Fig. 21. Ring Oscillator Symbol Setup**_
 
-After clicking OK, a new schematic window opens up with the ring oscillator symbol. Feel free to move around the pin placements for a better pin organization. See Fig.84 below for reference. Save the symbol when done with `Design -> Save`.
+After clicking OK, a new schematic window opens up with the ring oscillator symbol. Feel free to move around the pin placements for a better pin organization. See Fig.22 below for reference. Save the symbol when done with `Design -> Save`.
 
-![fig84](images/fig84.png)
+![fig22](images/fig22.png)
 
-_**Fig. 84. Ring Oscillator Symbol**_
+_**Fig. 22. Ring Oscillator Symbol**_
 
-Now create a new schematic to use as a testbench for the ring oscillator by going to `New -> CellView` from the Custom Designer Console and setup the options as shown in Fig.85 below. The setup is as follows:
+Now create a new schematic to use as a testbench for the ring oscillator by going to `New -> CellView` from the Custom Designer Console and setup the options as shown in Fig.23 below. The setup is as follows:
 
 - Library: mylibrary
 - Cell Name: ringOscillator_testbench
 - View Name: schematic
 - Editor: Schematic Editor
 
-![fig85](images/fig85.png)
+![fig23](images/fig23.png)
 
-_**Fig. 85. Ring Oscillator Testbench Setup**_
+_**Fig. 23. Ring Oscillator Testbench Setup**_
 
-Afterwards a new schematic window should open. In the new schematic window, setup the ring oscillator testbench circuit as shown in Fig.86.
+Afterwards a new schematic window should open. In the new schematic window, setup the ring oscillator testbench circuit as shown in Fig.24.
 
 To place a ringOscillator instance, look for them in `Add -> Instance` to open the add instance window. In the add instance window, choose `mylibrary` for library, `ringOscillator` for cell, and `symbol` for the view and place an instance of your ring oscillator on the schematic. Also place an instance of ground and a voltage source in the schematic. You can find these instances under library: `analogLib` and cell: `gnd` and cell: `vsource` respectively. For the voltage source, set the voltage to 1.2 volts.
 
@@ -212,11 +212,11 @@ Add wires with `Add -> Wire`.
 For the pins, go to `Add -> Pins` and place five output pins for each of the five `VIO#` pins. Feel
 free to give the wires the same names as the pins using `Add -> Wire Name`.
 
-![fig86](images/fig86.png)
+![fig24](images/fig24.png)
 
-_**Fig. 86. Ring Oscillator Testbench Circuit**_
+_**Fig. 24. Ring Oscillator Testbench Circuit**_
 
-Save with `Design -> Save` once your testbench circuit is done. Now we need to create a new layout so go to `New -> CellView` from the Custom Designer Console and setup the options as shown in Fig 87 below.
+Save with `Design -> Save` once your testbench circuit is done. Now we need to create a new layout so go to `New -> CellView` from the Custom Designer Console and setup the options as shown in Fig.25 below.
 
 - Library: mylibrary
 - Cell Name: ringOscillator
@@ -225,38 +225,38 @@ Save with `Design -> Save` once your testbench circuit is done. Now we need to c
 
 Click `OK` when done.
 
-![fig87](images/fig87.png)
+![fig25](images/fig25.png)
 
-_**Fig. 87. Ring Oscillator Layout Setup**_
+_**Fig. 25. Ring Oscillator Layout Setup**_
 
-In the new layout window, we can use the layout of the inverter created earlier to build a ring oscillator circuit. Go to `Create -> Instance` to open up a new create instance window. In the window select `mylibrary` for library, `inverter` for cell, and `layout` for the view and place five instances of the inverter layout on the layout screen. See Fig.88 for reference.
+In the new layout window, we can use the layout of the inverter created earlier to build a ring oscillator circuit. Go to `Create -> Instance` to open up a new create instance window. In the window select `mylibrary` for library, `inverter` for cell, and `layout` for the view and place five instances of the inverter layout on the layout screen. See Fig.26 for reference.
 
-![fig88](images/fig88.png)
+![fig26](images/fig26.png)
 
-_**Fig. 88. Placing Five Inverter Layout Instances**_
+_**Fig. 26. Placing Five Inverter Layout Instances**_
 
-Notice that the layout components for the inverter layouts don’t display. This is because the inverter layouts are hiding one level up in the hierarchy. In order to view them, change the hierarchy bounds as shown in Fig.89 below. The numbers represent a range of hierarchy levels that are displayed where the left number is the lower limit and the right number is the higher limit. Afterwards the inverter layouts are viewable as shown in Fig.90.
+Notice that the layout components for the inverter layouts don’t display. This is because the inverter layouts are hiding one level up in the hierarchy. In order to view them, change the hierarchy bounds as shown in Fig.27 below. The numbers represent a range of hierarchy levels that are displayed where the left number is the lower limit and the right number is the higher limit. Afterwards the inverter layouts are viewable as shown in Fig.28.
 
-![fig89](images/Fig_89.png)
+![fig27](images/fig27.png)
 
-_**Fig. 89. placing Five Inverter Layout Instances**_
+_**Fig. 27. placing Five Inverter Layout Instances**_
 
-![fig90](images/fig90.png)
+![fig28](images/fig28.png)
 
-_**Fig. 90. Viewing Inverter Layout Instances**_
+_**Fig. 28. Viewing Inverter Layout Instances**_
 
-Now draw metal paths with `Create -> Path` using the `M1` layer under the LPP panel. Connect all VDD signals with a single M1 connection and all VSS signals with a single M1 connection. Also connect the output of an inverter to the input of the next inverter using the `M1` layer. See Fig.91 for M1 connections.
+Now draw metal paths with `Create -> Path` using the `M1` layer under the LPP panel. Connect all VDD signals with a single M1 connection and all VSS signals with a single M1 connection. Also connect the output of an inverter to the input of the next inverter using the `M1` layer. See Fig.29 for M1 connections.
 
-In addition you need to add labels for the metal connections just added. To add labels, select the `M1PIN` layer in the LPP panel and go to `Create -> Text -> Label`. Enter a name for each label in the box noted in Fig.92 and place the text labels as noted by the red boxes in Fig.91. Label names used are: `VDD, VSS, VIO1, VIO2, VIO3, VIO4, and VIO5`. Remember that in order to pass LVS, your M1PIN label names in layout need to match up with the pin names from your ring oscillator schematic. Also names for schematic pins and names for layout labels should use uppercase letters. Save the layout.
+In addition you need to add labels for the metal connections just added. To add labels, select the `M1PIN` layer in the LPP panel and go to `Create -> Text -> Label`. Enter a name for each label in the box noted in Fig.30 and place the text labels as noted by the red boxes in Fig.29. Label names used are: `VDD, VSS, VIO1, VIO2, VIO3, VIO4, and VIO5`. Remember that in order to pass LVS, your M1PIN label names in layout need to match up with the pin names from your ring oscillator schematic. Also names for schematic pins and names for layout labels should use uppercase letters. Save the layout.
 
-![fig91](images/fig91-3.png)
+![fig29](images/fig29.png)
 
-_**Fig. 91. Ring Oscillator Layout using Metal2 (refer Fig.107)**_
+_**Fig. 29. Ring Oscillator Layout using Metal2 (refer Fig.107)**_
 
-![fig92](images/fig92.png)
-_**Fig. 92. Label Text**_
+![fig92](images/fig30.png)
+_**Fig. 30. Label Text**_
 
-After your layout matches Fig 91, go to `Verification -> DRC -> Setup and Run` to setup and run DRC (as done earlier in lab2 of the tutorial). Leave the options on the custom tab as their defaults. Click `OK` when done.
+After your layout matches Fig.29, go to `Verification -> DRC -> Setup and Run` to setup and run DRC (as done earlier in lab2 of the tutorial). Leave the options on the custom tab as their defaults. Click `OK` when done.
 
 Debug any DRC errors that come up. When DRC is passed, continue on to `Verification -> LVS -> Setup and Run` to run LVS. In LVS, leave the defaults for the custom options tab. Click `OK` when done.
 
@@ -268,15 +268,17 @@ Under main option select the file “rules.lvs.9m_saed90.ev” as `Run Dir` in t
 
 At this point if there are any LVS errors, an error window will show up. Debug any errors you have and rerun LVS until you pass it. After running LVS successfully, go to `Verification -> LPE -> Setup and Run` to run parasitic extraction.
 
-See Fig.96 below for reference on setups.
+See Fig.31 below for reference on setups.
 
-![fig96_1](images/fig96_a.png)
+![fig31](images/fig31.png)
 
-![fig96_2](images/fig96_b.png)
+_**Fig. 31. LPE Setup -- Main**_
 
-_**Fig. 96. LPE Setup**_
+![fig32](images/fig32.png)
 
-Under the Output Options tab make sure that you have the same setup as shown in Fig.97. Make sure the Device Map and Layer Map  files are set as noted below if not already set by default.
+_**Fig. 32. LPE Setup -- Extraction Options**_
+
+Under the Output Options tab make sure that you have the same setup as shown in Fig.33. Make sure the Device Map and Layer Map  files are set as noted below if not already set by default.
 
 Device Map:
 ```
@@ -289,63 +291,63 @@ Layer Map:
 
 Leave the custom options tab with their set defaults. Click `OK` when done.
 
-![fig97](images/fig97.png)
+![fig33](images/fig33.png)
 
-_**Fig. 97. LPE Setup**_
+_**Fig. 33. LPE Setup -- Output Options**_
 
-If LPE ran successfully, a parasitics view will open up. The parasitics are small so drag a box over it with a mouse cursor and zoom in to see individual components if you don’t see it at first. See Fig.98 below for reference. Afterwards save the parasitics view with `Design -> Save`.
+If LPE ran successfully, a parasitics view will open up. The parasitics are small so drag a box over it with a mouse cursor and zoom in to see individual components if you don’t see it at first. See Fig.34 below for reference. Afterwards save the parasitics view with `Design -> Save`.
 
-![fig98](images/fig98.png)
+![fig34](images/fig34.png)
 
-_**Fig. 98. Parasitics View**_
+_**Fig. 34. Parasitics View**_
 
-After parasitic extraction, create a new configuration files by going to `File -> New -> CellView` in the custom designer console. Setup the options as noted in Fig.99 to setup a configurations file for the ring oscillator testbench. Click `OK` when done.
+After parasitic extraction, create a new configuration files by going to `File -> New -> CellView` in the custom designer console. Setup the options as noted in Fig.35 to setup a configurations file for the ring oscillator testbench. Click `OK` when done.
 
-![fig98](images/fig99.png)
+![fig35](images/fig35.png)
 
-_**Fig. 99. Configurations File Setup**_
+_**Fig. 35. Configurations File Setup**_
 
-A new configurations file will open up. From here, setup the options as noted in Fig.100 to load the ring oscillator parasitics into the ring oscillator symbol. Save with `File -> Save` when done.
+A new configurations file will open up. From here, setup the options as noted in Fig.36 to load the ring oscillator parasitics into the ring oscillator symbol. Save with `File -> Save` when done.
 
-![fig100](images/fig100.png)
+![fig36](images/fig36.png)
 
-_**Fig. 100. Configurations File Setup**_
+_**Fig. 36. Configurations File Setup**_
 
-To start simulation with parasitics, go to `File -> Open Design` from the Custom Designer Console window. In the Open Design window that opens, select `ringOscillator_testbench` under the cells column and config under the views column and right click on `config` under views. Select `Open Design` from the drop down menu. See Fig.101 below for reference.
+To start simulation with parasitics, go to `File -> Open Design` from the Custom Designer Console window. In the Open Design window that opens, select `ringOscillator_testbench` under the cells column and config under the views column and right click on `config` under views. Select `Open Design` from the drop down menu. See Fig.37 below for reference.
 
-![fig101](images/fig101.png)
+![fig37](images/fig37.png)
 
-_**Fig. 101. Open Design with Parasitics**_
+_**Fig. 37. Open Design with Parasitics**_
 
-Afterwards a schematic window opens up with the ring oscillator testbench circuit created earlier, see Fig.102 for reference. To check if the parasitics were properly loaded into the ring oscillator, double click the ring oscillator symbol and the parasitics view generated from LPE earlier should display.
+Afterwards a schematic window opens up with the ring oscillator testbench circuit created earlier, see Fig.38 for reference. To check if the parasitics were properly loaded into the ring oscillator, double click the ring oscillator symbol and the parasitics view generated from LPE earlier should display.
 
-![fig102](images/fig102.png)
+![fig38](images/fig38.png)
 
-_**Fig. 102. Ring Oscillator Testbench Circuit**_
+_**Fig. 38. Ring Oscillator Testbench Circuit**_
 
 From the ring oscillator testbench window, you can simulate the circuit by using SAE as noted in part 3 of the tutorial. To open SAE, go to `Tools -> SAE` from the schematics window and setup the simulation for a transient analysis and plot the voltages for the VIO1, VIO2, VIO3, VIO4, and VIO5 voltages. For the transient analysis setup in SAE, use 1ps for step time and 1ns for stop time.
 
 Side Notes for Using Convergence Aids to Initialize Voltages:
-Also note that it may be helpful to give a wire in the circuit an initial voltage before running simulation. This particular setup applies to circuits such as a five stage ring oscillator circuit shown in Fig.103. In addition to the setup noted in part 3 for SAE, before running the simulation, go to `Setup -> Convergence Aids` in the SAE window.
+Also note that it may be helpful to give a wire in the circuit an initial voltage before running simulation. This particular setup applies to circuits such as a five stage ring oscillator circuit shown in Fig.39. In addition to the setup noted in part 3 for SAE, before running the simulation, go to `Setup -> Convergence Aids` in the SAE window.
 
-![fig103](images/fig103.png)
+![fig39](images/fig39.png)
 
-_**Fig. 103. Where to Click on Schematic for Node Setup in Ring Oscillator**_
+_**Fig. 39. Where to Click on Schematic for Node Setup in Ring Oscillator**_
 
-Setup the options as noted in Fig.104 below. You may need to setup multiple initial voltages to drive the inverters since one initial voltage may not be enough to drive the entire ring oscillator. It is suggested that you setup at least two initial voltages using alternating voltages of 0 and 1.2 for consecutive inverter nodes in the ring oscillator circuit. See Fig.105 for multi- node initialization and see Fig.103 on where to click in the schematic for node setups. Click `OK`, when done and run the simulation as noted in part 3 of the tutorial in Fig.106.
+Setup the options as noted in Fig.40 below. You may need to setup multiple initial voltages to drive the inverters since one initial voltage may not be enough to drive the entire ring oscillator. It is suggested that you setup at least two initial voltages using alternating voltages of 0 and 1.2 for consecutive inverter nodes in the ring oscillator circuit. See Fig.41 for multi- node initialization and see Fig.39 on where to click in the schematic for node setups. Click `OK`, when done and run the simulation as noted in part 3 of the tutorial in Fig.42.
 
 
-![fig104](images/fig104.png)
+![fig40](images/fig40.png)
 
-_**Fig. 104. Setting up Convergence Aids**_
+_**Fig. 40. Setting up Convergence Aids**_
 
-![fig105](images/fig105.png)
+![fig41](images/fig41.png)
 
-_**Fig. 105. Setup for Multiple Initial Voltages**_
+_**Fig. 41. Setup for Multiple Initial Voltages**_
 
-![fig106](images/fig106.png)
+![fig42](images/fig42.png)
 
-_**Fig. 106. Simulation result for ring oscillator**_
+_**Fig. 42. Simulation result for ring oscillator**_
 
 
 You have now finished transient simulation of the ring oscillator circuit with applied parasitics.
@@ -358,13 +360,13 @@ You have now finished transient simulation of the ring oscillator circuit with a
 
 For designs that require require an extra metal layers in layout, designers can use a metal layer higher up (like M2) to make connections if the lower metal layers (like M1) are too constricting to allow any other connections.
 
-In the ring oscillator layout, M1 (blue layer) is replaced with M2 (pink layer). See Fig.107 for reference (Ring Oscillator with M2 layer). Also note that M1 layers can run under M2 layers without physically connecting unless there is a VIA1 layer in between them.
+In the ring oscillator layout, M1 (blue layer) is replaced with M2 (pink layer). See Fig.43 for reference (Ring Oscillator with M2 layer). Also note that M1 layers can run under M2 layers without physically connecting unless there is a VIA1 layer in between them.
 
-![fig107](images/Fig_107.png)
+![fig43](images/fig43.png)
 
-_**Fig. 107. Multiple layer (M2) example**_
+_**Fig. 43. Multiple layer (M2) example**_
 
-In order to connect different layers to each other, all metal layers and contacts/VIAs must exist in between them. For example, to connect a metal 2 layer (M2) to diffusion (DIFF), a contact layer (CO), metal 1 layer (M1), and a VIA1 layer must exist between them. See figure.107 for reference. Also see figure.106 in circle A for a layout drawing example.
+In order to connect different layers to each other, all metal layers and contacts/VIAs must exist in between them. For example, to connect a metal 2 layer (M2) to diffusion (DIFF), a contact layer (CO), metal 1 layer (M1), and a VIA1 layer must exist between them. See figure.43 for reference. Also see figure.106 in circle A for a layout drawing example.
 To use higher metal layers not shown, use their corresponding VIA layers to interconnect between the desired layers. For example, to connect M2 to M3, a VIA2 layer/contact must be drawn in between them.
 
 Contact (CO) size is 0.13um x 0.13um and VIA1 size is 0.14um x 0.14um for 90nm design.
@@ -373,47 +375,47 @@ Contact (CO) size is 0.13um x 0.13um and VIA1 size is 0.14um x 0.14um for 90nm d
 
 - Connect MOS in parallel
 
-Fig.108 shows an example of two NMOS connecting in parallel (body is not connected in this example). Fig.109 shows the layout of Fig.108. Fig.110 shows another layout with source-drain sharing. 
+Fig.44 shows an example of two NMOS connecting in parallel (body is not connected in this example). Fig.45 shows the layout of Fig.44. Fig.46 shows another layout with source-drain sharing. 
 
-![fig108](images/fig108.png)
+![fig44](images/fig44.png)
 
-_**Fig. 108. Two parallel-connected NMOS transistors**_
+_**Fig. 44. Two parallel-connected NMOS transistors**_
 
-![fig109](images/fig109.png)
+![fig45](images/fig45.png)
 
-_**Fig. 109. Use two independent NMOS layout**_
+_**Fig. 45. Use two independent NMOS layout**_
 
-![fig110](images/fig110.png)
+![fig46](images/fig46.png)
 
-_**Fig. 110. Layout with source-drain sharing**_
+_**Fig. 46. Layout with source-drain sharing**_
 
 - Connect MOS in series
 
-Fig.111 shows an example of two PMOS connecting in series (body is not connected in this example). Fig.112 shows the layout of Fig.111. Fig.113 shows another layout with source-drain sharing. 
+Fig.47 shows an example of two PMOS connecting in series (body is not connected in this example). Fig.48 shows the layout of Fig.47. Fig.49 shows another layout with source-drain sharing. 
 
-![fig111](images/fig111.png)
+![fig47](images/fig47.png)
 
-_**Fig. 111. Two series-connected PMOS transistors**_
+_**Fig. 47. Two series-connected PMOS transistors**_
 
-![fig112](images/fig112.png)
+![fig48](images/fig48.png)
 
-_**Fig. 112. Use two independent PMOS layout**_
+_**Fig. 48. Use two independent PMOS layout**_
 
-![fig113](images/fig113.png)
+![fig49](images/fig49.png)
 
-_**Fig. 113. Layout with source-drain sharing**_
+_**Fig. 49. Layout with source-drain sharing**_
 
-### Placing body along the top
+### Place body along the top
 
-Fig.114 shows an example of PMOS circuit (body is not connected in this example). Fig.115 shows the layout of Fig.114. 
+Fig.50 shows an example of PMOS circuit (body is not connected in this example). Fig.51 shows the layout of Fig.50. 
 
-![fig114](images/fig114.png)
+![fig50](images/fig50.png)
 
-_**Fig. 114. Five PMOS circuit**_
+_**Fig. 50. Five PMOS circuit**_
 
-![fig115](images/fig115.png)
+![fig51](images/fig51.png)
 
-_**Fig. 115. Layout with source-drain sharing and body along the top**_
+_**Fig. 51. Layout with source-drain sharing and body along the top**_
 
 ## Lab3
 
@@ -431,9 +433,9 @@ This lab is designed for four weeks, so for your lab report, you need to design 
 
 ---- week1 checkoff from here
 
-* Your inverter parasitic view in Fig 71.
+* Your inverter parasitic view in Fig.9.
 
-* Your post simulation result in Fig 80.
+* Your post simulation result in Fig.18.
 
 * Your ring oscillator schematic (with hierarchical design)
 
@@ -489,27 +491,27 @@ You can refer this full adder here.
 
 A full adder adds binary number with carry in and out. A 1-bit full adder adds three one-bit number, such as A, B, and CIN. A and B are the operands and CIN is a bit carried in from the previous less significant stage.
 
-![fig116](images/fig116.png)
+![fig52](images/fig52.png)
 
-_**Fig. 116. 1-bit Full Adder Schematic**_
+_**Fig. 52. 1-bit Full Adder Schematic**_
 
-In Fig.116, there are two-stage. The first one is to generate `COUT` and the second one is to generate `S` which is final sum. It requires 28 transistors including two inverters. You can use your own design but you need to transistor-level design.
+In Fig.52, there are two-stage. The first one is to generate `COUT` and the second one is to generate `S` which is final sum. It requires 28 transistors including two inverters. You can use your own design but you need to transistor-level design.
 
-![fig117](images/fig117.png)
+![fig53](images/fig53.png)
 
-_**Fig. 117. 1-bit adder simulation (Pre-simulation)**_
+_**Fig. 53. 1-bit adder simulation (Pre-simulation)**_
 
-![fig118](images/fig118.png)
+![fig54](images/fig54.png)
 
-_**Fig. 118. 1-bit adder testbench schematic**_
+_**Fig. 54. 1-bit adder testbench schematic**_
 
-![fig119](images/fig119.png)
+![fig55](images/fig55.png)
 
-_**Fig. 119. 4-bit ripple carry adder**_
+_**Fig. 55. 4-bit ripple carry adder**_
 
-![fig120](images/fig120.png)
+![fig56](images/fig56.png)
 
-_**Fig. 120. 1-bit full adder layout hint (Diffusion width must be the same as schematic Width = 0.5um for PMOS and Width = 0.25um for NMOS**_
+_**Fig. 56. 1-bit full adder layout hint (Diffusion width must be the same as schematic Width = 0.5um for PMOS and Width = 0.25um for NMOS**_
 
 ### What to submit
 
