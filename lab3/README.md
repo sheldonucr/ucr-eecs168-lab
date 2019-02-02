@@ -251,7 +251,7 @@ In addition you need to add labels for the metal connections just added. To add 
 
 ![fig29](images/fig29.png)
 
-_**Fig. 29. Ring Oscillator Layout using Metal2 (refer Fig.107)**_
+_**Fig. 29. Ring Oscillator Layout using Metal2 (refer Fig.43)**_
 
 ![fig92](images/fig30.png)
 _**Fig. 30. Label Text**_
