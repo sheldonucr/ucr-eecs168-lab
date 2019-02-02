@@ -23,15 +23,15 @@ It is recommended that you keep running and check with DRC tool for your layout 
 
 __Be careful not to submit your lab report with any DRC or LVS errors.__
 
-Start with Custom Designer. Type `cdesigner&` and open your design from lab1 you finished. Go to file-> New -> CellView on your Custom Designer Console. You need to make sure the name of the cell is the same as the schematic cell. Now, it is inverter (refer Fig.40), so click OK and the new layout workspace will be popup (refer Fig. 41)
+Start with Custom Designer. Type `cdesigner&` and open your design from lab1 you finished. Go to file-> New -> CellView on your Custom Designer Console. You need to make sure the name of the cell is the same as the schematic cell. Now, it is inverter (refer Fig.1), so click OK and the new layout workspace will be popup (refer Fig. 2)
 
-![fig40](images/fig40.png)
+![fig1](images/fig1.png)
 
-_**Fig. 40. Creating New Layout**_
+_**Fig. 1. Creating New Layout**_
 
-![fig41](images/fig41.png)
+![fig2](images/fig2.png)
 
-_**Fig. 41. New Layout Workspace**_
+_**Fig. 2. New Layout Workspace**_
 
 
 __One tip__: There is realtime DRC tool, which so-called SmartDRD technology. You can check in the following icon ![fig41](images/fig41-2.png) in the toolbar of your layout window. Which provides realtime DRC checking tool. If your design very large, enabling this helper may degrade your performance. It has `assist` and `visual` options. The `visual` mode only annotates the object spacing and DRC violations. Whereas, the `assist` mode attend to create barriers between objects to help enforce DRC compliance.
@@ -53,37 +53,41 @@ Note that this design tool based on p-substrate.
 
 ### Ruler
 
-Go to `Create ruler` by clicking on  ![fig42_1](images/fig42-1.png). Click once to start drawing the ruler and again to end it. Draw two rulers about the lengths shown in Fig.42 (about 3um by 2um can be a good start). 
+Go to `Create ruler` by clicking on  ![fig42_1](images/fig42-1.png). Click once to start drawing the ruler and again to end it. Draw two rulers about the lengths shown in Fig.3 (about 3um by 2um can be a good start). 
 
 ### NWELL Layer
 
-Select the `NWELL` layer in the layers panel on the right and select `Create-> Rectangle` (Fig.42).
+Select the `NWELL` layer in the layers panel on the right and select `Create-> Rectangle` (Fig.3).
 
 Draw a rectangle that approximately fits the dimensions of the rulers you set. You can always adjust the dimensions of this rectangle by using the tools (stretch object, refer icon ![fig42_2](images/fig42-2.png), move object, refer icon ![fig42_3](images/fig42-3.png)) that existed on left side of layout window then clicking the side you want to stretch or move.
 
-![fig42_a](images/fig42_a.png) ![fig42_b](images/fig42_b_1.png)
+![fig3](images/fig3.png) 
 
-_**Fig. 42. Drawing Rulers and N-Well Layer**_
+_**Fig. 3. Drawing N-Well Layer**_
+
+![fig4](images/fig4.png)
+
+_**Fig. 4. Drawing N-Well Layer**_
 
 After you have created an N-well (N-tub), move your mouse over it. Notice at the top left there are two fields that tell you what layer you are on and the coordinates. This is useful information if you are having trouble figuring out what a layer is and when you are fixing errors found in DRC.
 
 ### DIFF Layer
 
-Now we are going to make diffusion areas for PMOS, NMOS and body connections. From our schematic, we know that the width of the PMOS should be 0.5um and the width of NMOS should be 0.25um (refer lab1). The location of the diffusion should be similar to the ones in Fig.44. There are two horizontal diffusion areas that are the NMOS and PMOS devices, and two vertical rectangles that will be the body connections. Place rulers down to help you make sure the width of the diffusion areas for the NMOS and PMOS match our schematic area exactly.
+Now we are going to make diffusion areas for PMOS, NMOS and body connections. From our schematic, we know that the width of the PMOS should be 0.5um and the width of NMOS should be 0.25um (refer lab1). The location of the diffusion should be similar to the ones in Fig.5. There are two horizontal diffusion areas that are the NMOS and PMOS devices, and two vertical rectangles that will be the body connections. Place rulers down to help you make sure the width of the diffusion areas for the NMOS and PMOS match our schematic area exactly.
 
 Select the `DIFF` layer again use the `Create Rectangle` tool to draw the diffusion area. Use rulers to check the width of the rectangles. If the widths are different than the widths of the devices in the schematic, you will not pass LVS. You can also use the property editor in `Edit -> Property` Editor to change the dimensions of the rectangle to exact values.
 
 The size of the diffusion areas and body connections can be modified later. I recommend you look ahead and see what else you will need to add to your layout so you can make these locations large enough to accomodate future material. 
 
-![fig44](images/fig44.png)
+![fig5](images/fig5.png)
 
-_**Fig. 44. Layout with NWell and Diffusion**_
+_**Fig. 5. Layout with NWell and Diffusion**_
 
 ### PIMP Layer and NIMP Layer
 
 Now we will add the P-implant and N-implant areas. When manipulating layers on top of each other sometimes it is useful to “hide” a layer, like you would do in a program like Photoshop. You can do hide or reveal layers in Cosmos by clicking ![fig44-2](images/fig44-2.png).
 
-Use the p-diff(PIMP layer) and n-diff (NIMP layer) layers with the `Create Rectangle` to cover and surround the diffusion and body connection areas. It is important to note that the `PIMP` is drawn to the edge of the `NWELL` where the `NWELL` meets the `NIMP`. This can be seen in Fig.45. The PMOS area should be covered with `PIMP` and the `NMOS` with `NIMP`, except for the body connections which have the opposite implantation.
+Use the p-diff(PIMP layer) and n-diff (NIMP layer) layers with the `Create Rectangle` to cover and surround the diffusion and body connection areas. It is important to note that the `PIMP` is drawn to the edge of the `NWELL` where the `NWELL` meets the `NIMP`. This can be seen in Fig.6. The PMOS area should be covered with `PIMP` and the `NMOS` with `NIMP`, except for the body connections which have the opposite implantation.
 
 TIPS: There cannot be any overlap between `NIMP` and `PIMP` so be sure to zoom in and make these meet exactly. You can seperate these two but you will then need to ensure you leave a large enough gap between to pass DRC. The implant areas just need to cover the diffusion and connection areas but extra room can help you later, so it is ok if you make them large.
 
@@ -93,23 +97,23 @@ Rule DIFF.E.1: Source/drain active to well edge (min enclosure by well) is 0.24u
 
 Rule PIMP.E.1: Enclosure of P+Active is 0.14um, we make it 0.2um.
 
-![fig45](images/fig45.png)
+![fig6](images/fig6.png)
 
-_**Fig. 45. Drawing PIMP and NIMP layers**_
+_**Fig. 6. Drawing PIMP and NIMP layers**_
 
 ### PO Layer
 
-Now we select the `PO` layer (Polysilicon) and use the `Create -> Path` tool to draw a strip of poly through both PMOS and NMOS diffusion areas. Make sure the poly is sticking out past the diffusion areas by at least the amount specified in the design rule manual. When drawing the Poly path, make sure the width is 0.1um to match the transistor lengths in the schematic, see Fig.49 to set width/thickness for the draw path tool. Create a rectangle of poly in the center of the strip that would be used for the input signal, see Fig.47. This strip does not have to be inside the N-tub.
+Now we select the `PO` layer (Polysilicon) and use the `Create -> Path` tool to draw a strip of poly through both PMOS and NMOS diffusion areas. Make sure the poly is sticking out past the diffusion areas by at least the amount specified in the design rule manual. When drawing the Poly path, make sure the width is 0.1um to match the transistor lengths in the schematic, see Fig.9 to set width/thickness for the draw path tool. Create a rectangle of poly in the center of the strip that would be used for the input signal, see Fig.7. This strip does not have to be inside the N-tub.
 
 Rule PO.EX.1: Minimum gate extension of active (end cap) is 0.18um.
 
-![fig47](images/fig47.png)
+![fig7](images/fig7.png)
 
-_**Fig. 47. Drawing Polysilicon**_
+_**Fig. 7. Drawing Polysilicon**_
 
 ### CO Layer
 
-Select the `CO` (contact) layer and use the `Create Rectangle` or `Create Polygon` tool in conjunction with rulers to make a contact 0.13 by 0.13. You can also use the property editor to get these exact values. After you have created one contact click on ![fig47-2](images/fig47-2.png)  and the contact and make a copy to place the other contacts. Contact placements are shown in Fig.48. Check to see that your contact placements meet the design rules.
+Select the `CO` (contact) layer and use the `Create Rectangle` or `Create Polygon` tool in conjunction with rulers to make a contact 0.13 by 0.13. You can also use the property editor to get these exact values. After you have created one contact click on ![fig47-2](images/fig47-2.png)  and the contact and make a copy to place the other contacts. Contact placements are shown in Fig.8. Check to see that your contact placements meet the design rules.
 
 Rule CO.W.1: Exact contact size is 0.13um.
 
@@ -124,19 +128,19 @@ Rule CO.E.2: Minimum enclosure by DIFF is 0.04um, i.e., we make it 0.055um.
 Rule CO.E.3: Minimum enclosure by poly at least two apposite sides 0.05um.
 
 
-![fig48](images/fig48.png)
+![fig8](images/fig8.png)
 
-_**Fig. 48. Drawing Contacts**_
+_**Fig. 8. Drawing Contacts**_
 
 ### M1 Layer
 
 Select the `M1` (Metal-1) layer and again select the `Create Path` tool. This time in the `Create Path` window that pops ups, click on the width box to then enter 0.14 in the Width field.
 
-![fig49](images/fig49.png)
+![fig9](images/fig9.png)
 
-_**Fig. 49. Modifying Width**_
+_**Fig. 9. Modifying Width**_
 
-Draw the `M1` layer the way it is shown in Fig.50. Make sure the metal is covering the contacts by the amount specified in the design rule manual. You can also draw rectangles over the contacts to cover them more.
+Draw the `M1` layer the way it is shown in Fig.10. Make sure the metal is covering the contacts by the amount specified in the design rule manual. You can also draw rectangles over the contacts to cover them more.
 
 Rule M1.W.1: Minimum width is 0.14um.
 
@@ -144,84 +148,85 @@ Rule CO.E.6: Minimum enclosure of any contact (CO outside M1 is not allowed) is 
 
 Rule CO.E.7: Minimum enclosure of contact at end of line is 0.05um.
 
-![fig50](images/fig50.png)
+![fig10](images/fig10.png)
 
-_**Fig. 50. Drawing Metal Connections**_
+_**Fig. 10. Drawing Metal Connections**_
 
 ### MIPIN Layer
 
-Select the `M1PIN` layer. Select the `Create -> Text -> Label` tool and place text labels labeled as VDD, VSS, VIN, and VOUT (refer Fig.51). Note that you need to match the label names in layout as the labeled pins in the schematic in order to pass LVS (Layout vs Schematic). You have now completed the initial layout and can move onto DRC. Save your layout by going to `Design -> Save`. As a general convention, use uppercase letters for labels instead of lowercase letters.
+Select the `M1PIN` layer. Select the `Create -> Text -> Label` tool and place text labels labeled as VDD, VSS, VIN, and VOUT (refer Fig.11). Note that you need to match the label names in layout as the labeled pins in the schematic in order to pass LVS (Layout vs Schematic). You have now completed the initial layout and can move onto DRC. Save your layout by going to `Design -> Save`. As a general convention, use uppercase letters for labels instead of lowercase letters.
 
-![fig51](images/fig51.png)
+![fig11](images/fig11.png)
 
-_**Fig. 51. Labeling Connections**_
+_**Fig. 11. Labeling Connections**_
 
-Fig.51-2 shows another inverter layout. In real design, you should try to make the dimensions small in the case of meeting design rules.  
+Fig.12 shows another inverter layout. In real design, you should try to make the dimensions small in the case of meeting design rules.  
 
-![fig51-2](images/fig51-2.png)
+![fig12](images/fig12.png)
 
-_**Fig. 51-2. Another Inverter Layout**_
+_**Fig. 12. Another Inverter Layout**_
 
 ## PART 6: Running DRC
 
 After the inverter layout has been drawn to accurately represent the schematic, to verify that the layout meets all the basic design rules, we need to run `IC Validator` for a DRC (Design Rule Check). Save the layout cell by clicking on Save. In Custom Designer Editor, go to `Verification -> DRC -> Setup and Run`.
-Locate the runset file rules.drc.9m_saed90ev_saed90_icv.rs from the following directory and click Ok (Fig 52).
+Locate the runset file rules.drc.9m_saed90ev_saed90_icv.rs from the following directory and click Ok (Fig.13).
 
 ```
 /usr/local/synopsys/pdk/SAED_PDK90nm/icv/drc/rules.drc.9m_saed90_icv.rs
 ```
 
-![fig52](images/fig52.png)
+![fig13](images/fig13.png)
 
-_**Fig. 52. Runset File**_
+_**Fig. 13. Runset File**_
 
 You should check your library, cell, and view are correctly set and Format should be `OpenAccess` to communicate with `IC Validator` Don't forget to enable `Launch Debugger` and `View Output` to see DRC result.
 
-![fig53](images/fig53.png)
+![fig14](images/fig14.png)
 
-_**Fig. 53. DRC Setup**_
+_**Fig. 14. DRC Setup**_
 
 Click OK. After DRC is done, you will see a message on your Console indicating that DRC is
-done, see Fig. 54.
+done, see Fig.15.
 
-![fig54](images/fig54.png)
+![fig15](images/fig15.png)
 
-_**Fig. 54. DRC result**_
+_**Fig. 15. DRC result in Console**_
 
 When the layout is free from all the errors and meets all the design rules, you can see `Completed with no erros` message in the console. But if not, the debugger will launch, and you can see which bug you have it.
 
 
-![fig55_a](images/fig55_a.png)
-![fig55_b](images/fig55_b.png)
+![fig16](images/fig16.png)
 
-_**Fig. 55. DRC debugging**_
+_**Fig. 16. DRC Debug -- Run Summary**_
 
-In Fig. 55, it shows 1 violation found, to see the error detail, you need to clock `DRC Erros` tab. Then see your design name and double click error, then it shows where the error comes from.
+![fig17](images/fig17.png)
 
+_**Fig. 17. DRC Debug -- DRC Errors**_
 
-![fig56](images/fig56.png)
+In Fig 16 and 17, it shows 1 violation found, to see the error detail, you need to clock `DRC Erros` tab. Then see your design name and double click error, then it shows where the error comes from.
 
-_**Fig. 56. DRC passed**_
+Also for debugging screen again, you can go to `Verification -> DRC -> Debug`, see Fig.18.
 
-Also for debugging screen again, you can go to `Verification -> DRC -> Debug`, see Fig. 57.
+![fig18](images/fig18.png)
 
-![fig57](images/fig57.png)
-
-_**Fig. 57. DRC Errors**_
+_**Fig. 18. DRC Debug**_
 
 
 ## Part 7: Running LVS
 
 The LVS (Layout versus Schematic) performs LVS comparison to verify that the design layout accurately represents the electronic equivalent of the design schematic. `IC Validator` LVS verifies whether the physical design design matches the schematic by extracting the devices, verifying the connectivity between the devices and comparing the extracted information with the schematic netlist.
 
-Notice that in order to pass LVS, schematic names and layout names must match one to one. Make sure the names for labels and pins are using uppercase letters instead of lowercase letters. Also transistor dimensions for gate width and length in layout and schematic must match. See Fig. 58 for reference.
+Notice that in order to pass LVS, schematic names and layout names must match one to one. Make sure the names for labels and pins are using uppercase letters instead of lowercase letters. Also transistor dimensions for gate width and length in layout and schematic must match. See Fig 19 and 20 for reference.
 
-![fig58_a](images/fig58_a.png)
-![fig58_b](images/fig58_b.png)
+![fig19](images/fig19.png)
 
-_**Fig. 58. Layout versus Schematic (LVS)**_
+_**Fig. 19. Layout versus Schematic (LVS)**_
 
-In the layout window go to `Verification -> LVS -> Setup and Run`. Please make sure your setup mirrors the Fig.59.
+![fig20](images/fig20.png)
+
+_**Fig. 20. Layout versus Schematic (LVS)**_
+
+In the layout window go to `Verification -> LVS -> Setup and Run`. Please make sure your setup mirrors the Fig.21.
 
 Under main option select the file “rules.lvs.9m_saed90.ev” as `Run Dir` in the following directory:
 ```
@@ -231,40 +236,34 @@ Here, we assume library name is `mylibrary` and cell name is `inverter` here.
 
 You need to make sure of all `OpenAccess` for Layout and Schematic/Config
 
-![fig59](images/fig59.png)
+![fig21](images/fig21.png)
 
-_**Fig. 59. LVS Setup**_
+_**Fig. 21. LVS Setup -- Main**_
 
-Under Netlisting Option tab, for the netlister, select: CDL if not already selected. See Fig. 60.
+Under Netlisting Option tab, for the netlister, select: CDL if not already selected. See Fig.22.
 
-![fig60](images/fig60.png)
+![fig22](images/fig22.png)
 
-_**Fig. 60. LVS Setup Netlisting Options Tab**_
+_**Fig. 22. LVS Setup -- Netlisting Options**_
 
 
-Under the Custom Options tab, leave the defaults as shown in Fig 62. Click OK when done.
+Under the Custom Options tab, leave the defaults as shown in Fig.23. Click OK when done.
 
-![fig62](images/fig62.png)
+![fig23](images/fig23.png)
 
-_**Fig. 62. LVS Setup Custom Options Tab**_
+_**Fig. 23. LVS Setup -- Custom Options**_
 
-On your Console window you should get the following message as in Fig. 63 if you passed LVS.
+Like DRC, you can use debugging window to fix your LVS problem in Fig.24.
 
-![fig63](images/fig63.png)
+![fig24](images/fig24.png)
 
-_**Fig. 63. LVS Passed**_
+_**Fig. 64. LVS Debug**_
 
-Like DRC, you can use debugging window to fix your LVS problem in Fig 64.
+After fix every thing, you can see `PASS` message in Fig.25.
 
-![fig64](images/fig64.png)
+![fig25](images/fig25.png)
 
-_**Fig. 64. LVS Passed**_
-
-After fix every thing, you can see `PASS` message in Fig. 65
-
-![fig65](images/fig65.png)
-
-_**Fig. 65. LVS Passed**_
+_**Fig. 25. LVS Pass**_
 
 ## Part 8: Design NAND Gate
 
@@ -305,21 +304,21 @@ Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will
 
 * Summary of what you learned thru this lab (One paragraph)
 
-* Your inverter layout in Fig. 51.
+* Your inverter layout in Fig.11 or Fig.12.
 
-* An DRC Result with `CLEAN` for your inverter layout in Fig 57.
+* A DRC Result with `CLEAN` for your inverter layout in Fig.18.
 
-* An LVS Result with `PASS` for your inverter layout in Fig 64.
+* A LVS Result with `PASS` for your inverter layout in Fig.24.
 
 * Your NAND gate schematic (Only NAND cell)
 
 * Your NAND gate test bench schematic for simulation
 
-* Your Waveform View result with transient analysis result (SAE, HSPICE) to show `OUT'=AIN*BIN`, you need one capacitance load (0.05p F) at the output connecting your `OUT` to `GND` to remove noise of `OUT`. `AIN` pulse signal can be 5n pulse width `BIN` pulse signal can be 10n pulse width for simulation. Expected result can be seen in Fig 66.
+* Your Waveform View result with transient analysis result (SAE, HSPICE) to show `OUT'=AIN*BIN`, you need one capacitance load (0.05p F) at the output connecting your `OUT` to `GND` to remove noise of `OUT`. `AIN` pulse signal can be 5n pulse width `BIN` pulse signal can be 10n pulse width for simulation. Expected result can be seen in Fig.26.
 
-![fig66](images/fig66.png)
+![fig26](images/fig26.png)
 
-_**Fig. 66. Expected NAND Simulation Result**_
+_**Fig. 26. Expected NAND Simulation Result**_
 
 * Your NAND gate layout
 
