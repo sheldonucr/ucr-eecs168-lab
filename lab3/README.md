@@ -407,7 +407,9 @@ _**Fig. 49. Layout with source-drain sharing**_
 
 ### Place body along the top
 
-Fig.50 shows an example of PMOS circuit (body is not connected in this example). Fig.51 shows the layout of Fig.50. 
+Fig.50 shows an example of PMOS circuit (body is not connected in this example). Fig.51 shows the layout of Fig.50.
+
+In digital circuit design, usually M1, M3, M5 are used for vertical routing, M2, M4, M6 are used for horizontal routing.
 
 ![fig50](images/fig50.png)
 
