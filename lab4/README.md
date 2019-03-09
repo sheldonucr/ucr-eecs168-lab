@@ -982,7 +982,7 @@ write -f verilog -hierarchy -output "gcdGCDUnit_rtl_synthesized.v"
 - Also, remember to write the sdc file
 
 ```
-write_sdc -nosplit "fa_4bit_const.sdc"
+write_sdc -nosplit "gcdGCDUnit_const.sdc"
 ```
 
 
