@@ -21,7 +21,7 @@ For the rest four parts (Lab 2), you will use Custom Designer to create a layout
 
 You need to login our `bender.engr.ucr.edu` server first. If you do not know how to connect our server, please check out [lab0](../lab0)
 
-You can use your home folder (`~ or /home/[Account Name]`, in the example, [Account Name] will be `tkim` or `zsun`, you need to use your own account and create a new folder for this eecs168 course. To create your design folder, you need to type the followings. The first command let you move your home folder, and `mkdir` command is to create your folder.
+You can use your home folder (`~ or /home/[Account Name]`, in the example, [Account Name] will be `tkim` or `zsun`, you need to use your own account and create a new folder for this eecs168 course. To create your design folder, you need to type the followings. The first command let you move into your home folder, and `mkdir` command is to create your folder.
 
 ```
 cd ~
