@@ -1,3 +1,68 @@
+## Lab1
+
+### Objective
+
+Lab 1 is to learn how to design your circuit, generate netlist, and simulate given netlist for your layout design in lab 2. You will learn three IC design tools (Custom Designer, Waveform View, HSPICE) in this lab and the followings are expected to be delivered in your lab report.
+
+### Deliverables for your lab report.
+
+* Name, SID, Session(021,022,023), ENGR ID, UCR NetID.
+
+* Summary of what you learned thru this lab (One paragraph)
+
+* An inverter schematic view as seen in Fig 13.
+
+* An inverter symbol view as seen in Fig 15.
+
+* A test-bench for your inverter design as seen in Fig 18.
+
+* A transient analysis waveform as seen in Fig. 28.
+
+* A DC Sweep analysis waveform as seen in Fig 29.
+
+* A delay measurement of VOUT and VIN at 50% to 50% annotated waveform as seen in Fig 33.
+
+* A rise AND fall measurement at 90% and 10% for VOUT annotated waveform as seen in Fig 35.
+
+* An average current measurement annotated waveform as seen in Fig. 37.
+
+* A frequency measurement for VOUT annotated waveform as seen in Fig. 39.
+
+* Some of the issues if you have (One paragraph)
+
+### What to submit
+
+* Lab report (PDF format)
+
+file name should be following
+
+`lab1-[My UCR NET ID].pdf`
+
+for example, my UCR Net ID is `tkim049`, so filename should be
+
+`lab1-tkim049.pdf`
+
+* Tar and Zip your design folder you made
+
+`cd ~/eecs168` or you made
+
+`tar -cvzf lab1-[My UCR NET ID].tgz ./`
+
+for example, my ucr Net ID is `tkim049`, so do like following
+
+`tar -cvzf lab1-tkim049.tgz ./`
+
+* You need to submit two files (*.pdf, *.tgz) in iLearn
+
+* To download your tgz file from the server, first you need to connect to the ENGR VPN (if you are using the computer in WCH labs, you can skip this step). Please refer [here](http://systems.engr.ucr.edu/vpn/vpn.html) for using VPN. Then refer [here](http://systems.engr.ucr.edu/help/remoteaccess.html#fatzdds) for file access. Please remember to use your ENGR ID to login in.
+
+### Lab Report Due
+
+* One week.
+
+* eecs168-021, 023: by 11:59pm on 1/21
+* eecs168-022: by 11:59pm on 1/22
+
 # Lab/Tutorial 1
 
 In this tutorial, some contexts use Synopsys tutorials from Vazgen Melikyan (Synopsys) and Hamid Nahmoodi (SFSU). All the tools and PDK are given thru Synopsys University Program.
