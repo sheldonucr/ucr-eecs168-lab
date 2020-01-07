@@ -451,8 +451,8 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 * One week.
 
-* eecs168-021, 023: by 11am on 1/23
-* eecs168-022: by 5pm on 1/25
+* eecs168-021, 023: by 11am on 1/22
+* eecs168-022: by 5pm on 1/23
 
 ### Next lab
 
