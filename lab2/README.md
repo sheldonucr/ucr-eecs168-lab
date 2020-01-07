@@ -1,3 +1,16 @@
+## Lab2
+
+### Objective
+
+Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will learn three IC design tools (Custom Designer, IP Validator) and design inverter and NAND gates in this lab and the followings are expected to be delivered in your lab report.
+
+## Lab Report Due
+
+* One week.
+
+* eecs168-021, 023: by 11:59pm on 1/28
+* eecs168-022: by 11:59pm on 1/29
+
 # Lab/Tutorial 2
 
 In this tutorial, some contexts use Synopsys tutorials from Vazgen Melikyan (Synopsys) and Hamid Nahmoodi (SFSU). All the tools and PDK are given thru Synopsys University Program.
@@ -356,8 +369,8 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 * One week.
 
-* eecs168-021, 023: by 11am on 1/30
-* eecs168-022: by 5pm on 2/1
+* eecs168-021, 023: by 11:59pm on 1/28
+* eecs168-022: by 11:59pm on 1/29
 
 ### Next lab
 
