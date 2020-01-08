@@ -65,7 +65,8 @@ For example
 `ssh -Y tkim@bender.engr.ucr.edu`
 
 ### VPN(if needed)
-If you are using your own laptop to login the bender and blocked by your firewall, you can try the vpn which can be found at https://ucrsupport.service-now.com/ucr_portal/?id=kb_article&sys_id=e7499d251b6188d0750b11bebd4bcb75
+If you are using your own laptop to login the bender and blocked by your firewall, you can try the vpn which can be found at https://ucrsupport.service-now.com/ucr_portal/?id=kb_article&sys_id=e7499d251b6188d0750b11bebd4bcb75. The ucr vpn address is: 
+vpn.ucr.edu/engineering
 
 ## Check Synopsys Galaxy Custom Designer Launch
 
