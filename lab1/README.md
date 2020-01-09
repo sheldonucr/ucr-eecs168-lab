@@ -443,8 +443,8 @@ _**Fig. 40. Nets connection by assigning the same wire name**_
 _**Fig. 41. Assigning wire name with drawing wire**_
 
 
-When you have some weird warning message for solder dot on crossing wires like Fig 41, then please revise as Fig 42. 
-Fig 41 and Fig 42 are both correct but they generate some warning since Fig 41 is a common possible unexpected wrong connection.
+When you have some weird warning message for solder dot on crossing wires like Fig 42, then please revise as Fig 43. 
+Fig 42 and Fig 43 are both correct but they generate some warning since Fig 42 is a common possible unexpected wrong connection.
 
 _**Fig. 42. Cross wires warning**_
 
