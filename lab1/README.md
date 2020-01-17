@@ -54,7 +54,7 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 * You need to submit two files (*.pdf, *.tgz) in iLearn
 
-* To download your tgz file from the server, first you need to connect to the ENGR VPN (if you are using the computer in WCH labs, you can skip this step). Please refer [here](http://systems.engr.ucr.edu/vpn/vpn.html) for using VPN. Then refer [here](http://systems.engr.ucr.edu/help/remoteaccess.html#fatzdds) for file access. Please remember to use your ENGR ID to login in.
+* To download your tgz file from the server, first you need to connect to the ENGR VPN. Please refer [here](http://systems.engr.ucr.edu/vpn/vpn.html) for using VPN. Then refer [here](http://systems.engr.ucr.edu/help/remoteaccess.html#fatzdds) for file access. Please remember to use your ENGR ID to login in.
 
 ### Lab Report Due
 
@@ -443,8 +443,8 @@ _**Fig. 40. Nets connection by assigning the same wire name**_
 _**Fig. 41. Assigning wire name with drawing wire**_
 
 
-When you have some weird warning message for solder dot on crossing wires like Fig 41, then please revise as Fig 42. 
-Fig 41 and Fig 42 are both correct but they generate some warning since Fig 41 is a common possible unexpected wrong connection.
+When you have some weird warning message for solder dot on crossing wires like Fig 42, then please revise as Fig 43. 
+Fig 42 and Fig 43 are both correct but they generate some warning since Fig 42 is a common possible unexpected wrong connection.
 
 _**Fig. 42. Cross wires warning**_
 
@@ -510,7 +510,7 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 * You need to submit two files (*.pdf, *.tgz) in iLearn
 
-* To download your tgz file from the server, first you need to connect to the ENGR VPN (if you are using the computer in WCH labs, you can skip this step). Please refer [here](http://systems.engr.ucr.edu/vpn/vpn.html) for using VPN. Then refer [here](http://systems.engr.ucr.edu/help/remoteaccess.html#fatzdds) for file access. Please remember to use your ENGR ID to login in.
+* To download your tgz file from the server, first you need to connect to the ENGR VPN. Please refer [here](http://systems.engr.ucr.edu/vpn/vpn.html) for using VPN. Then refer [here](http://systems.engr.ucr.edu/help/remoteaccess.html#fatzdds) for file access. Please remember to use your ENGR ID to login in.
 
 ### Lab Report Due
 
