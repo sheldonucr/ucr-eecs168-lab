@@ -510,7 +510,7 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 * You need to submit two files (*.pdf, *.tgz) in iLearn
 
-* To download your tgz file from the server, first you need to connect to the ENGR VPN. Please refer [here](http://systems.engr.ucr.edu/vpn/vpn.html) for using VPN. Then refer [here](http://systems.engr.ucr.edu/help/remoteaccess.html#fatzdds) for file access. Please remember to use your ENGR ID to login in.
+* To download your tgz file from the server, first you need to connect to the ENGR VPN. Please refer [here](http://alumni.cs.ucr.edu/~aggelos/TA/S06_CS6/winscp.html) for using VPN. Please remember to use your ENGR ID to login in.
 
 ### Lab Report Due
 
