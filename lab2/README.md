@@ -244,7 +244,7 @@ Here, we assume library name is `mylibrary` and cell name is `inverter` here.
 
 You need to make sure of all `OpenAccess` for Layout and Schematic/Config. Check `Launch Debugger` and `View Output`.
 
-![fig21](images/fig21.png)
+![fig21](images/fig.21.revised.png)
 
 _**Fig. 21. LVS Setup -- Main**_
 
