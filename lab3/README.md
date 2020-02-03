@@ -235,7 +235,7 @@ In the new layout window, we can use the layout of the inverter created earlier 
 
 _**Fig. 26. Placing Five Inverter Layout Instances**_
 
-Notice that the layout components for the inverter layouts don’t display. This is because the inverter layouts are hiding one level up in the hierarchy. In order to view them, change the hierarchy bounds as shown in Fig.27 below. The numbers represent a range of hierarchy levels that are displayed where the left number is the lower limit and the right number is the higher limit. Afterwards the inverter layouts are viewable as shown in Fig.28.
+Notice that the layout components for the inverter layouts don’t display. This is because the inverter layouts are hiding one level up in the hierarchy. In order to view them, change the hierarchy bounds, which is the rightmost number from 0 to 1 or 32, as shown in Fig.27 below. The numbers represent a range of hierarchy levels that are displayed where the left number is the lower limit and the right number is the higher limit. Afterwards the inverter layouts are viewable as shown in Fig.28.
 
 ![fig27](images/fig27.png)
 
