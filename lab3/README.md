@@ -239,6 +239,8 @@ Notice that the layout components for the inverter layouts don’t display. This
 
 ![fig27](images/fig27.png)
 
+![fig27-2](images/fig27-2.png)
+
 _**Fig. 27. placing Five Inverter Layout Instances**_
 
 ![fig28](images/fig28.png)
