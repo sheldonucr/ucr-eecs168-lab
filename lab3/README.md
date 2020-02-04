@@ -543,8 +543,8 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 ### Lab Report Due
 
-* eecs168-021, 023: by 11am on 2/27
-* eecs168-022: by 5pm on 3/1
+* eecs168-021, 023: by 11:59pm on 2/11, 2/18, 2/25 respectively, one report for each week's lab. 
+* eecs168-022: by 11.59pm on 2/12, 2/19, 2/26 respectively, one report for each week's lab.
 
 ### Checkoff
 
