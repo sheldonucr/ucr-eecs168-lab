@@ -489,9 +489,6 @@ This lab is designed for four weeks, so for your lab report, you need to design 
 
 ### Hint
 
-You can refer this full adder here.
-
-[https://en.wikipedia.org/wiki/Adder_%28electronics%29](https://en.wikipedia.org/wiki/Adder_%28electronics%29)
 
 A full adder adds binary number with carry in and out. A 1-bit full adder adds three one-bit number, such as A, B, and CIN. A and B are the operands and CIN is a bit carried in from the previous less significant stage.
 
