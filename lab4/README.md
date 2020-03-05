@@ -379,7 +379,7 @@ The first goal of a Place and Route (P&R) tool is to determine where each gate s
 For this tutorial we will generate layout for the gate-level netlist of the 4-bit full adder circuit synthesized in the previous section. Once the netlist has successfully been placed and routed, you should be able to see all the instantiated standard cells and routed metals of the physical implementation. We will then use the IC Compiler GUI to visualize the layout of your final placed and routed design.
 
 ```
-icc_shell
+icc_shell -shared_license
 ```
 
 To use GUI interface, you need to run the following command in the icc shell.
