@@ -217,7 +217,7 @@ Make sure library and cell names match and click `OK`. See Fig.14 below for refe
 
 _**Fig. 14. Cellview Generation from Cellview**_
 
-Now we have a transistor level model of an inverter (symbol). You may modify the appearance of the inverter symbol by using the shape tools, `Add -> Shape`. Now save and close the symbol window. See Fig. 15 for reference. 
+Now we have a transistor level model of an inverter (symbol). You may modify the appearance of the inverter symbol by using the shape tools, `Add -> Shape`. Now save and close the symbol window. See Fig. 15 for reference.  Note that if the polygen doen't work, add the triangle by three 'path'.
 
 ![fig15](images/fig15_b.png)
 
