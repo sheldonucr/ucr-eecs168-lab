@@ -22,9 +22,7 @@ Every discussion/Q&A will be at https://github.com/sheldonucr/ucr-eecs168-lab. P
 
 ### Attendance Policy
 
-- Late will be 10% penalty.
-- Missing a lab is acceptable only for emergency (eg. Medical emergency, doctor letter is required) and should be completed within 1 week of the missed lab.
-- Labs can be skipped by completing early. Proof of completion will be due prior to the start of your scheduled lab day. Available by request ONLY. 
+Lab attendance is not mandatory if you have finished the lab prior to the lab time.
 
 ## Late Submission for lab report
 
@@ -32,7 +30,7 @@ Every discussion/Q&A will be at https://github.com/sheldonucr/ucr-eecs168-lab. P
 
 ## Checkoff
 
-- You need to get checkoff your each lab result. If not , you will receive no credit for your lab score even if you submit your lab report. Checkoff means showing your completed work to your TA.
+- You need to get checkoff your each lab result by video. If not , you will receive no credit for your lab score even if you submit your lab report. Checkoff by video means recording the results of running simulation and displaying the output waveforms in the video. Upload the video to googledrive/youtube and put the link at the top of your lab report. 
 
 ### Cheating Policy
 
