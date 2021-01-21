@@ -8,8 +8,7 @@ Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will
 
 * One week.
 
-* eecs168-021, 023: by 11:59pm on 1/28
-* eecs168-022: by 11:59pm on 1/29
+* by 10:59am on 1/27
 
 # Lab/Tutorial 2
 
@@ -362,12 +361,7 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 * You need to submit two files (\*.pdf, \*.tgz) in iLearn
 
-### Lab Report Due
 
-* One week.
-
-* eecs168-021, 023: by 11:59pm on 1/28
-* eecs168-022: by 11:59pm on 1/29
 
 ### Next lab
 
