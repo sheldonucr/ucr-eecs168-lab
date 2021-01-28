@@ -540,7 +540,7 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 ### Lab Report Due
 
-* 02/10/2021 (Wednesday) by 10:59am
+* 02/24/2021 (Wednesday) by 10:59am
 
 ### Checkoff
 
