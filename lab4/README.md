@@ -38,7 +38,6 @@ Here is Verilog tutorials consist of 5 Chapters as follows:
 
 You need to review from chapter 1 thru Chapter 5, Chapter 6-9 can be references for your Verilog programming.
 
-You need to provide all your answers for the each question to get checked off at the end of the lab. So please open text editor/ms office word and write down all the answers to show TA for the check-off.
 
 Go to the following Verilog tutorial
 
@@ -1069,8 +1068,6 @@ In this lab4, we introduce Synopsys RTL design toolkit, which are VCS, Design Co
 
 ---- week1 checkoff from here
 
-  * Answers of all the questions from Verilog tutorial in Chapter 1 to 5.
-
   * Simulation result of example counter.
 
   * The result of gate-level for 4-bit full adder, fa_4bit_synthesized.v
@@ -1115,7 +1112,7 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 ### Lab Report Due
 
-* All sessions: by 11am on 3/15
+* All sessions: by 11am on 3/10
 
 ### Checkoff
 
