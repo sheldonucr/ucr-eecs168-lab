@@ -304,7 +304,9 @@ Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will
 
 * NAND schematic, testbench, simulation waveform
 
-* You do not need to demo your NAND layout, DRC, LVS during lab 2 session. But you need to demo your NAND layout, DRC, LVS together with your lab3-1 results at the lab3-1 session (week 4).
+* NAND layout, DRC, LVS
+
+
 
 
 ### Deliverables for your lab report.
@@ -314,6 +316,8 @@ Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will
 * Summary of what you learned thru this lab (One paragraph)
 
 * Your inverter layout in Fig.11 or Fig.12.
+
+* Inverter Layout, DRC, LVS checkoff video
 
 * A DRC Result with `CLEAN` for your inverter layout in Fig.18.
 
@@ -334,6 +338,8 @@ _**Fig. 26. Expected NAND Simulation Result**_
 * An DRC Result with `CLEAN` for your NAND gate layout.
 
 * An LVS Result with `PASS` for your NAND gate layout.
+
+* NAND gate schematic, testbench, layout, DRC and LVS checkoff video.
 
 * Some of the issues if you have (One paragraph)
 
