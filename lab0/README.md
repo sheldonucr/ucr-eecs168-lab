@@ -43,7 +43,7 @@ and you can put hostname `bender.engr.ucr.edu` and put your user id. The most im
 ![putty1](images/lab0-06.png)
 
 
-Again, you need to run `Xming` first and then `putty` later
+**Again, you need to run `Xming` first and then `putty` later**
 
 If you cannot install `Xming` on your computer, you can use `VcXsrv`. You can download it at [ here ] (https://sourceforge.net/projects/vcxsrv/)
 
