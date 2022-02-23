@@ -337,7 +337,10 @@ compile
 
 After your compilation done, you need to create schematic of the synthesized RTL code.
 
-Once you click the symbol (fa_4bit), you can see how it was compiled/synthesized.
+Once you click the symbol (fa_4bit), you can see how it was compiled/synthesized as shown in fig50. 
+![fig50](images/fig50.png)
+
+_**Fig. 50. Synthesized schematic**_
 
 We finished the synthesis and we need to generate output file for IC Compiler for layout.
 
