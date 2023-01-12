@@ -58,7 +58,7 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 ### Lab Report Due
 
-* One week by 10:59am on 1/20
+* The day before Lab 2
 
 
 # Lab/Tutorial 1
