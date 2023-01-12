@@ -8,8 +8,6 @@ Lab 1 is to learn how to design your circuit, generate netlist, and simulate giv
 
 * Name, SID, Session(021,022,023), ENGR ID, UCR NetID.
 
-* The link of your video check off.
-
 * Summary of what you learned thru this lab (One paragraph)
 
 * An inverter schematic view as seen in Fig 13.
