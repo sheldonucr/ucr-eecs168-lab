@@ -2,7 +2,7 @@
 
 ### Objective
 
-Lab 1 is to learn how to design your circuit, generate netlist, and simulate given netlist for your layout design in lab 2. You will learn three IC design tools (Custom Designer, Waveform View, HSPICE) in this lab and the followings are expected to be delivered in your lab report.
+Lab 1 is to learn how to design your circuit, generate netlist, and simulate given netlist for your layout design in lab 2. You will learn three IC design tools (Custom Compiler, PrimeWave, PrimeSim) in this lab and the followings are expected to be delivered in your lab report.
 
 ### Deliverables for your lab report.
 
@@ -67,7 +67,7 @@ In this tutorial, some contexts use Synopsys tutorials from Vazgen Melikyan (Syn
 
 ## Introduction
 
-In this tutorial, you will learn how to draw custom IC layout and simulate your design using 28/32/90nm technologies in Synopsys Custom Design Tools. This tutorial includes the detail steps of schematic, layout, and simulation of designs.
+In this tutorial, you will learn how to draw custom IC layout and simulate your design using 28/32/90nm technologies in Synopsys Custom Compiler. This tutorial includes the detail steps of schematic, layout, and simulation of designs.
 
 You need to have some basic skill for Linux environment to manage the design file (creation/rename/modify folders and files). If you want to know how to use Linux, there are many of tutorials available on the web. For example, there is small Linux cheat sheets [here](http://www.nixtutor.com/linux/all-the-best-linux-cheat-sheets/) and long tutorials [here](http://tldp.org/LDP/gs/node5.html)
 
@@ -76,9 +76,9 @@ You need to have some basic skill for Linux environment to manage the design fil
 _**Fig. 1 Full Custom Design Flow**_
 
 
-Fig. 1 shows the full custom design flow with Synopsys design tools. The first three parts of flow are covered in our lab1 and the rest four parts will be covered in the lab2. In this three parts, you design a CMOS inverter in Custom Designer, simulate the circuit in HSPICE, measure and view waveforms of simulation results in Custom Waveview.
+Fig. 1 shows the full custom design flow with Synopsys design tools. The first three parts of flow are covered in our lab1 and the rest four parts will be covered in the lab2. In this three parts, you design a CMOS inverter in Custom Compiler, simulate the circuit in PrimeSim, measure and view waveforms of simulation results in PrimeWave.
 
-For the rest four parts (Lab 2), you will use Custom Designer to create a layout with given technology from Synopsys. IC Validator will be used to verify your design ([DRC](https://en.wikipedia.org/wiki/Design_rule_checking)) and check if your layout matches its schematic ([LVS](https://en.wikipedia.org/wiki/Layout_Versus_Schematic)). In the last two steps, you can do the parasitic extraction of your circuit and do simulation again. Finally, you can compare your simulation and post-simulation. This is our lab 1 and 2. In this tutorial, you will complete the first three steps.
+For the rest four parts (Lab 2), you will use Custom Compiler to create a layout with given technology from Synopsys. IC Validator will be used to verify your design ([DRC](https://en.wikipedia.org/wiki/Design_rule_checking)) and check if your layout matches its schematic ([LVS](https://en.wikipedia.org/wiki/Layout_Versus_Schematic)). In the last two steps, you can do the parasitic extraction of your circuit and do simulation again. Finally, you can compare your simulation and post-simulation. This is our lab 1 and 2. In this tutorial, you will complete the first three steps.
 
 ## Part 1: Set up your design workspace
 
@@ -111,19 +111,19 @@ Once PDK library is installed correctly in your workspace, then you can run `cus
 cdesigner&
 ```
 
-By adding `&` after the command, you can put a command in the background in Linux system. So, you can do another job while `Custom Designer` is running.
+By adding `&` after the command, you can put a command in the background in Linux system. So, you can do another job while `Custom Compiler` is running.
 
-Custom Designer Console should open up without any warning message in Fig.2.
+Custom Compiler Console should open up without any warning message in Fig.2.
 
 ![Custom Designer](images/fig2.png)
 
-_**Fig. 2 Custom Designer Console**_
+_**Fig. 2 Custom Compiler Console**_
 
 If you see any warning message in Fig.2, that means that your PDK was not setup correctly, so you need to copy PDK's `lib.def` in your workspace again.
 
 Let's launch Library Manager first, go to `Tools -> Library Manager`, you may see `SAED_PDK_90` library in the libraries list.
 
-Then, go to `File -> New -> Library` to create a new library. New library windows will pop up. You can put your new library name in the name in the attributes section. For the PDK technology, you can choose `Import file` and choose your technology file (.tf extension) in the PDK. You can under the following folder for 90nm.
+Then, go to `File -> New -> Library` to create a new library. New library windows will pop up. You can put your new library name in the name in the attributes section. For the PDK technology, you can choose `Import file` and choose your technology file (.tf extension) in the PDK. You can find it under the following folder for 90nm.
 
 ```
 /usr/local/synopsys/pdk/SAED_PDK90nm/techfiles/saed90nm_1p9m_cd.tf
@@ -135,8 +135,14 @@ After you put name and technology file (.tf), click `OK`. See Fig.3.
 
 _**Fig. 3. New Library**_
 
+Here, you need to make sure right PDK library is used. From your `console window` (first launched windows after you typed `cdesigner`), go to `Tools -> Technology Manage`. Then you have to choose `SAED_PDK_90` in attachment for your `mylibrary`.
 
-## Part 2: Creat a cell view
+![technology manager](images/fig6.png)
+
+_**Fig. 4. Technology Manager**_
+
+
+## Part 2: Create a cell view
 
 In the Library Manager window, go to `File -> New -> CellView` to create a new Cell View under the library you made. See Fig.4. In this case the setup is as follows:
 
@@ -147,19 +153,13 @@ In the Library Manager window, go to `File -> New -> CellView` to create a new C
 
 ![New Cellview](images/fig4.png)
 
-_**Fig. 4. New Cellview**_
+_**Fig. 5. New Cellview**_
 
 After clicking `OK`, a schematic design window will open up. See Fig.5.
 
 ![New Schematic](images/fig5.png)
 
-_**Fig. 5. New Schematic Window**_
-
-Here, you need to make sure right PDK library is used. From your `console window` (first launched windows after you typed `cdesigner`), go to `Tools -> Technology Manage`. Then you have to choose `SAED_PDK_90` in attachment for your `mylibrary`.
-
-![technology manager](images/fig6.png)
-
-_**Fig. 6. Technology Manager**_
+_**Fig. 6. New Schematic Window**_
 
 Go to your schematic window, and click `Add > Instance`, then select `SAED_PDK_90` for the library and select pmos4t and nmos4t for your PMOS and NMOS.
 For pmos4t width, assign 0.5um and for nmos4t width, assign 0.25um as seen in Fig.7. You can modify these values later with property editor (`Edit -> Properties -> Property Editor`).
