@@ -115,7 +115,7 @@ By adding `&` after the command, you can put a command in the background in Linu
 
 Custom Compiler Console should open up without any warning message in Fig.2.
 
-![Custom Designer](images/fig2.png)
+![Custom Designer](images/Fig2.png)
 
 _**Fig. 2 Custom Compiler Console**_
 
