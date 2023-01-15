@@ -76,7 +76,7 @@ You need to have some basic skill for Linux environment to manage the design fil
 _**Fig. 1 Full Custom Design Flow**_
 
 
-Fig. 1 shows the full custom design flow with Synopsys design tools. The first three parts of flow are covered in our lab1 and the rest four parts will be covered in the lab2. In this three parts, you design a CMOS inverter in Custom Compiler, simulate the circuit in PrimeSim, measure and view waveforms of simulation results in PrimeWave.
+Fig. 1 shows the full custom design flow with Synopsys design tools. The first three parts of flow are covered in our lab1 and the rest four parts will be covered in the lab2. In this three parts, you design a CMOS inverter in Custom Compiler, simulate the circuit in PrimeSim using HSPICE models, measure and view waveforms of simulation results in PrimeWave.
 
 For the rest four parts (Lab 2), you will use Custom Compiler to create a layout with given technology from Synopsys. IC Validator will be used to verify your design ([DRC](https://en.wikipedia.org/wiki/Design_rule_checking)) and check if your layout matches its schematic ([LVS](https://en.wikipedia.org/wiki/Layout_Versus_Schematic)). In the last two steps, you can do the parasitic extraction of your circuit and do simulation again. Finally, you can compare your simulation and post-simulation. This is our lab 1 and 2. In this tutorial, you will complete the first three steps.
 
@@ -260,7 +260,7 @@ Your final schematic should look like Fig.18 above with the applied property edi
 
 In Simulation and Analysis Environment (SAE), we will run a DC sweep and a transient analysis.
 
-To run SAE, go to `Tools -> SAE` in the schematic window. This will launch the window in Fig.20, which consists of three primary sections. Section one contains the design variables. Section three contains the values being measured in the circuit. Section two displays the types of analysis being run. See Fig.20 below for reference.
+To run SAE, go to `Tools -> PrimeWave` in the schematic window. This will launch the window in Fig.20, which consists of three primary sections. Section one contains the design variables. Section three contains the values being measured in the circuit. Section two displays the types of analysis being run. See Fig.20 below for reference.
 
 ![fig20](images/fig20.png)
 
@@ -278,36 +278,36 @@ In section two of the model files window (see Fig 21), select `TT_12` as your tr
 
 _**Fig. 21. HSPICE Simulation Model**_
 
-Next to setup analysis type, go to `Setup -> Analysis` and the window in Fig.22 will appear. Stay on the general tab and select `tran` to setup the transient analysis type. Setup the remaining options as shown in Fig.22 and click `Apply`.
+Next to setup analysis type, go to `Setup -> Analyses` and the window in Fig.22 will appear. Stay on the general tab and select `tran` to setup the transient analysis type. Setup the remaining options as shown in Fig.22.
 
-![fig22](images/fig22.png)
+![fig22](images/Fig21.png)
 
 _**Fig. 22. Transient Simulation Setup**_
 
-In the same window, select `dc` to setup a DC sweep. Fill out the options as shown in Fig.23 below. Click `OK` when done.
+In the same window, select `dc` to setup a DC sweep. Fill out the options as shown in Fig.23 below. Select `noise` when done and click `Apply`.
 
-![fig23](images/fig23.png)
+![fig23](images/Fig22.png)
 
-_**Fig. 22. DC Simulation Setup**_
+_**Fig. 23. DC Simulation Setup**_
 
 The following step is to choose the desired simulations results and select the nodes in the circuit to measure. In section THREE of Fig.20 do the following steps:
 
 To setup the circuit output voltage:
 
 1. Click under the output field, and write “VOUT” or a name for an output variable of the inverter.
-1. Click under the expression column and choose the output node from the schematic. In this case, click on pointer icon and select the wire labeled “VOUT” as shown below in Fig.24 in the schematic window. You can also write an equation that uses the values of some nodes in that schematic.
+1. Click under the expression column and choose the output node from the schematic by selecting the 'Pick from Design' icon to the right. In this case, click on pointer icon and select the wire labeled “VOUT” as shown below in Fig.24 in the schematic window. You can also write an equation that uses the values of some nodes in that schematic.
 1. Under analysis, select the type of analysis you want to run. In this case, select `dc` and `tran` to run the transient and DC analysis for this variable.
 
 
 To setup the circuit input voltage:
 1. Click under the output field in a new row, and write “VIN” or a name for an input variable of the inverter.
-1. In the same row, click under the expression column and choose the input node from the schematic. In this case, click on pointer icon and select the wire labeled “VIN” as shown below in figure 24 in the schematic window.
+1. In the same row, click under the expression column and choose the input node from the schematic by selecting the 'Pick from Design' icon to the right. In this case, click on pointer icon and select the wire labeled “VIN” as shown below in figure 24 in the schematic window.
 1. Under analysis, select the type of analysis you want to run. In this case, select `dc` and `tran` to run the transient and DC analysis for this variable.
 
 
 To setup the circuit source current:
 1. Click under the output field in a new row, and write “isupply” or a name for a current variable.
-1. In the same row, click under the expression column and choose the voltage source from the schematic. In this case, click on and select the voltage source labeled “V1” as shown below in Fig. 24 in the schematic window. Notice that current is being measured rather than voltage.
+1. In the same row, click under the expression column and choose the voltage source from the schematic by selecting the 'Pick from Design' icon to the right. In this case, click on and select the voltage source labeled “V1” as shown below in Fig. 24 in the schematic window. Notice that current is being measured rather than voltage.
 1. Under analysis, select the type of analysis you want to run. In this case, select `dc` and `tran` to run the transient and DC analysis for this variable.
 
 Afterwards, the SAE window should look something similar to Fig.25 below. Note that the expression values in Fig.25 may not match with your values which are fine since those are dependent on the names used in the schematic for the voltage sources and wires.
@@ -316,13 +316,13 @@ Afterwards, the SAE window should look something similar to Fig.25 below. Note t
 
 _**Fig. 24. Click on the Schematic Windows**_
 
-![fig25](images/fig25.png)
+![fig25](images/Fig25.png)
 
 _**Fig. 25. Updated SAE Window**_
 
 Now save your simulation setups by going to `Session -> Save State`. In the new window that opens, select `OpenAccess` from the three main categories at the top and give a name for the session in the name field. Click `OK` when done. See Fig.26 below for reference.
 
-![fig26](images/fig26.png)
+![fig26](images/Fig26.png)
 
 _**Fig. 26. Save State Window**_
 
