@@ -266,6 +266,8 @@ To run SAE, go to `Tools -> PrimeWave` in the schematic window. This will launch
 
 _**Fig. 20. SAE window**_
 
+Then go to `Simulation -> Options` and select 'PrimeSim HSPICE' and click OK.
+
 To setup the simulation model files, go to `Setup -> Models Files`. A model files window will open as shown in Fig.21 below. Next click on section one as shown in Fig.21 and browse the directory and select the SAED90nm.lib file. You can find the file in the following directory:
 
 ```
@@ -280,13 +282,13 @@ _**Fig. 21. HSPICE Simulation Model**_
 
 Next to setup analysis type, go to `Setup -> Analyses` and the window in Fig.22 will appear. Stay on the general tab and select `tran` to setup the transient analysis type. Setup the remaining options as shown in Fig.22.
 
-![fig22](images/Fig21.png)
+![fig22](images/fig22.png)
 
 _**Fig. 22. Transient Simulation Setup**_
 
 In the same window, select `dc` to setup a DC sweep. Fill out the options as shown in Fig.23 below. Select `noise` when done and click `Apply`.
 
-![fig23](images/Fig22.png)
+![fig23](images/fig23.png)
 
 _**Fig. 23. DC Simulation Setup**_
 
