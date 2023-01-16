@@ -374,7 +374,7 @@ To group the waveforms in Waveview together, select the names of the signals to 
 
 Delay Measurements of VIN and VOUT at 50% to 50%:
 
-To measure delay between the input and output signals of the inverter at 50% select `tran` tab in the bottom left hand corner of the WaveView window. Group the VOUT and VIN waveforms together so the two waves overlap each other (see figure 31 on how to group signals). Open the measurement tool by going to `Tools -> Measurement…` or by clicking ruler icon in the WaveView window. Click the `All` tab in the measurement tool window and fill out the options as shown below in Fig.32. Click `OK` when done.
+To measure delay between the input and output signals of the inverter at 50% select `tran` tab in the bottom left hand corner of the WaveView window. Group the VOUT and VIN waveforms together so the two waves overlap each other (see figure 31 on how to group signals). Open the measurement tool by going to `Utilities -> Measure Tool` or by clicking ruler icon in the WaveView window. Click the `All` tab in the measurement tool window and fill out the options as shown below in Fig.32. Click `OK` when done.
 
 ![fig32](images/fig32.png)
 
@@ -388,7 +388,7 @@ _**Fig. 33. Delay Waveform Measurement**_
 
 Rise/Fall Time Measurements at 90% and 10% for VOUT:
 
-To measure fall and rise time, select the `tran` tab in the bottom left-hand corner of the WaveView window and ungroup all the waveforms as described in Fig.30. Open the measurement tool by going to `Tools -> Measurement…` or by clicking ruler icon in the WaveView window. Click the `All` tab in the measurement tool window and fill out the options as shown below in Fig. 34. Click `OK` when done.
+To measure fall and rise time, select the `tran` tab in the bottom left-hand corner of the WaveView window and ungroup all the waveforms as described in Fig.30. Open the measurement tool by going to `Utilities -> Measure Tool` or by clicking ruler icon in the WaveView window. Click the `All` tab in the measurement tool window and fill out the options as shown below in Fig. 34. Click `OK` when done.
 
 ![fig34](images/fig34.png)
 
@@ -404,7 +404,7 @@ Average Current Measurement:
 
 To measure average current, select the `tran` tab in the bottom left-hand corner of the WaveView window and ungroup all the waveforms as described in figure 30. Delete the VOUT and VIN waveforms so only the isupply waveform shows. You can delete a waveform by selecting its name in the signal list on the left side of the WaveView window and pressing `delete` on the keyboard and clicking ok. You can always recover these signals later by clicking `Plot` on the SAE window.
 
-Open the measurement tool by going to `Tools -> Measurement…` or by clicking ruler icon in the WaveView window. Scroll down in the menu window on the left and then click on the `Average` measurement within the `Level` submenu as shown in Fig. 36. Click `OK` when done.
+Open the measurement tool by going to `Utilities -> Measure Tool` or by clicking ruler icon in the WaveView window. Scroll down in the menu window on the left and then click on the `Average` measurement within the `Level` submenu as shown in Fig. 36. Click `OK` when done.
 
 ![fig36](images/fig36.png)
 
