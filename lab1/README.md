@@ -420,7 +420,7 @@ Frequency Measurement:
 
 To measure frequency, select `tran` tab in the bottom left hand corner of the WaveView window and ungroup all the waveforms as described in Fig.30.
 
-Open the measurement tool by going to `Tools -> Measurement…` or by clicking ruler icon in the WaveView window. Click the `All` tab in the measurement tool window and fill out the options as shown below in Fig.38. Click `OK` when done.
+Open the measurement tool by going to `Utilities -> Measure Tool` or by clicking ruler icon in the WaveView window. Click the `All` tab in the measurement tool window and fill out the options as shown below in Fig.38. Click `OK` when done.
 
 ![fig38](images/fig38.png)
 
