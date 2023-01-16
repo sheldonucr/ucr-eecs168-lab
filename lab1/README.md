@@ -266,8 +266,9 @@ To run SAE, go to `Tools -> PrimeWave` in the schematic window. This will launch
 
 _**Fig. 20. SAE window**_
 
-
-**Then go to `Simulation -> Options` and select 'PrimeSim HSPICE' and click OK.**
+```diff
+- **Then go to `Simulation -> Options` and select 'PrimeSim HSPICE' and click OK.**
+```
 
 To setup the simulation model files, go to `Setup -> Models Files`. A model files window will open as shown in Fig.21 below. Next click on section one as shown in Fig.21 and browse the directory and select the SAED90nm.lib file. You can find the file in the following directory:
 
