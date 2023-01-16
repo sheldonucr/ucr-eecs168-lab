@@ -266,7 +266,8 @@ To run SAE, go to `Tools -> PrimeWave` in the schematic window. This will launch
 
 _**Fig. 20. SAE window**_
 
-Then go to `Simulation -> Options` and select 'PrimeSim HSPICE' and click OK.
+
+**Then go to `Simulation -> Options` and select 'PrimeSim HSPICE' and click OK.**
 
 To setup the simulation model files, go to `Setup -> Models Files`. A model files window will open as shown in Fig.21 below. Next click on section one as shown in Fig.21 and browse the directory and select the SAED90nm.lib file. You can find the file in the following directory:
 
@@ -309,7 +310,7 @@ To setup the circuit input voltage:
 
 To setup the circuit source current:
 1. Click under the output field in a new row, and write “isupply” or a name for a current variable.
-1. In the same row, click under the expression column and choose the voltage source from the schematic by selecting the 'Pick from Design' icon to the right. In this case, click on and select the voltage source labeled “V1” as shown below in Fig. 24 in the schematic window. Notice that current is being measured rather than voltage.
+1. In the same row, click under the expression column and choose the voltage source from the schematic by selecting the 'Pick from Design' icon to the right. In this case, click on and select the positive end of voltage source labeled “V1” as shown below in Fig. 24 in the schematic window. Notice that current is being measured rather than voltage.
 1. Under analysis, select the type of analysis you want to run. In this case, select `dc` and `tran` to run the transient and DC analysis for this variable.
 
 Afterwards, the SAE window should look something similar to Fig.25 below. Note that the expression values in Fig.25 may not match with your values which are fine since those are dependent on the names used in the schematic for the voltage sources and wires.
@@ -318,21 +319,21 @@ Afterwards, the SAE window should look something similar to Fig.25 below. Note t
 
 _**Fig. 24. Click on the Schematic Windows**_
 
-![fig25](images/Fig25.png)
+![fig25](images/Figg25.png)
 
 _**Fig. 25. Updated SAE Window**_
 
 Now save your simulation setups by going to `Session -> Save State`. In the new window that opens, select `OpenAccess` from the three main categories at the top and give a name for the session in the name field. Click `OK` when done. See Fig.26 below for reference.
 
-![fig26](images/Fig26.png)
+![fig26](images/Figg26.png)
 
 _**Fig. 26. Save State Window**_
 
-To run the simulation, go to `Simulation -> Netlist and Run`. The status of simulation is reported in Custom Designer Console window. If you see “Simulation completed successfully” it means that your simulation is successfully done (Fig.27).
+To run the simulation, go to `Simulation -> Netlist and Run`. The status of simulation is reported in Custom Compiler Console window. If you see “Simulation completed successfully” it means that your simulation is successfully done (Fig.27).
 
 ![fig27](images/fig27.png)
 
-_**Fig. 27. Custom Designer Console**_
+_**Fig. 27. Custom Compiler Console**_
 
 
 After running simulation successfully, a WaveView window will open up. You can select the type of analysis you want to view by selecting the respective tab in the bottom left corner of the window.
