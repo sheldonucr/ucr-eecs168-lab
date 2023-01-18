@@ -81,3 +81,11 @@ Once you see the following screen, then it is ready for next lab.
 ![Synopsys cdesigner](images/lab0-02.png)
 
 If you have any question, then you can post your question at issue section in this github.
+
+## Helpful tip
+
+If the Synopsys Custom Compiler is running in the background and your schematic/symbol/testbench files are locked (can be opened only in Read-only), please follow these steps:
+
+1. In the terminal window, type `jobs -l` and click 'Enter'
+2. Using the PID of the cdesigner that's open, type `kill [PID]` and 'Enter'. 
+Ex. If the PID is 73491, type `kill 73491`
