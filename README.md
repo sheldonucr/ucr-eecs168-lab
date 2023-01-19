@@ -28,10 +28,6 @@ Lab attendance is not mandatory if you have finished the lab prior to the lab ti
 
 - Late submission will be 50% penalty.
 
-## Checkoff
-
-- You need to get checkoff your each lab result by video. If not , you will receive no credit for your lab score even if you submit your lab report. Checkoff by video means recording the results of running simulation and displaying the output waveforms in the video. Upload the video to googledrive/youtube and put the link at the top of your lab report. 
-
-### Cheating Policy
+ ### Cheating Policy
 
 Each lab report should be individual even if you can do pair design and programming. If I find students cheating on the lab report, I give no credit for lab given report. Then I forward your case to the academic integrity board at UCR.
