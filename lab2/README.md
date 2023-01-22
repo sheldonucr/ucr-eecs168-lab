@@ -2,13 +2,11 @@
 
 ### Objective
 
-Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will learn three IC design tools (Custom Designer, IP Validator) and design inverter and NAND gates in this lab and the followings are expected to be delivered in your lab report.
+Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will learn three IC design tools (Layout using Custom Compiler, DRC and LVS using IC Validator) and design inverter and NAND gates in this lab.
 
 ## Lab Report Due
 
-* One week.
-
-* by 10:59am on 1/27
+* Prior to Lab 3.
 
 # Lab/Tutorial 2
 
@@ -16,21 +14,24 @@ In this tutorial, some contexts use Synopsys tutorials from Vazgen Melikyan (Syn
 
 ## Introduction
 
-In this tutorial, you will learn how to draw custom IC layout and simulate your design using 90nm technology in Synopsys Custom Design Tools. This tutorial includes the detail steps of schematic, layout, and simulation of designs.
+In this tutorial, you will learn how to draw custom IC layout and simulate your design using 90nm technology with Synopsys Custom Design Tools. This tutorial includes the detailed steps of schematic, layout, and simulation of designs.
 
 ## Part 5: Creating Layout (continues from lab1)
 
-To design a layout, you need to be familiar with the Lamba-based rules design. This helps you save your time for design cycle and debugging Design Rules Check (DRC) errors. For Synopsys PDK, you can access 90nm technology we are currently using in the following location at `/usr/local/synopsys/pdk/SAED_PDK90nm/documents/SAED_90_Design_Rule.pdf` at `bender.engr.ucr.edu`. You can download this file to your desktop using a file transfer application (WinSCP, Filezilla) or use the network drive and then use your computer's pdf viewer.
+To design a layout, you need to be familiar with the Lamba-based rules. This helps you save time for design cycle and debugging Design Rules Check (DRC) errors. For Synopsys PDK, you can access 90nm technology we are currently using in the following location at `/usr/local/synopsys/pdk/SAED_PDK90nm/documents/SAED_90_Design_Rule.pdf` at `bender.engr.ucr.edu`. 
+You can download this file to your desktop using a file transfer application (WinSCP, Filezilla) or use the network drive and then use your computer's pdf viewer.
+
+Run the following command in your 'eecs168' folder through Putty/xterm:
 
 ```
 cp /usr/local/synopsys/pdk/SAED_PDK90nm/documents/SAED_90_Design_Rule.pdf SAED_90_Design_Rule.pdf
 ```
 
-It is recommended that you keep running and check with DRC tool for your layout design while you design. In this tutorial you just sequentially design first and then check your DRC later. However, in practice, you need to keep checking your DRC with layout to find errors earlier and correct your errors and mistakes.
+It is recommended that you keep checking your layout with the DRC tool while you design. In this tutorial you just sequentially design first and then check your DRC later. However, in practice, you need to keep checking your layout to find errors earlier and correct the mistakes.
 
 __Be careful not to submit your lab report with any DRC or LVS errors.__
 
-Start with Custom Designer. Type `cdesigner&` and open your design from lab1 you finished. Go to file-> New -> CellView on your Custom Designer Console. You need to make sure the name of the cell is the same as the schematic cell. Now, it is inverter (refer Fig.1), so click OK and the new layout workspace will be popup (refer Fig. 2)
+Start with Custom Compiler. Type `cdesigner&` and open your design from lab1 you finished. Go to file-> New -> CellView on your Custom Compiler Console. You need to make sure the name of the cell is the same as the schematic cell. Now, it is inverter (refer Fig.1), so click OK and the new layout workspace will be popup (refer Fig. 2)
 
 ![fig1](images/fig1.png)
 
@@ -41,9 +42,7 @@ _**Fig. 1. Creating New Layout**_
 _**Fig. 2. New Layout Workspace**_
 
 
-__One tip__: There is realtime DRC tool, which so-called SmartDRD technology. You can check in the following icon ![fig41](images/fig41-2.png) in the toolbar of your layout window. Which provides realtime DRC checking tool. If your design very large, enabling this helper may degrade your performance. It has `assist` and `visual` options. The `visual` mode only annotates the object spacing and DRC violations. Whereas, the `assist` mode attend to create barriers between objects to help enforce DRC compliance.
-
-More details can be founded at [here](https://www.synopsys.com/Tools/Implementation/CustomImplementation/CapsuleModule/smartDRD_tech_bgr.pdf)
+__One tip__: There is realtime DRC tool, which so-called SmartDRD technology. You can check in the following icon ![fig41](images/fig41-2.png) in the toolbar of your layout window. Which provides realtime DRC checking tool. If your design is very large, enabling this helper may degrade your performance. It has `assist` and `visual` options. The `visual` mode only annotates the object spacing and DRC violations. Whereas, the `assist` mode attends to create barriers between objects to help enforce DRC compliance.
 
 First we need to know each layer naming. The meaning of each layer is the following:
 
