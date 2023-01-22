@@ -42,7 +42,7 @@ _**Fig. 1. Creating New Layout**_
 _**Fig. 2. New Layout Workspace**_
 
 
-__One tip__: There is realtime DRC tool, which so-called SmartDRD technology. You can check in the following icon ![fig41](images/fig41-2.png) in the toolbar of your layout window. Which provides realtime DRC checking tool. If your design is very large, enabling this helper may degrade your performance. It has `assist` and `visual` options. The `visual` mode only annotates the object spacing and DRC violations. Whereas, the `assist` mode attends to create barriers between objects to help enforce DRC compliance.
+__One tip__: There is realtime DRC tool, which so-called SmartDRD technology. You can check in the following icon ![fig41](images/fig41-1.png) in the toolbar of your layout window, which provides realtime DRC checking tool. If your design is very large, enabling this helper may degrade your performance. It has `assist` and `visual` options. The `visual` mode only annotates the object spacing and DRC violations. Whereas, the `assist` mode attends to create barriers between objects to help enforce DRC compliance.
 
 First we need to know each layer naming. The meaning of each layer is the following:
 
@@ -81,7 +81,9 @@ After you have created an N-well (N-tub), move your mouse over it. Notice at the
 
 Now we are going to make diffusion areas for PMOS, NMOS and body connections. From our schematic, we know that the width of the PMOS should be 0.5um and the width of NMOS should be 0.25um (refer lab1). The location of the diffusion should be similar to the ones in Fig.5. There are two horizontal diffusion areas that are the NMOS and PMOS devices, and two vertical rectangles that will be the body connections. Place rulers down to help you make sure the width of the diffusion areas for the NMOS and PMOS match our schematic area exactly.
 
-Select the `DIFF` layer again use the `Create Rectangle` tool to draw the diffusion area. Use rulers to check the width of the rectangles. If the widths are different than the widths of the devices in the schematic, you will not pass LVS. You can also use the property editor in `Edit -> Property` Editor to change the dimensions of the rectangle to exact values.
+Select the `DIFF` layer again use the `Create Rectangle` tool to draw the diffusion area. Use rulers to check the width of the rectangles. If the widths are different than the widths of the devices in the schematic, you will not pass LVS. 
+
+__You can also use the property editor in `Edit -> Property Editor` or select shape and press 'Q' to change the dimensions of the rectangle to exact values.__
 
 The size of the diffusion areas and body connections can be modified later. I recommend you look ahead and see what else you will need to add to your layout so you can make these locations large enough to accomodate future material. 
 
