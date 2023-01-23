@@ -93,7 +93,7 @@ _**Fig. 5. Layout with NWell and Diffusion**_
 
 ### PIMP Layer and NIMP Layer
 
-Now we will add the P-implant and N-implant areas. When manipulating layers on top of each other sometimes it is useful to “hide” a layer, like you would do in a program like Photoshop. You can do hide or reveal layers in Cosmos by clicking ![fig44-2](images/fig44-2.png).
+Now we will add the P-implant and N-implant areas. When manipulating layers on top of each other sometimes it is useful to “hide” a layer, like you would do in a program like Photoshop.
 
 Use the p-diff(PIMP layer) and n-diff (NIMP layer) layers with the `Create Rectangle` to cover and surround the diffusion and body connection areas. It is important to note that the `PIMP` is drawn to the edge of the `NWELL` where the `NWELL` meets the `NIMP`. This can be seen in Fig.6. The PMOS area should be covered with `PIMP` and the `NMOS` with `NIMP`, except for the body connections which have the opposite implantation.
 
@@ -142,7 +142,7 @@ _**Fig. 8. Drawing Contacts**_
 
 ### M1 Layer
 
-Select the `M1` (Metal-1) layer and again select the `Create Path` tool. This time in the `Create Path` window that pops ups, click on the width box to then enter 0.14 in the Width field.
+Select the `M1` (Metal-1) layer and again select the `Create Path` tool. This time in the `Create Path` window that pops up, click on the width box to then enter 0.14 in the Width field.
 
 ![fig9](images/fig9.png)
 
@@ -160,7 +160,7 @@ Rule CO.E.7: Minimum enclosure of contact at end of line is 0.05um.
 
 _**Fig. 10. Drawing Metal Connections**_
 
-### MIPIN Layer
+### M1PIN Layer
 
 Select the `M1PIN` layer. Select the `Create -> Text -> Label` tool and place text labels labeled as VDD, VSS, VIN, and VOUT (refer Fig.11), where the center point of label should be put within the metal wire. Note that you need to match the label names in layout as the labeled pins in the schematic in order to pass LVS (Layout vs Schematic). You have now completed the initial layout and can move onto DRC. Save your layout by going to `Design -> Save`. As a general convention, use uppercase letters for labels instead of lowercase letters.
 
