@@ -248,7 +248,7 @@ Here, we assume library name is `mylibrary` and cell name is `inverter` here.
 
 You need to make sure of all `OpenAccess` for Layout and Schematic/Config. Check `Launch Debugger` and `View Output`.
 
-![fig21](images/fig.21.revised.png)
+![fig21](images/Figg21.png)
 
 _**Fig. 21. LVS Setup -- Main**_
 
@@ -283,24 +283,24 @@ From your lecture class, we learned NAND gate schematic and its layout. Now, fro
 
 1. Design your `NAND` gate cell (see lecture notes)
 
-1. Design your `NAND` symbol
+2. Design your `NAND` symbol
 
-1. Design your testbench for simulation `NAND_testbench` cell
+3. Design your testbench for simulation `NAND_testbench` cell
 
-1. Do transient simulation with two different inputs and one output, you need to show if `NAND` gate is correctly working. You need to setup your testing variables such as timing, Input signal frequencies (`AIN`, `BIN`) with appropriate `VDD` and `VSS`.
+4. Do transient simulation with two different inputs and one output, you need to show if `NAND` gate is correctly working. You need to setup your testing variables such as timing, Input signal frequencies (`AIN`, `BIN`) with appropriate `VDD` and `VSS`.
 
-1. Draw `NAND` gate layout (see lecture notes)
+5. Draw `NAND` gate layout (see lecture notes)
 
-1. DRC for `NAND` gate layout
+6. DRC for `NAND` gate layout
 
-1. LVS for `NAND` gate layout
+7. LVS for `NAND` gate layout
 
 
 ## Lab2
 
 ### Objective
 
-Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will learn three IC design tools (Custom Designer, IP Validator) and design inverter and NAND gates in this lab and the followings are expected to be delivered in your lab report.
+Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will learn three IC design tools (Layout using Custom Compiler, DRC and LVS using IC Validator) and design inverter and NAND gates in this lab and the following are expected to be delivered in your lab report.
 
 
 ### Checkoff
@@ -318,7 +318,7 @@ Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will
 
 * Name, SID, Session(021,022,023), ENGR ID, UCR NetID
 
-* Summary of what you learned thru this lab (One paragraph)
+* Summary of what you learned through this lab (One paragraph)
 
 * Your inverter layout in Fig.11 or Fig.12.
 
@@ -370,7 +370,7 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 `tar -cvzf lab2-tkim049.tgz ./`
 
-* You need to submit two files (\*.pdf, \*.tgz) in iLearn
+* You need to submit two files (\*.pdf, \*.tgz) in eLearn
 
 
 
