@@ -113,6 +113,8 @@ _**Fig. 6. Drawing PIMP and NIMP layers**_
 
 Now we select the `PO` layer (Polysilicon) and use the `Create -> Path` tool to draw a strip of poly through both PMOS and NMOS diffusion areas. Make sure the poly is sticking out past the diffusion areas by at least the amount specified in the design rule manual. When drawing the Poly path, make sure the width is 0.1um to match the transistor lengths in the schematic, see Fig.9 to set width/thickness for the draw path tool. Create a rectangle of poly in the center of the strip that would be used for the input signal, see Fig.7. This strip does not have to be inside the N-tub.
 
+__Double-click to complete drawing the path.__
+
 Rule PO.EX.1: Minimum gate extension of active (end cap) is 0.18um.
 
 ![fig7](images/fig7.png)
@@ -162,7 +164,9 @@ _**Fig. 10. Drawing Metal Connections**_
 
 ### M1PIN Layer
 
-Select the `M1PIN` layer. Select the `Create -> Text -> Label` tool and place text labels labeled as VDD, VSS, VIN, and VOUT (refer Fig.11), where the center point of label should be put within the metal wire. Note that you need to match the label names in layout as the labeled pins in the schematic in order to pass LVS (Layout vs Schematic). You have now completed the initial layout and can move onto DRC. Save your layout by going to `Design -> Save`. As a general convention, use uppercase letters for labels instead of lowercase letters.
+Select the `M1PIN` layer. Select the `Create -> Text -> Label` tool and place text labels labeled as VDD, VSS, VIN, and VOUT (refer Fig.11), where the center point of label should be put within the metal wire. Note that you need to match the label names in layout as the labeled pins in the schematic in order to pass LVS (Layout vs Schematic). Fill in the name in the toolbar and 0.1 as height. 
+
+You have now completed the initial layout and can move onto DRC. Save your layout by going to `Design -> Save`. As a general convention, use uppercase letters for labels instead of lowercase letters.
 
 ![fig11](images/fig11.png)
 
