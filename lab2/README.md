@@ -180,7 +180,7 @@ _**Fig. 12. Another Inverter Layout**_
 
 ## PART 6: Running DRC
 
-After the inverter layout has been drawn to accurately represent the schematic, to verify that the layout meets all the basic design rules, we need to run `IC Validator` for a DRC (Design Rule Check). Save the layout cell by clicking on Save. In Custom Designer Editor, go to `Verification -> DRC -> Setup and Run`.
+After the inverter layout has been drawn to accurately represent the schematic, to verify that the layout meets all the basic design rules, we need to run `IC Validator` for a DRC (Design Rule Check). Save the layout cell by clicking on Save. In Layout Editor, go to `Verification -> DRC -> Setup and Run`.
 Locate the runset file rules.drc.9m_saed90ev_saed90_icv.rs from the following directory and click Ok (Fig.13).
 
 ```
@@ -215,7 +215,7 @@ _**Fig. 16. DRC Debug -- Run Summary**_
 
 _**Fig. 17. DRC Debug -- DRC Errors**_
 
-In Fig 16 and 17, it shows 1 violation found, to see the error detail, you need to clock `DRC Erros` tab. Then see your design name and double click error, then it shows where the error comes from.
+In Fig 16 and 17, it shows 1 violation found, to see the error detail, you need to click `DRC Erros` tab. Then see your design name and double click error, then it shows where the error comes from.
 
 Also for debugging screen again, you can go to `Verification -> DRC -> Debug`, see Fig.18.
 
@@ -226,9 +226,9 @@ _**Fig. 18. DRC Debug**_
 
 ## Part 7: Running LVS
 
-The LVS (Layout versus Schematic) performs LVS comparison to verify that the design layout accurately represents the electronic equivalent of the design schematic. `IC Validator` LVS verifies whether the physical design design matches the schematic by extracting the devices, verifying the connectivity between the devices and comparing the extracted information with the schematic netlist.
+The LVS (Layout versus Schematic) performs comparison to verify that the design layout accurately represents the electronic equivalent of the design schematic. `IC Validator` LVS verifies whether the physical design matches the schematic by extracting the devices, verifying the connectivity between the devices and comparing the extracted information with the schematic netlist.
 
-__Notice that in order to pass LVS, schematic names and layout names must match one to one__. Make sure the names for labels and pins are using uppercase letters instead of lowercase letters. Also transistor dimensions for gate width and length in layout and schematic must match. See Fig 19 and 20 for reference.
+__Notice that in order to pass LVS, schematic names and layout names must match exactly__. Make sure the names for labels and pins are using uppercase letters instead of lowercase letters. Also transistor dimensions for gate width and length in layout and schematic must match. See Fig 19 and 20 for reference.
 
 ![fig19](images/fig19.png)
 
