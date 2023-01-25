@@ -84,7 +84,7 @@ If you have any question, then you can post your question at issue section in th
 
 ## Helpful tip
 
-If the Synopsys Custom Compiler is running in the background and your schematic/symbol/testbench files are locked (can be opened only in Read-only), please follow these steps:
+If the Synopsys Custom Compiler is running in the background and your schematic/symbol/testbench/layout files are locked (can be opened only in Read-only), please follow these steps:
 
 1. In the terminal window, type `jobs -l` and click 'Enter'
 2. Using the PID of the cdesigner that's open, type `kill [PID]` and 'Enter'. 
