@@ -100,7 +100,7 @@ cd eecs168
 Then, you need to install Synopsys PDK ([Process Design Kit](https://en.wikipedia.org/wiki/Process_design_kit)) technology library into your workspace as follows.
 
 ```
-cp /usr/local/synopsys/pdk/SAED_PDK90nm/lib.defs ./
+cp /usr/local/synopsys/pdk/SAED_PDK90nm/install/lib.defs ./
 ```
 
 Above procedure is just required for one time, you do not need to re-do above command `cp` the next time.
