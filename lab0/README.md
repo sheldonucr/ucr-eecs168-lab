@@ -88,7 +88,9 @@ If the Synopsys Custom Compiler is running in the background and your schematic/
 
 1. In the terminal window, type `jobs -l` and click 'Enter'
 2. Using the PID of the cdesigner that's open, type `kill [PID]` and 'Enter'. 
+
 Ex. If the PID is 73491, type `kill 73491`
 
 If this does not work, navigate to the folders which have the locked files using Putty / xterm and use 'rm' command to delete all the 'cds.oa.lck' files.
+
 Ex. ../eecs168/mylibrary/inverter/schematic $ rm cds.oa.lck
