@@ -344,7 +344,7 @@ _**Fig. 26. Expected NAND Simulation Result**_
 
 * An LVS Result with `PASS` for your NAND gate layout.
 
-* NAND gate schematic, testbench, layout, DRC and LVS checkoff video.
+
 
 * Some of the issues if you have (One paragraph)
 
