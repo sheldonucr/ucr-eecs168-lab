@@ -322,7 +322,7 @@ Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will
 
 * Your inverter layout in Fig.11 or Fig.12.
 
-* Inverter Layout, DRC, LVS checkoff video
+* Inverter Layout, DRC, LVS
 
 * A DRC Result with `CLEAN` for your inverter layout in Fig.18.
 
