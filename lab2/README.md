@@ -6,7 +6,7 @@ Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will
 
 ## Lab Report Due
 
-* Prior to Lab 3.
+* Next Friday.
 
 # Lab/Tutorial 2
 
@@ -111,7 +111,7 @@ _**Fig. 6. Drawing PIMP and NIMP layers**_
 
 ### PO Layer
 
-Now we select the `PO` layer (Polysilicon) and use the `Create -> Path` tool to draw a strip of poly through both PMOS and NMOS diffusion areas. Make sure the poly is sticking out past the diffusion areas by at least the amount specified in the design rule manual. When drawing the Poly path, make sure the width is 0.1um to match the transistor lengths in the schematic, see Fig.9 to set width/thickness for the draw path tool. Create a rectangle of poly in the center of the strip that would be used for the input signal, see Fig.7. This strip does not have to be inside the N-tub.
+Now we select the `PO` layer (Polysilicon) and use the `Create -> Interconnect` tool to draw a strip of poly through both PMOS and NMOS diffusion areas. Make sure the poly is sticking out past the diffusion areas by at least the amount specified in the design rule manual. When drawing the Poly path, make sure the width is 0.1um to match the transistor lengths in the schematic, see Fig.9 to set width/thickness for the draw path tool. Create a rectangle of poly in the center of the strip that would be used for the input signal, see Fig.7. This strip does not have to be inside the N-tub.
 
 __Double-click to complete drawing the path.__
 
@@ -144,7 +144,7 @@ _**Fig. 8. Drawing Contacts**_
 
 ### M1 Layer
 
-Select the `M1` (Metal-1) layer and again select the `Create Path` tool. This time in the `Create Path` window that pops up, click on the width box to then enter 0.14 in the Width field.
+Select the `M1` (Metal-1) layer and again select the `Create Interconnect` tool. This time in the toolbar that pops up, click on the width box to then enter 0.14 in the Width field.
 
 ![fig9](images/fig9.png)
 
