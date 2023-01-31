@@ -6,7 +6,7 @@ In this tutorial, some contexts use Synopsys tutorials from Vazgen Melikyan (Syn
 
 In this tutorial, you will learn how to do parasitic extraction/ post layout simulation and hierarchical design. You will use your Inverter design for your parasitic extraction and post layout simulation. For your hierarchical design, you will eventually design Ring Oscillator. You need to check off until Ring Oscillator.
 
-This work design for two weeks lab, so for your lab report, you need to design 4-bit binary full adder schematic, layout (DRC,LVS pass) and post layout simulation, which requires Hierarchical Design skill. The 1-bit adder requires 5 NAND gates.
+The next 2 weeks will revolve around designing 1-bit full adder and hierarchical 4-bit full adder. So for your lab report, you need to submit results for all three weeks, which includes ring oscillator, 1-bit and 4-bit binary full adder schematic, layout (DRC,LVS pass) and post layout simulation.
 
 ## Part 9: Parasitic Extraction (continues from lab1 and lab2)
 
@@ -80,12 +80,12 @@ You have successfully generated the parasitic view for the inverter and are read
 
 ## Part 10: Post Layout Simulation
 
-After parasitic extraction we want to apply the parasitics to the schematic for a more accurate representation of our inverter and test it. From the Custom Designer Console window go to `File -> Open Design` and open the inverter circuit schematic created earlier.
+After parasitic extraction we want to apply the parasitics to the schematic for a more accurate representation of our inverter and test it. From the Custom Compiler Console window go to `File -> Open Design` and open the inverter circuit schematic created earlier.
 
 Select the following options for the following columns:
 
 - Libraries: mylibrary
-- Cells: inverter_schematic
+- Cells: inverter_testbench
 - Views: schematic
 
 See Fig.11 for reference. Once all options are highlighted, click `Open` and the schematic that was created earlier for testing the inverter will open, see Fig.12 for reference.
@@ -98,7 +98,7 @@ _**Fig. 11. Opening Circuit with Inverter Schematic**_
 
 _**Fig. 12. Testbench Circuit for Inverter**_
 
-After opening the testbench circuit, make sure the circuit is similar to the one shown in Fig.12. Now the parasitics need to be loaded into the inverter cell used in the circuit. From the Custom Designer Console window, go to `File -> New -> CellView`. In the New CellView window, create a new configurations file as follows:
+After opening the testbench circuit, make sure the circuit is similar to the one shown in Fig.12. Now the parasitics need to be loaded into the inverter cell used in the circuit. From the Custom Compiler Console window, go to `File -> New -> CellView`. In the New CellView window, create a new configurations file as follows:
 
 - Select inverter_testbench for the cell.
 - Set view name to config
@@ -128,7 +128,7 @@ For future reference, to apply parasitics for a general case, a schematic must h
 
 _**Fig. 15. Loading Parasitics into the Inverter**_
 
-To start simulation with parasitics, go to `Tool -> Library Manager` from the Custom Designer Console window. In the Open Design window that opens, select `inverter_testbench` under the cells column and `config` under the views column and right click on config under views. Select `Open Design` from the drop down menu. See Fig.16 below for reference.
+To start simulation with parasitics, go to `Tool -> Library Manager` from the Custom Compiler Console window. In the Open Design window that opens, select `inverter_testbench` under the cells column and `config` under the views column and right click on config under views. Select `Open Design` from the drop down menu. See Fig.16 below for reference.
 
 ![fig16](images/fig16.png)
 
@@ -144,7 +144,7 @@ _**Fig. 17. Schematic with Parasitics Applied to the Inverter**_
 
 _**Fig. 18. Simulation result with parasitic extraction**_
 
-Now go ahead and simulate your circuit as you did previously in Part 3 of the tutorial. From the schematic window, go to `Tools -> SAE` to open a new SAE window. When comparing the two waveforms (inverter parasitics to inverter without parasitics) take note of the difference between delays from VIN to VOUT for transient waveforms. The result can be seen in Fig.18.
+Now go ahead and simulate your circuit as you did previously in Part 3 of the tutorial. From the schematic window, go to `Tools -> PrimeWave` to open a new SAE window. When comparing the two waveforms (inverter parasitics to inverter without parasitics) take note of the difference between delays from VIN to VOUT for transient waveforms. The result can be seen in Fig.18.
 
 
 __Tip__:
