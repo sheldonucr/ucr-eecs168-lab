@@ -156,7 +156,7 @@ If there is a mismatch error in the console regarding mismatched nets that are u
 
 Using smaller instances of circuits to create a larger design is what hierarchical design is all about. In this section, we use an inverter we created earlier and use several instances of it to create a five stage oscillator in schematic and layout views.
 
-Create a new schematic for the ring oscillator by going to `New -> CellView` from the Custom Designer Console and setup the options as shown in Fig.19 below. The setup is as follows:
+Create a new schematic for the ring oscillator by going to `New -> CellView` from the Custom Compiler Console and setup the options as shown in Fig.19 below. The setup is as follows:
 
 - Library: mylibrary
 - Cell Name: ringOscillator
@@ -169,7 +169,7 @@ Click `OK` when done.
 
 _**Fig. 19. Ring Oscillator Schematic Setup**_
 
-In the schematic window, building a ring oscillator circuit with pins as shown below in Fig.20.
+In the schematic window, building a ring oscillator circuit as shown below in Fig.20.
 For the inverter instances, look for them in `Add -> Instance` to open the add instance window. In the add instance window, choose `mylibrary` for library, `inverter` for cell, and `symbol` for the view and place five instances of the inverter on the schematic.
 
 Add wires with `Add -> Wire`.
