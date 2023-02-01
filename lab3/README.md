@@ -314,7 +314,7 @@ A new configurations file will open up. From here, setup the options as noted in
 
 _**Fig. 36. Configurations File Setup**_
 
-To start simulation with parasitics, go to `File -> Open Design` from the Custom Designer Console window. In the Open Design window that opens, select `ringOscillator_testbench` under the cells column and config under the views column and right click on `config` under views. Select `Open Design` from the drop down menu. See Fig.37 below for reference.
+To start simulation with parasitics, go to `File -> Open Design` from the Custom Compiler Console window. In the Open Design window that opens, select `ringOscillator_testbench` under the cells column and config under the views column and right click on `config` under views. Select `Open Design` from the drop down menu. See Fig.37 below for reference.
 
 ![fig37](images/fig37.png)
 
