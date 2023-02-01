@@ -8,6 +8,20 @@ In this tutorial, you will learn how to do parasitic extraction/ post layout sim
 
 The next 2 weeks will revolve around designing 1-bit full adder and hierarchical 4-bit full adder. So for your lab report, you need to submit results for all three weeks, which includes ring oscillator, 1-bit and 4-bit binary full adder schematic, layout (DRC,LVS pass) and post layout simulation.
 
+### Lab Report Due
+
+* 02/24/2023 (Friday)
+
+### Checkoff
+
+* First week: Check off your parasitic extraction and ring oscillator layout and post-simulator
+
+* Second week: Check off your 1-bit full adder layout (DRC, LVS should be okay) and post-simulation
+
+* Third week: Check off your 4-bit full adder layout (DRC, LVS should be okay) and post-simulation
+
+* Fourth week: Extra work time in case you cannot finish within 3 weeks, you should have everything checked off by the end of this week's lab
+
 ## Part 9: Parasitic Extraction (continues from lab1 and lab2)
 
 You need to keep working on Inverter schematic and layout for this extraction.
@@ -248,6 +262,8 @@ _**Fig. 28. Viewing Inverter Layout Instances**_
 
 Now draw metal paths with `Create -> Interconnect` using the `M1` layer under the LPP panel. Connect all VDD signals with a single M1 connection and all VSS signals with a single M1 connection. Also connect the output of an inverter to the input of the next inverter using the `M1` layer. Note that ouput of inverter 5 connects to input of inverter 1 with a M2 layer. __Do not forget to connect `M1 and M2` layers using `VIA1`. Refer Fig.29.__
 
+__See 'Extra Tutorial' below__
+
 In addition you need to add labels for the metal connections just added. To add labels, select the `M1PIN` layer in the LPP panel and go to `Create -> Text -> Label`. Enter a name for each label in the box noted in Fig.30 and place the text labels as noted by the red boxes in Fig.29. Label names used are: `VDD, VSS, VIO1, VIO2, VIO3, VIO4, and VIO5`. Remember that in order to pass LVS, your M1PIN label names in layout need to match up with the pin names from your ring oscillator schematic. Also names for schematic pins and names for layout labels should use uppercase letters. Save the layout.
 
 ![fig29](images/fig29.png)
@@ -326,7 +342,9 @@ Afterwards a schematic window opens up with the ring oscillator testbench circui
 
 _**Fig. 38. Ring Oscillator Testbench Circuit**_
 
-From the ring oscillator testbench window, you can simulate the circuit by using PrimeWave as noted in part 3 of the tutorial. To open SAE, go to `Tools -> PrimeWave` from the schematics window and setup the simulation for a transient analysis and plot the voltages for the VIO1, VIO2, VIO3, VIO4, and VIO5 voltages. For the transient analysis setup in SAE, use 1ps for step time and 1ns for stop time.
+From the ring oscillator testbench window, you can simulate the circuit by using PrimeWave as noted in 'PART 3' of the tutorial __(LAB 1)__. To open SAE, go to `Tools -> PrimeWave` from the schematics window and setup the simulation for a transient analysis and plot the voltages for the VIO1, VIO2, VIO3, VIO4, and VIO5 voltages. For the transient analysis setup in SAE, use 1ps for step time and 1ns for stop time.
+
+__REMEMBER TO CHANGE SIMULATOR TO 'PRIMESIM HSPICE' AND ALSO ADD 'MODEL FILES'__
 
 __Side Notes for Using Convergence Aids to Initialize Voltages:__
 Also note that it may be helpful to give a wire in the circuit an initial voltage before running simulation. This particular setup applies to circuits such as a five stage ring oscillator circuit shown in Fig.39. In addition to the setup noted in part 3 for SAE, before running the simulation, go to `Setup -> Convergence Aids` in the SAE window.
@@ -425,7 +443,7 @@ _**Fig. 51. Layout with source-drain sharing and body along the top**_
 
 Lab3 is to learn how to do parasitic extraction/post layout simulation and hierarchical design. You will use your inverter design for your parasitic extraction and post layout simulation. For your hierarchical design, you will eventually design ring oscillator. You need to check off until Ring Oscillator.
 
-This lab is designed for four weeks, so for your lab report, you need to design `Ripple-carry 4-bit binary full adder` schematic, layout (DRC,LVS pass) and post layout simulation, which requires Hierarchical Design skill. The 1-bit adder requires 14-PMOS, 14-NMOS, total 28 transistors. Inputs are A, B, CIN and outputs are S and COUT.
+This lab is designed for three weeks, so for your lab report, you need to design `Ring oscillator`, `1-bit full adder` and `Ripple-carry 4-bit binary full adder` schematic, layout (DRC,LVS pass) and post layout simulation, which requires Hierarchical Design skill. 
 
 ### Deliverables for your lab report.
 
@@ -487,7 +505,7 @@ This lab is designed for four weeks, so for your lab report, you need to design 
 
 ### Hint
 
-A full adder adds binary number with carry in and out. A 1-bit full adder adds three one-bit number, such as A, B, and CIN. A and B are the operands and CIN is a bit carried in from the previous less significant stage.
+A full adder adds binary number with carry in and out. A 1-bit full adder adds three one-bit number, such as A, B, and CIN and outputs S and COUT.. A and B are the operands and CIN is a bit carried in from the previous less significant stage. __The 1-bit adder requires 14-PMOS, 14-NMOS, total 28 transistors.__
 
 ![fig52](images/fig52.png)
 
