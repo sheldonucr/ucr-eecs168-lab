@@ -246,7 +246,7 @@ _**Fig. 27. placing Five Inverter Layout Instances**_
 
 _**Fig. 28. Viewing Inverter Layout Instances**_
 
-Now draw metal paths with `Create -> Interconnect` using the `M1` layer under the LPP panel. Connect all VDD signals with a single M1 connection and all VSS signals with a single M1 connection. Also connect the output of an inverter to the input of the next inverter using the `M1` layer. See Fig.29 for M1 connections.
+Now draw metal paths with `Create -> Interconnect` using the `M1` layer under the LPP panel. Connect all VDD signals with a single M1 connection and all VSS signals with a single M1 connection. Also connect the output of an inverter to the input of the next inverter using the `M1` layer. Note that ouput of inverter 5 connects to input of inverter 1 with a M2 layer. __Do not forget to connect `M1 and M2` layers using `VIA1`. Refer Fig.29.__
 
 In addition you need to add labels for the metal connections just added. To add labels, select the `M1PIN` layer in the LPP panel and go to `Create -> Text -> Label`. Enter a name for each label in the box noted in Fig.30 and place the text labels as noted by the red boxes in Fig.29. Label names used are: `VDD, VSS, VIO1, VIO2, VIO3, VIO4, and VIO5`. Remember that in order to pass LVS, your M1PIN label names in layout need to match up with the pin names from your ring oscillator schematic. Also names for schematic pins and names for layout labels should use uppercase letters. Save the layout.
 
@@ -326,9 +326,9 @@ Afterwards a schematic window opens up with the ring oscillator testbench circui
 
 _**Fig. 38. Ring Oscillator Testbench Circuit**_
 
-From the ring oscillator testbench window, you can simulate the circuit by using SAE as noted in part 3 of the tutorial. To open SAE, go to `Tools -> SAE` from the schematics window and setup the simulation for a transient analysis and plot the voltages for the VIO1, VIO2, VIO3, VIO4, and VIO5 voltages. For the transient analysis setup in SAE, use 1ps for step time and 1ns for stop time.
+From the ring oscillator testbench window, you can simulate the circuit by using PrimeWave as noted in part 3 of the tutorial. To open SAE, go to `Tools -> PrimeWave` from the schematics window and setup the simulation for a transient analysis and plot the voltages for the VIO1, VIO2, VIO3, VIO4, and VIO5 voltages. For the transient analysis setup in SAE, use 1ps for step time and 1ns for stop time.
 
-Side Notes for Using Convergence Aids to Initialize Voltages:
+__Side Notes for Using Convergence Aids to Initialize Voltages:__
 Also note that it may be helpful to give a wire in the circuit an initial voltage before running simulation. This particular setup applies to circuits such as a five stage ring oscillator circuit shown in Fig.39. In addition to the setup noted in part 3 for SAE, before running the simulation, go to `Setup -> Convergence Aids` in the SAE window.
 
 ![fig39](images/fig39.png)
@@ -349,7 +349,6 @@ _**Fig. 41. Setup for Multiple Initial Voltages**_
 ![fig42](images/fig42.png)
 
 _**Fig. 42. Simulation result for ring oscillator**_
-
 
 You have now finished transient simulation of the ring oscillator circuit with applied parasitics.
 
@@ -488,14 +487,13 @@ This lab is designed for four weeks, so for your lab report, you need to design 
 
 ### Hint
 
-
 A full adder adds binary number with carry in and out. A 1-bit full adder adds three one-bit number, such as A, B, and CIN. A and B are the operands and CIN is a bit carried in from the previous less significant stage.
 
 ![fig52](images/fig52.png)
 
 _**Fig. 52. 1-bit Full Adder Schematic**_
 
-In Fig.52, there are two-stage. The first one is to generate `COUT` and the second one is to generate `S` which is final sum. It requires 28 transistors including two inverters. You can use your own design but you need to transistor-level design.
+In Fig.52, there are two-stage. The first one is to generate `COUT` and the second one is to generate `S` which is final sum. It requires 28 transistors including two inverters. You can use your own design but you need to have transistor-level design.
 
 ![fig53](images/fig53.png)
 
@@ -539,7 +537,7 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 ### Lab Report Due
 
-* 02/24/2021 (Wednesday) by 10:59am
+* 02/24/2023 (Friday)
 
 ### Checkoff
 
@@ -553,4 +551,4 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 ### Next lab
 
-In lab 4 (last one), you will full chip design.
+In lab 4 (last one), you will do full chip design.
