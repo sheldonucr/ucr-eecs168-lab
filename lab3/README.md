@@ -192,7 +192,7 @@ After clicking OK, a new schematic window opens up with the ring oscillator symb
 
 _**Fig. 22. Ring Oscillator Symbol**_
 
-Now create a new schematic to use as a testbench for the ring oscillator by going to `New -> CellView` from the Custom Designer Console and setup the options as shown in Fig.23 below. The setup is as follows:
+Now create a new schematic to use as a testbench for the ring oscillator by going to `New -> CellView` from the Custom Compiler Console and setup the options as shown in Fig.23 below. The setup is as follows:
 
 - Library: mylibrary
 - Cell Name: ringOscillator_testbench
@@ -209,14 +209,13 @@ To place a ringOscillator instance, look for them in `Add -> Instance` to open t
 
 Add wires with `Add -> Wire`.
 
-For the pins, go to `Add -> Pins` and place five output pins for each of the five `VIO#` pins. Feel
-free to give the wires the same names as the pins using `Add -> Wire Name`.
+For the pins, go to `Add -> Pins` and place five output pins for each of the five `VIO#` pins. Feel free to give the wires the same names as the pins using `Add -> Wire Name`. Save with `Design -> Save` once your testbench circuit is done.
 
 ![fig24](images/fig24.png)
 
 _**Fig. 24. Ring Oscillator Testbench Circuit**_
 
-Save with `Design -> Save` once your testbench circuit is done. Now we need to create a new layout so go to `New -> CellView` from the Custom Designer Console and setup the options as shown in Fig.25 below.
+Now we need to create a new layout so go to `New -> CellView` from the Custom Compiler Console and setup the options as shown in Fig.25 below.
 
 - Library: mylibrary
 - Cell Name: ringOscillator
@@ -235,7 +234,7 @@ In the new layout window, we can use the layout of the inverter created earlier 
 
 _**Fig. 26. Placing Five Inverter Layout Instances**_
 
-Notice that the layout components for the inverter layouts don’t display. This is because the inverter layouts are hiding one level up in the hierarchy. In order to view them, change the hierarchy bounds, which is the rightmost number from 0 to 1 or 32, as shown in Fig.27 below. The numbers represent a range of hierarchy levels that are displayed where the left number is the lower limit and the right number is the higher limit. Afterwards the inverter layouts are viewable as shown in Fig.28.
+Notice that the layout components for the inverter layouts don’t display. This is because the inverter layouts are hiding one level up in the hierarchy. In order to view them, change the hierarchy bounds, which is the rightmost number from 0 to 1 or 5 or 32, as shown in Fig.27 below. The numbers represent a range of hierarchy levels that are displayed where the left number is the lower limit and the right number is the higher limit. Afterwards the inverter layouts are viewable as shown in Fig.28.
 
 ![fig27](images/fig27.png)
 
@@ -247,7 +246,7 @@ _**Fig. 27. placing Five Inverter Layout Instances**_
 
 _**Fig. 28. Viewing Inverter Layout Instances**_
 
-Now draw metal paths with `Create -> Path` using the `M1` layer under the LPP panel. Connect all VDD signals with a single M1 connection and all VSS signals with a single M1 connection. Also connect the output of an inverter to the input of the next inverter using the `M1` layer. See Fig.29 for M1 connections.
+Now draw metal paths with `Create -> Interconnect` using the `M1` layer under the LPP panel. Connect all VDD signals with a single M1 connection and all VSS signals with a single M1 connection. Also connect the output of an inverter to the input of the next inverter using the `M1` layer. See Fig.29 for M1 connections.
 
 In addition you need to add labels for the metal connections just added. To add labels, select the `M1PIN` layer in the LPP panel and go to `Create -> Text -> Label`. Enter a name for each label in the box noted in Fig.30 and place the text labels as noted by the red boxes in Fig.29. Label names used are: `VDD, VSS, VIO1, VIO2, VIO3, VIO4, and VIO5`. Remember that in order to pass LVS, your M1PIN label names in layout need to match up with the pin names from your ring oscillator schematic. Also names for schematic pins and names for layout labels should use uppercase letters. Save the layout.
 
