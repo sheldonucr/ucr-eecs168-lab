@@ -46,9 +46,9 @@ _**Fig. 3. Select ICV Runset Report File**_
 
 _**Fig. 4. Select ICV Runset Report File**_
 
-In Fig.5, you should make sure the netlist ground node matches the ground node name in the schematic and lyout. Here, choose 'VSS' for our ground. Note that you cannot use 'GND' or 'gnd' as ground node name.
+As shown in Fig.5, change 'Extract power nets' to `YES` and make sure the netlist ground node matches the ground node name in the schematic and layout. Here, choose `VSS` for our ground. Note that you cannot use 'GND' or 'gnd' as ground node name.
 
-![fig5](images/fig5.png)
+![fig5](images/Fig5.png)
 
 _**Fig. 5. LPE Setup -- Extract Options**_
 
