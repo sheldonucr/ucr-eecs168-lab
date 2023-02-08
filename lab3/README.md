@@ -481,7 +481,7 @@ This lab is designed for three weeks, so for your lab report, you need to design
 
 * An LVS Result with `PASS` for your 1-bit full adder
 
-* Your 1-bit full adder __POST (Layout) SIMULATION__ result (with parasitic extraction) - you need to have your test bench and the test results should include 0+0, 0+1, 1+0, 1+1 (Hint: the frequency of input signal B can be twice that of A.)
+* Your 1-bit full adder __POST (Layout) SIMULATION__ result (with parasitic extraction) - you need to have your test bench and the test results should include 0+0+0 to 1+1+1 (Hint: the frequency of input signal A can be twice that of B and 4 times of C).
 
 ---- until here for week2 check off
 
