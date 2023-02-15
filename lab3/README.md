@@ -463,6 +463,10 @@ This lab is designed for three weeks, so for your lab report, you need to design
 
 * Your ring oscillator testbench
 
+* An DRC Result with `CLEAN`
+
+* An LVS Result with `PASS`
+
 * Your ring oscillator __POST (Layout) SIMULATION__ result (with parasitic extraction)
 
 ---- until here for week1 check off
