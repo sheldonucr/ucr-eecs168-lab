@@ -477,15 +477,13 @@ This lab is designed for three weeks, so for your lab report, you need to design
 
 * Your 1-bit full adder simulation
 
-* Your 1-bit full adder stick diagram
-
 * Your 1-bit full adder layout
 
 * An DRC Result with `CLEAN` for your 1-bit full adder
 
 * An LVS Result with `PASS` for your 1-bit full adder
 
-* Your 1-bit full adder __POST (Layout) SIMULATION__ result (with parasitic extraction) - you need to have your test bench and the test results should include 0+0+0 to 1+1+1 (Hint: the frequency of input signal A can be twice that of B and 4 times of C).
+* Your 1-bit full adder __POST (Layout) SIMULATION__ result (with parasitic extraction) - you need to have your test bench and the test results should include 0+0+0 to 1+1+1 (Hint: the frequency of input signal A can be twice that of B and 4 times of C. This can be achieved by setting).
 
 ---- until here for week2 check off
 
