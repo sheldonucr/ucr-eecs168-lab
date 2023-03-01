@@ -210,10 +210,10 @@ In this tutorial you will use Synopsys Design Compiler to elaborate the RTL for 
 
 First, go to `lab4-rtl` folder and make workspace folder for `4-bit full adder`
 
-open 'vi', 'emacs', or 'nano' to edit this file
+open 'vi', 'emacs', or 'vim' to edit this file
 
 ```
-nano fa_4bit.v
+vi fa_4bit.v
 ```
 
 `fa_4bit.v` file should contain the following code
@@ -231,7 +231,13 @@ module fa_4bit( cin, cout, ain, bin, sum );
 endmodule // fa_4bit
 ```
 
-One Verilog file is ready. We need to do SYNTHESIS, which is a transformation process from RTL to gate-level design (another synthesized Verilog). Type the following command to launch Design Compiler.
+Please follow these steps to edit this file:
+1) Type `i` to switch into insert mode so that you can start editing the file.
+2) Type-in or copy-paste the above code into your file.
+3) Once you're done, press the escape key Esc to get out of insert mode and back to command mode.
+4) Type :wq to save and exit your file.
+
+Once Verilog file is ready, we need to do SYNTHESIS, which is a transformation process from RTL to gate-level design (another synthesized Verilog). Type the following command to launch Design Compiler.
 
 ```
 dc_shell
