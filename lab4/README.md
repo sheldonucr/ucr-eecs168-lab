@@ -93,7 +93,7 @@ wget https://raw.githubusercontent.com/sheldonucr/ucr-eecs168-lab/master/lab4/co
 wget https://raw.githubusercontent.com/sheldonucr/ucr-eecs168-lab/master/lab4/counter_tb.v
 ```
 
-1. In the “lab4-rtl” directory, compile the verilog source code by typing the following at the
+1. In the “counter” directory, compile the verilog source code by typing the following at the
 machine prompt.
 ```
 vcs counter_tb.v counter.v
