@@ -48,7 +48,7 @@ You should finish this tutorial first for 2 hours at least.
 
 ## Lab4-Week1: Part 2. Synopsys Verilog Compiler Simulator (Verilog Compiler) Tutorial
 
-For the Verilog editor, `vi` or `emacs` is recommended, but if you're beginner of Linux system, you can use `nano`, it's your choice.
+For the Verilog editor, `vi` or `emacs` is recommended, but you are free to use `vim` as well.
 
 Synopsys Verilog Compiler Simulator is a tool from Synopsys specifically designed to simulate and debug designs. This tutorial basically describes how to use VCS, simulate a verilog description of a design and learn to debug the design. VCS also uses VirSim, which is a graphical user interface to VCS used for debugging and viewing the waveforms.
 
@@ -96,7 +96,7 @@ wget https://raw.githubusercontent.com/sheldonucr/ucr-eecs168-lab/master/lab4/co
 1. In the “lab4-rtl” directory, compile the verilog source code by typing the following at the
 machine prompt.
 ```
-vcs counter_tb.v counter.v +v2k
+vcs counter_tb.v counter.v
 ```
 
 You can see the following successful compilation message
@@ -141,9 +141,6 @@ make: warning:  Clock skew detected.  Your build may be incomplete.
 CPU time: .132 seconds to compile + .249 seconds to elab + .230 seconds to link
 ```
 
-
-Here, the `+v2k` option is used if you are using Verilog IEE 1364-2000 syntax; otherwise there
-is no need for the option.
 
 By default the output of compilation would be a executable binary file is named `simv`.
 You can specify a different name with the -o compile-time option. VCS compiles the
