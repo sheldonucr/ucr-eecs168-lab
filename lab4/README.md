@@ -9,7 +9,7 @@ In this tutorial, you will learn how to do RTL (register transfer level) design 
 You will synthesize two sets of HDL, which are 4-bit binary full adder (week1) and greatest common devisor (gcd) (week2-3).
 
 
-In this lab4, we introduce Synopsys RTL design toolkit, which are VCS, Design Compiler, IC Compiler, VCS RTL Verification solution.
+In this lab4, we introduce Synopsys RTL design toolkit, which are VCS, Custom Compiler, IC Compiler, VCS RTL Verification solution.
 
 In this lab, you need to review at least 2 hours for the following website to review your Verilog programming skill, debugging method, and design examples. After 2 hours review, you need to follow RTL design step to make the final layout with design automation process.
 
@@ -44,11 +44,6 @@ Go to the following Verilog tutorial
 __[Click here for Verilog Tutorial](http://www.asic-world.com/verilog/index.html)__
 
 You should finish this tutorial first for 2 hours at least.
-
-
-There is better explanation for Verolog Operators [Click Here](https://embeddedmicro.com/tutorials/mojo/verilog-operators) - Thanks, Brandon
-
-__This lab requires individual lab!__
 
 
 ## Lab4-Week1: Part 2. Synopsys Verilog Compiler Simulator (Verilog Compiler) Tutorial
