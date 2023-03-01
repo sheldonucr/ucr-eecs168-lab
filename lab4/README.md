@@ -1113,7 +1113,7 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 ### Lab Report Due
 
-* All sessions: by 11am on 3/10
+* All sessions: by 11pm on 3/16
 
 ### Checkoff
 
