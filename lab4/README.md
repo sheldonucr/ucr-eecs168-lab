@@ -262,6 +262,9 @@ First we need to choose Synopsys 90nm model for design process.
 _**Fig. 3. Choose Setup for library setup.**_
 
 **Replace** the default your_library with the following files
+
+__You can search for the keywords 'link', 'target' and 'symbol' in the window that pops up, and attach the following libraries.__
+
 - Link library
 ```
 /usr/local/synopsys/pdk/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/ref/saed90nm_fr/LM/saed90nm_typ.db
