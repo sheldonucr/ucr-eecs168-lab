@@ -113,13 +113,8 @@ cdesigner&
 
 By adding `&` after the command, you can put a command in the background in Linux system. So, you can do another job while `Custom Compiler` is running.
 
-Custom Compiler Console should open up without any warning message in Fig.2.
-
-![Custom Designer](images/Fig2.png)
 
 _**Fig. 2 Custom Compiler Console**_
-
-If you see any warning message in Fig.2, that means that your PDK was not setup correctly, so you need to copy PDK's `lib.def` in your workspace again.
 
 Let's launch Library Manager first, go to `Tools -> Library Manager`, you may see `SAED_PDK_90` library in the libraries list.
 
