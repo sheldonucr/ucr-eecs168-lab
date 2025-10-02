@@ -80,6 +80,15 @@ Once you see the following screen, then it is ready for next lab.
 
 ![Synopsys cdesigner](images/lab0-02.png)
 
+### Problem Shooting
+
+If error such as "command not found" occurs, please use the following commands to configure path and run cdesigner.
+`export PATH=/usr/local/svnopsys/customcompiler/V-2023.12-SP2-7/bin:$PATH
+source ~/.bashrc
+cdesigner &`
+
+Here V-2023.12-SP2-7 is the version of Synopsys Custom Compiler.
+
 If you have any question, then you can post your question at issue section in this github.
 
 ## Helpful tip
