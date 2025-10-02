@@ -100,7 +100,7 @@ cd eecs168
 Then, you need to install Synopsys PDK ([Process Design Kit](https://en.wikipedia.org/wiki/Process_design_kit)) technology library into your workspace as follows.
 
 ```
-cp /usr/local/synopsys/pdk/SAED_PDK90nm/install/lib.defs ./
+cp /usr/local/synopsys/pdk/SAED90nm_PDK_10222017/install/lib.defs ./
 ```
 
 Above procedure is just required for one time, you do not need to re-do above command `cp` the next time.
@@ -121,7 +121,7 @@ Let's launch Library Manager first, go to `Tools -> Library Manager`, you may se
 Then, go to `File -> New -> Library` to create a new library. New library windows will pop up. You can put your new library name in the name in the attributes section. For the PDK technology, you can choose `Import file` and choose your technology file (.tf extension) in the PDK. You can find it under the following folder for 90nm.
 
 ```
-/usr/local/synopsys/pdk/SAED_PDK90nm/techfiles/saed90nm_1p9m_cd.tf
+/usr/local/synopsys/pdk/SAED90nm_PDK_10222017/techfiles/saed90nm_1p9m_cd.tf
 ```
 
 After you put name and technology file (.tf), click `OK`. See Fig.3.
@@ -268,7 +268,7 @@ _**Fig. 20. SAE window**_
 To setup the simulation model files, go to `Setup -> Models Files`. A model files window will open as shown in Fig.21 below. Next click on icon in RED box as shown in Fig.21 and browse the directory and select the SAED90nm.lib file. You can find the file in the following directory:
 
 ```
-/usr/local/synopsys/pdk/SAED_PDK90nm/hspice/SAED90nm.lib
+/usr/local/synopsys/pdk/SAED90nm_PDK_10222017/hspice/SAED90nm.lib
 ```
 
 In the BLUE box of the model files window (see Fig 21), select `TT_12` as your transistor type. Click `OK` when done.
