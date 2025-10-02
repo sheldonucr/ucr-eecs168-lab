@@ -118,6 +118,18 @@ _**Fig. 2 Custom Compiler Console**_
 
 Let's launch Library Manager first, go to `Tools -> Library Manager`, you may see `SAED_PDK_90` library in the libraries list.
 
+If you cannot see the `SAED_PDK_90`, please check the copied lib.defs file by
+
+```
+cat lib.defs
+```
+
+If the shown result contains `INCLUDE $SAED90_PDK/lib.defs`. Then change the preset PATH by
+
+```
+export SAED90_PDK=/usr/local/synopsys/pdk/SAED90nm_PDK_10222017
+```
+
 Then, go to `File -> New -> Library` to create a new library. New library windows will pop up. You can put your new library name in the name in the attributes section. For the PDK technology, you can choose `Import file` and choose your technology file (.tf extension) in the PDK. You can find it under the following folder for 90nm.
 
 ```
