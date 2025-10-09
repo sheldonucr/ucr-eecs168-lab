@@ -16,6 +16,8 @@ In this tutorial, some contexts use Synopsys tutorials from Vazgen Melikyan (Syn
 
 In this tutorial, you will learn how to draw custom IC layout and simulate your design using 90nm technology with Synopsys Custom Design Tools. This tutorial includes the detailed steps of schematic, layout, and simulation of designs.
 
+![fig0](images/fig0.png)
+
 ## Part 5: Creating Layout (continues from lab1)
 
 To design a layout, you need to be familiar with the Lamba-based rules. This helps you save time for design cycle and debugging Design Rules Check (DRC) errors. For Synopsys PDK, you can access 90nm technology we are currently using in the following location at `/usr/local/synopsys/pdk/SAED90nm_PDK_10222017/documents/SAED90nm_Disign_Rules_v1.9_18032015.pdf` at `bender.engr.ucr.edu`. 
