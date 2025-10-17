@@ -6,7 +6,7 @@ Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will
 
 ## Lab Report Due
 
-* Next Friday.
+* __Oct. 31, 2025__ (Friday)
 
 # Lab/Tutorial 2
 
