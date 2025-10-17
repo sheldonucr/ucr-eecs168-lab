@@ -10,7 +10,7 @@ The next 2 weeks will revolve around designing 1-bit full adder and hierarchical
 
 ### Lab Report Due
 
-* 02/24/2023 (Friday)
+* TBD (Friday)
 
 ### Checkoff
 
@@ -572,3 +572,4 @@ for example, my ucr Net ID is `tkim049`, so do like following
 ### Next lab
 
 In lab 4 (last one), you will do full chip design.
+
