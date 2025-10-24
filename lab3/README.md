@@ -26,7 +26,7 @@ The next 2 weeks will revolve around designing 1-bit full adder and hierarchical
 
 Lab3 is to learn how to do parasitic extraction/post layout simulation and hierarchical design. You will use your inverter design for your parasitic extraction and post layout simulation. For your hierarchical design, you will eventually design ring oscillator. You need to check off until Ring Oscillator.
 
-This lab is designed for three weeks, so for your lab report, you need to design `Ring oscillator`, `1-bit full adder` and `Ripple-carry 4-bit binary full adder` schematic, layout (DRC,LVS pass) and post layout simulation, which requires Hierarchical Design skill. 
+This lab is designed for three weeks, so for your lab report, you need to design `1-bit full adder` and `Ripple-carry 4-bit binary full adder` schematic, layout (DRC,LVS pass) and post layout simulation, which requires Hierarchical Design skill. 
 
 ### Deliverables for your lab report.
 
@@ -49,9 +49,9 @@ This lab is designed for three weeks, so for your lab report, you need to design
 
 * Your 1-bit full adder __POST (Layout) SIMULATION__ result (with parasitic extraction) - you need to have your test bench and the test results should include 0+0+0 to 1+1+1 (Hint: the frequency of input signal A can be twice that of B and 4 times of C. This can be achieved by setting).
 
----- until here for week2 check off
+---- until here for week1 check-off
 
----- week-2 checkoff from here
+---- week-2 check-off from here
 
 * Your 4-bit full adder schematic (with hierarchical design)
 
@@ -70,6 +70,16 @@ This lab is designed for three weeks, so for your lab report, you need to design
 ### Hint
 
 A full adder adds binary number with carry in and out. A 1-bit full adder adds three one-bit number, such as A, B, and CIN and outputs S and COUT. A and B are the operands and CIN is a bit carried in from the previous less significant stage. __The 1-bit adder requires 14-PMOS, 14-NMOS, total 28 transistors.__
+
+Step.1: Write the expression of Output signal:
+```Input Signal: A, B, Cin```
+
+$$
+S = (A\cdot B\cdot Cin)+(\overline{\text{COUT\mkern4mu}}\cdot (A +B +Cin))\\
+COUT = (A \cdot B) + (Cin \cdot(A + B))
+$$
+
+Step.2: Build Pull-up (PMOS) or Pull-down (NMOS) network first, then apply De Morgan’s theorem to build the other.
 
 ![fig1](images/fig1.png)
 
@@ -130,6 +140,10 @@ for example, my ucr Net ID is `tkim049`, so do like following
 * Third week: Check off your 4-bit full adder layout (DRC, LVS should be okay) and post-simulation
 
 * Fourth week: Extra work time in case you cannot finish within 3 weeks, you should have everything checked off by the end of this week's lab
+
+
+### Useful tips
+- When performing shcematic design, if the wire routing looks confusing or messy, try labeling the matching wires with the same name. The tool will automatically combine them even if they are not physically connected. 
 
 ### Next lab
 
