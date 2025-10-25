@@ -75,7 +75,10 @@ Step.1: Write the expression of Output signal:
 ```Input Signal: A, B, Cin```
 
 $$
-S = (A\cdot B\cdot Cin)+(\overline{\text{COUT\mkern4mu}}\cdot (A +B +Cin))\\
+S = (A\cdot B\cdot Cin)+(\overline{\text{COUT\mkern4mu}}\cdot (A +B +Cin))
+$$
+
+$$
 COUT = (A \cdot B) + (Cin \cdot(A + B))
 $$
 
