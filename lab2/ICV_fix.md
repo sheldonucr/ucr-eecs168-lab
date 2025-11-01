@@ -9,6 +9,7 @@ vi ~/.bashrc
 
 Step.2: Click 'i' to insert texts and add the following commands in the file,
 ```
+export PATH="/usr/local/synopsys/icvalidator/V-2023.12-SP5-13/bin/linux64:$PATH"
 export ICV_HOME_DIR=/usr/local/synopsys/icvalidator/V-2023.12-SP5-13
 export SNPSLMD_LICENSE_FILE=27000@synopsys.engr.ucr.edu
 export LM_LICENSE_FILE=$SNPSLMD_LICENSE_FILE
