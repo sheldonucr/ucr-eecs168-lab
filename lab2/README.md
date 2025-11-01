@@ -4,6 +4,8 @@
 
 Lab 2 is to learn how to design your layout, validate with DRC and LVS. You will learn three IC design tools (Layout using Custom Compiler, DRC and LVS using IC Validator) and design inverter and NAND gates in this lab.
 
+IMPORTANT: Please refer to [this post](ICV_fix.md)
+
 ## Lab Report Due
 
 * __Oct. 31, 2025__ (Friday)
