@@ -17,7 +17,7 @@ export LM_LICENSE_FILE=$SNPSLMD_LICENSE_FILE
 
 You can also add
 ```
-export SAED90_PDK =/usr/local/synopsys/pdk/SAED90nm_PDK_10222017
+export SAED90_PDK=/usr/local/synopsys/pdk/SAED90nm_PDK_10222017
 ```
 in Lab 1 into the `bashrc` file.
 
