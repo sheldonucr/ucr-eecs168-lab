@@ -1,6 +1,8 @@
-## ICV fix for DRC
+## ICV fix for DRC and LVS
 
 #### This document shows show to configure IC Validator for running DRC and LVS
+
+### ICV FIX for DRC
 
 Step.1: First find and open the `~/.bashrc` file under home folder by
 ```
@@ -35,5 +37,15 @@ source ~/.bashrc
 ```
 
 
+### FIX for LVS
+Check Main -> Job Parameters -> Runset, replace the original .rs file with
+```
+/usr/local/synopsys/pdk/SAED90nm_PDK_10222017/icv/lvs/CORRECT_rules.lvs.9m_saed90_lvs.rs
+```
+(You can directly copy the whole line).
+
+
+
 ### Follow-ups and modofication
 `[1031]` Currently DRC should work properly. However, we found that when running LVS there may be an error related to device resource. We are actively working on this.
+`[1114]` LVS issue solved.
