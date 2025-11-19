@@ -48,4 +48,5 @@ Check Main -> Job Parameters -> Runset, replace the original .rs file with
 
 ### Follow-ups and modofication
 `[1031]` Currently DRC should work properly. However, we found that when running LVS there may be an error related to device resource. We are actively working on this.
+
 `[1114]` LVS issue solved.
