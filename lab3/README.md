@@ -8,16 +8,13 @@ The next 2 weeks will revolve around designing 1-bit full adder and hierarchical
 
 ### Lab Report Due
 
-* __Nov. 14 2025__ (Friday)
+* __Dec. 02 2025__ (Friday)
 
 ### Checkoff
 
 * __First week__: Check off your 1-bit full adder layout (DRC, LVS should be completed without error) and post-simulation
 
 * __Second week__: Check off your 4-bit full adder layout (DRC, LVS should be completed without error) and post-simulation
-
-<!-- * Third week: Extra work time in case you cannot finish within 3 weeks, you should have everything checked off by the end of this week's lab -->
-
 
 
 ## Lab3
@@ -132,21 +129,19 @@ for example, my ucr Net ID is `tkim049`, so do like following
 
 ### Lab Report Due
 
-* __11/14/2025__ (Friday)
+* __12/02/2025__ (Friday)
 
 ### Checkoff
 
-* First week: Check off your parasitic extraction and ring oscillator layout and post-simulator
+* First week: Check off your 1-bit full adder layout (DRC, LVS should be okay) and post-simulation
 
-* Second week: Check off your 1-bit full adder layout (DRC, LVS should be okay) and post-simulation
-
-* Third week: Check off your 4-bit full adder layout (DRC, LVS should be okay) and post-simulation
-
-* Fourth week: Extra work time in case you cannot finish within 3 weeks, you should have everything checked off by the end of this week's lab
+* Second week: Check off your 4-bit full adder layout (DRC, LVS should be okay) and post-simulation
 
 
 ### Useful tips
-- When performing shcematic design, if the wire routing looks confusing or messy, try labeling the matching wires with the same name. The tool will automatically combine them even if they are not physically connected. 
+- When performing schematic design, if the wire routing looks confusing or messy, try labeling the matching wires with the same name. The tool will automatically combine them even if they are not physically connected. 
+- You can use higher metal layers if needed (M2, M3, etc.). However, ensure that the contacts are the correct type (eg., use M1-M2 via to connect M1 and M2).
+- MOS devices are symmetric so you can assign source and drain according to your case.
 
 ### Next lab
 
