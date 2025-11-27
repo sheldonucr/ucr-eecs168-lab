@@ -11,7 +11,7 @@ vi ~/.bashrc
 
 Step.2: Click 'i' to insert texts and add the following commands in the file,
 ```
-export PATH=“/usr/local/synopsys/starrc/W-2024.09-SP5-1/bin:$PATH”
+export PATH="/usr/local/synopsys/starrc/W-2024.09-SP5-1/bin:$PATH"
 export PATH="/usr/local/synopsys/icvalidator/V-2023.12-SP5-13/bin/linux64:$PATH"
 export ICV_HOME_DIR=/usr/local/synopsys/icvalidator/V-2023.12-SP5-13
 export SNPSLMD_LICENSE_FILE=27000@synopsys.engr.ucr.edu
@@ -54,7 +54,7 @@ vi ~/.bashrc
 ```
 Step.2: Click 'i' to insert texts and add the following commands in the file,
 ```
-export PATH=“/usr/local/synopsys/starrc/W-2024.09-SP5-1/bin:$PATH”
+export PATH="/usr/local/synopsys/starrc/W-2024.09-SP5-1/bin:$PATH"
 ```
 This step is to include StarRC tool to the path.
 After adding these commands press ':wq' to save and quit the `~/.bashrc`
