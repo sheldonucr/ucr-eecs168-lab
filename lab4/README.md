@@ -48,6 +48,8 @@ You should finish this tutorial first for 2 hours at least.
 
 ## Lab4-Week1: Part 2. Synopsys Verilog Compiler Simulator (Verilog Compiler) Tutorial
 
+#### Attention: This section is currently not available due to the OS issue, we will first skip this section and wait for the support from IT.
+
 For the Verilog editor, `vi` or `emacs` is recommended, but you are free to use `vim` as well.
 
 Synopsys Verilog Compiler Simulator is a tool from Synopsys specifically designed to simulate and debug designs. This tutorial basically describes how to use VCS, simulate a verilog description of a design and learn to debug the design. VCS also uses VirSim, which is a graphical user interface to VCS used for debugging and viewing the waveforms.
@@ -240,10 +242,10 @@ Please follow these steps to edit this file:
 Once Verilog file is ready, we need to do SYNTHESIS, which is a transformation process from RTL to gate-level design (another synthesized Verilog). Type the following command to launch Design Compiler.
 
 ```
-dc_shell
+dc_shell-xg-t
 ```
 
-- launch dc_shell for design compiler.
+- launch dc_shell (dc_shell-xg-t) for design compiler.
 
 ![fig1](images/fig1.png)
 
@@ -267,15 +269,15 @@ __You can search for the keywords 'link', 'target' and 'symbol' in the window th
 
 - Link library
 ```
-/usr/local/synopsys/pdk/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/ref/saed90nm_fr/LM/saed90nm_typ.db
+/usr/local/synopsys/pdk/SAED90nm_EDK_10072017/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/ref/saed90nm_fr/LM/saed90nm_typ.db
 ```
 - Target Library
 ```
-/usr/local/synopsys/pdk/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/ref/saed90nm_fr/LM/saed90nm_typ.db
+/usr/local/synopsys/pdk/SAED90nm_EDK_10072017/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/ref/saed90nm_fr/LM/saed90nm_typ.db
 ```
 - Symbol Library
 ```
-/usr/local/synopsys/pdk/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/ref/icons/saed90nm.sdb
+/usr/local/synopsys/pdk/SAED90nm_EDK_10072017/SAED90_EDK/SAED_EDK90nm_REF/references/ChipTop/ref/icons/saed90nm.sdb
 ```
 
 ![fig4](images/fig4.png)
