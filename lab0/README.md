@@ -82,6 +82,8 @@ Once you see the following screen, then it is ready for next lab.
 
 ### Problem Shooting
 
+#### Cannot start Custom Compiler
+
 If error such as "command not found" occurs, please use the following commands to configure path and run cdesigner.
 
 `export PATH=/usr/local/synopsys/customcompiler/W-2024.09-SP2-7/bin:$PATH`
@@ -91,6 +93,16 @@ If error such as "command not found" occurs, please use the following commands t
 `cdesigner &`
 
 Here W-2024.09-SP2-7 is the version of Synopsys Custom Compiler.
+
+#### X11 forwarding not working
+
+If error such as "display environment variable is not defined" occurs, X11 forwarding is not being passed through to bender. Please check the following:
+
+1. Make sure an X server (`Xming` or `VcXsrv`) is running on your Windows computer before you connect.
+2. In `putty`, go to Connection → SSH → X11 and make sure "Enable X11 forwarding" is checked.
+3. Reconnect to bender and run `echo $DISPLAY`. You should get something like `localhost:10.0`. If it prints nothing, X11 forwarding is still not working.
+
+For OSX/Linux, make sure you log in with the `-Y` option (`ssh -Y`), and for OSX, that XQuartz is installed.
 
 If you have any question, then you can post your question at issue section in this github.
 
